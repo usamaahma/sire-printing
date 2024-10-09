@@ -1,0 +1,9 @@
+.carousel-image {
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
+}
+
+.pic {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+}

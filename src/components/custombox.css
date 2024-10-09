@@ -1,0 +1,16 @@
+.custombox-txt{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.custombox-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+.title-custombox {
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 160, 21);
+    height: 3rem;
+}

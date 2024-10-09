@@ -1,0 +1,14 @@
+.btn-mainnav {
+    background-color: black;
+    color: white;
+    border: none; /* Remove border if needed */
+  }
+  
+  .btn-mainnav:hover {
+    background-color: darkgray; /* Change hover color as needed */
+    color: white; /* Ensure text color stays white on hover */
+  }
+  .text-color {
+     font-weight: bold;
+  }
+  
