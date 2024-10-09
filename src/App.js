@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import 'react-bootstrap/dist/react-bootstrap.min.css';
 import Firstnav1 from "./components/navbars/firstnav";
 import Mainnav1 from "./components/navbars/mainnav";
 import Carousel1 from "./components/carousel";
