@@ -1,0 +1,47 @@
+.hot-txt {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .hot-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    position: relative; /* Make the card a positioned element */
+    overflow: hidden; /* Prevent overflow for the overlay */
+    height: 300px; /* Set a fixed height for consistency */
+  }
+  
+  .hotcard-image {
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Make the image take the full height */
+    object-fit: cover; /* Cover the card area */
+    display: block; /* Remove bottom space below the image */
+  }
+  
+  .overlayhot {
+    position: absolute;
+    top: 0; /* Start at the top of the card */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hide the overlay */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+  
+  .hot-card:hover .overlayhot {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .overlayhot-text {
+    color: white; /* Text color */
+    font-size: 1.5rem; /* Adjust font size */
+    text-align: center; /* Center text */
+  }
+  

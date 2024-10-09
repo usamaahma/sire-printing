@@ -1,12 +1,23 @@
-.enjoy-txt{
+.enjoy-txt {
     text-align: center;
     margin-top: 2rem;
     font-weight: bold;
     font-size: 2rem;
 }
+
 .image-wrapper {
-    margin: 0 10px; /* Adjust margin as needed */
     text-align: center; /* Center text under the image */
-  }
-  
-  
+    margin: 0 10px; /* Adjust margin as needed */
+}
+
+.responsive-image1 {
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Set a max-width for larger screens */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.responsive-image1:hover {
+    transform: scale(1.05); /* Scale image on hover */
+}

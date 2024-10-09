@@ -11,7 +11,6 @@ const imagesData = [
   { src: '../images/price.webp', text: 'Competitive Price' },
   { src: '../images/fast.webp', text: 'Fast Turnaround' },
   { src: '../images/freedelivery.webp', text: 'Free Delivery' },
- 
 ];
 
 const Enjoysire1 = () => {
@@ -23,17 +22,17 @@ const Enjoysire1 = () => {
       </div>
 
       {/* Image Grid Section */}
-      <div style={{ padding: '20px'  }}>
-        <Row gutter={[16, 16]} justify="center" style={{ whiteSpace: 'nowrap' }}>
+      <div style={{ padding: '20px' }}>
+        <Row gutter={[16, 16]} justify="center">
           {imagesData.map((image, index) => (
             <Col xs={24} sm={12} md={8} lg={3} key={index}>
-              <div style={{ textAlign: 'center', margin: '0 10px' }}> {/* Added margin */}
+              <div className="image-wrapper">
                 <img
                   src={image.src}
                   alt={image.text}
-                  style={{ width: '80%', height: 'auto', borderRadius: '8px' }} // Responsive image
+                  className="responsive-image1" // Use a class for styles
                 />
-                <p style={{ marginTop: '8px', fontSize: '16px' }}>{image.text}</p>
+                <p style={{ marginTop: '8px', fontSize: '14px' }}>{image.text}</p>
               </div>
             </Col>
           ))}

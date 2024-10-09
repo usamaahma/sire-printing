@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Firstnav1() {
   return (
-    <Navbar expand="lg" className="mb-3" style={{ backgroundColor: 'rgb(255,160,21)', padding: '10px 28px' }}>
+    <Navbar expand="lg" className="mb-0" style={{ backgroundColor: 'rgb(255,160,21)', padding: '10px 28px', margin: 0 }}>
       <Nav className="me-auto d-flex align-items-center">
         <Nav.Item className="d-flex align-items-center mx-4" style={{ color: 'black' }}>
           <FaSquarePhone style={{ fontSize: '1.5rem', marginRight: '5px' }} />

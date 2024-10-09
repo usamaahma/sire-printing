@@ -8,7 +8,7 @@ import './mainnav.css';
 
 function Mainnav1() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary sticky-top">
+    <Navbar expand="lg" className="bg-body-tertiary sticky-top mb-0" style={{ margin: 0 }}>
       <Container fluid>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
