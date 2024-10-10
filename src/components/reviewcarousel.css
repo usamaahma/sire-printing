@@ -1,3 +1,11 @@
+.test-review{
+
+}
+.test-txt{
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(249,249,249);
+}
 .main-container {
     display: flex;
     justify-content: center;
@@ -83,6 +91,7 @@
     .main-container {
         height: 90vh;
     }
+    
 }
 @media (max-width: 449px) {
     .outer-div {
@@ -100,5 +109,8 @@
     .main-container {
         height: 100vh; /* Full height of the viewport */
     }
+    .review-txt, .review-client-txt {
+        font-size: 10px;
+       }
 }
 

@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { Link } from "react-router-dom";
 import './mainnav.css';
 
 function Mainnav1() {
@@ -21,7 +22,7 @@ function Mainnav1() {
           </Offcanvas.Header>   
           <Offcanvas.Body>
             <Nav className="flex-column flex-lg-row justify-content-center align-items-center flex-grow-1 pe-3 text-color">
-              <Nav.Link href="#action1" className="my-2 mx-2">All Products</Nav.Link>
+              <Nav.Link as={Link} to="all-products" className="my-2 mx-2">All Products</Nav.Link>
               <Nav.Link href="#action2" className="my-2 mx-2">CBD Packaging</Nav.Link>
               <NavDropdown title="Custom Boxes" id="offcanvasNavbarDropdown" className="my-2 mx-2">
                 <NavDropdown.Item href="#action3" className="text-color">Action</NavDropdown.Item>
@@ -40,8 +41,8 @@ function Mainnav1() {
               </div>
               <Nav.Link href="#action2" className="my-2 mx-2">Custom Stickers</Nav.Link>
               <Nav.Link href="#action2" className="my-2 mx-2">Christmas Boxes</Nav.Link>
-              <Nav.Link href="#action2" className="my-2 mx-2">Portfolio</Nav.Link>
-              <Button type="text" className="btn-mainnav text-color">Get a Free Quote</Button>
+              <Nav.Link href="#action2" className="my-2 mx-2">Portfolio</Nav.Link>  
+              <Button type="text" className="btn-mainnav ">Get a Free Quote</Button>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

@@ -13,6 +13,7 @@ function ReviewCarousel() {
   };
 
   return (
+    <div className="test-review"><h2 className="test-txt">TESTIMONIALS</h2>
     <div className="main-container">
       <div className="outer-div">
         <div className="inner-div">
@@ -77,6 +78,7 @@ function ReviewCarousel() {
           </Carousel>
         </div>
       </div>
+    </div>
     </div>
   );
 }
