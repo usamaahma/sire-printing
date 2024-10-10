@@ -1,0 +1,36 @@
+.allproduct-row {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+  }
+  
+  .allproduct-col {
+    padding: 16px; /* Adds spacing around columns */
+  }
+  
+  .allproduct-cards-container {
+    overflow-y: auto; /* Allows vertical scrolling for the card container */
+   }
+  
+  .allproduct-cards {
+    display: flex;
+    justify-content: space-around;
+   }
+  
+  .allproduct-cards > div {
+    flex: 0 0 auto; /* Prevent card flexing, keep original size */
+    margin-bottom: 16px; /* Space between cards */
+  }
+  
+  .allproduct-form-container {
+    position: sticky; /* Sticky position */
+    top: 0; /* Stick to the top */
+    height: 100vh; /* Full height for the form container */
+    background: #fff; /* Background for the form */
+    padding: 16px; /* Padding for the form */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for the form */
+  }
+  
+  .allproduct-form {
+    border-radius: 8px; /* Rounded corners */
+  }
+  
