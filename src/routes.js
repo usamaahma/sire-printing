@@ -6,6 +6,8 @@ import ScrollToTop from './components/scrolltop';
 import Firstnav1 from './components/navbars/firstnav';
 import Mainnav1 from './components/navbars/mainnav';
 import Allproductspage1 from './pages/allproductspage';
+import Cbdpackagingpage from './pages/cbdpackagingpage';
+ 
  
  
  
@@ -20,8 +22,9 @@ const AppRoutes = () => {
                 <Routes>
                     <Route path="/" element={<Landingpage1 />} />
                     <Route path="all-products" element={<Allproductspage1 />} />
+                    <Route path="CBD-Packaging" element={<Cbdpackagingpage />} />
                 </Routes>
-                {/* <Footer1 /> */}
+                <Footer1 />
             </>
         </Router>
     );

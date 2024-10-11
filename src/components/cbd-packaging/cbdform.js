@@ -4,7 +4,7 @@ import React from "react";
 
 const { Option } = Select;
 
-function Productform() {
+function Cbdform() {
   const handleFinish = (values) => {
     console.log("Form Values: ", values);
   };
@@ -143,4 +143,4 @@ function Productform() {
   );
 }
 
-export default Productform;
+export default Cbdform;

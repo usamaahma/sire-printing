@@ -1,36 +1,122 @@
+.allproduct-beat-txt {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.div-beatform-txt {
+  background-color: rgb(255, 160, 21);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.allproduct-form-submit-button {
+  width: 100%;
+  max-width: 200px; /* Adjust max-width as needed */
+}
+.allproduct-form-sticky-div {
+    position: sticky;
+    top: 0;
+    padding-top: 5rem !important;
+    z-index: 1000; /* Ensure it appears above other content */
+    padding: 20px;
+    border-radius: 2px;
+    max-width: 800px; /* Limit max width to make it fit better */
+     
+  }
+  .input-allproduct{
+    border-color: rgb(131, 130, 130);
+      
+  }
+  .input-allproduct:hover{
+    border-color: black;
+  }
+ 
+.div-beatform-txt {
+  margin: 0 0 1rem 0; /* Reduce margin to make it compact */
+  background-color: rgb(255, 160, 21);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px; /* Set a fixed height */
+}
+
+.allproduct-beat-txt {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.allproduct-form-submit-button {
+  width: 100%;
+  max-width: 200px; /* Adjust max-width as needed */
+  padding: 10px 20px;
+  background-color: #070707;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 4rem;
+  font-weight: bold;
+}
+.allproduct-form-submit-button:hover{
+    background-color: #fcfcfc !important;
+    color: #070707 !important;
+    border-color: #070707;
+}
+/* Responsive adjustments */
+ 
+ 
+
+@media (max-width: 768px) {
+  .allproduct-form-sticky-div {
+    padding: 10px;
+  }
+
+  .div-beatform-txt {
+    height: auto; /* Allow height to adjust on smaller screens */
+  }
+}
+.allproduct-txt {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* Make all text in the form bold */
+
+/* *****************************************888 */
+.allproduct-main {
+  padding: 20px; /* Add some padding to the main container */
+}
+
 .allproduct-row {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-  }
-  
-  .allproduct-col {
-    padding: 16px; /* Adds spacing around columns */
-  }
-  
-  .allproduct-cards-container {
-    overflow-y: auto; /* Allows vertical scrolling for the card container */
-   }
-  
-  .allproduct-cards {
-    display: flex;
-    justify-content: space-around;
-   }
-  
-  .allproduct-cards > div {
-    flex: 0 0 auto; /* Prevent card flexing, keep original size */
-    margin-bottom: 16px; /* Space between cards */
-  }
-  
-  .allproduct-form-container {
-    position: sticky; /* Sticky position */
-    top: 0; /* Stick to the top */
-    height: 100vh; /* Full height for the form container */
-    background: #fff; /* Background for the form */
-    padding: 16px; /* Padding for the form */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for the form */
-  }
-  
-  .allproduct-form {
-    border-radius: 8px; /* Rounded corners */
-  }
-  
+  margin: 0; /* Remove default margin */
+}
+
+.allproduct-card-main {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allproduct-card {
+  width: 15rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.allproduct-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.allproduct-card-title {
+  font-weight: bold; /* Bold text */
+  background-color: rgb(255, 160, 21);
+  font-size: 1.2rem; /* Adjust font size as needed */
+  height: 3rem;
+  text-align: center;
+  align-items: center;
+}
