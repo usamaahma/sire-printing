@@ -1,7 +1,4 @@
 .img-cbdmain {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 90rem; /* Set a maximum width */
-    margin-right: 10px; /* Adjust margin as needed */
-  }
-  
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}

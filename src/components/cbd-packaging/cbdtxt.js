@@ -6,39 +6,30 @@ function Cbdtxt1() {
     <div className="div-allproduct-txt">
       <div>
         <h2 className="h2-allproduct-txt">Elevate Your Brand With Our Affordable CBD Packaging Solutions</h2>
-        <p className="p-allproduct-txt">Sireprinting.com is your ultimate one-stop choice to acquire any custom box packaging solutions under a single roof. No matter what you fantasize about, our highly proficient team of dedicated professionals will certainly make it possible for you! The packaging and printing industry is like a vast sea with many horizons, and we are here to help you conquer it with full zeal. Whether you are inquiring about CBD boxes or food packaging solutions or your target niche is the cosmetic industry-related packaging, we have got you fully covered for all its aspects. We give you full freedom to choose the box style of your choice and get it tailored concerning size, shade, layout, and finishing as well.</p>
-        <p className="p-allproduct-txt">The boxes we make are durable, sturdy, and also will protect the item within. Considering that our company believes in providing power in our customers' hands, we provide personalization at every stage of production. You may pick from 0pt to 28pt (60lb to 400lb) Eco-Friendly Kraft, E-flute Corrugated, Bux-Board, or Cardstock. Our choice of premium quality raw material and environmentally friendly production process makes us stand alone in our competitors' crowd. We are proud to announce that we do not use any single process that will harm the environment around us. Next comes the top-notch paper we make use of to produce premium quality products. The paper utilized by us for manufacturing various packaging products is hemorrhage proof and makes the true colors of your layout more prominent and distinguishing.</p>
+        <p className="p-allproduct-txt">As we are a well-known reputed company delivering CBD and products packaging boxes, we provide all types of packaging including pre-roll packaging, CBD gummy boxes, CBD topicals boxes, CBD vape boxes, and CBD oil boxes. Pre-roll boxes are used for carrying pre-rolls with different counts like single pre-roll, 2,5,10, or 20 pre-rolls depending on customers' needs. You need to get those pre-roll fit and save the product inside from any harm or pollutant. We turn your dreams into a realistic design that becomes your brand identity on a cost-effective budget. We give a professional look to your CBD packaging having cardboard stock with a matte coating. Furthermore, we add hot stamp foil with spot UV to your box to give it a more glossy look. An impactful and astonishing box impacts your sales growth which will result in taking your business to the next level.</p>
+        <p className="p-allproduct-txt">Discover a wide range of premium packaging options for your CBD products. Whether you're looking for custom-style boxes to showcase your products or need custom packaging solutions, explore our diverse selection. Visit Sire Printing now and enhance the presentation of your CBD shatter envelopes and more.</p>
       </div>
       <div>
-        <h2 className="h2-allproduct-txt">Types & Stock We Offer</h2>
-        <p className="p-allproduct-txt">We at sireprinting.com have a custom box for every product you may have; all you have to do is choose the one according to your specific business needs and requirements.</p>
-        <p className="p-allproduct-txt">Cardboard Boxes: It is the most common type widely used in almost every industry. As can be guessed from their name, these boxes are produced from cardboard material. You can easily use cardboard boxes produced by sireprinting.com for branding and product marketing at various platforms. We provide a vast customization option at cut-throat pricing. Whether you want to acquire Gift boxes, Food boxes, or have any other purpose in mind, we are here to serve you with all the hot stylizing like seal-end, reverse-tuck-end, tuck-end, much more for making your personalized cardboard boxes stand out in the crowd of similar products.</p>
-        <p className="p-allproduct-txt">Rigid Boxes: Manufactured from thick cardboard, these are best when you have to offer top-notch premium items like gift items, artifacts, watches, jewelry, perfumes, etc. Our professional team will further enhance the appearance of your personalized rigid packaging boxes. You can avail various addons to make these boxes' appeal more premium just as custom ribbons to give a luxurious look. We have a complete range of addons and customization options that you can use to make your rigid boxes look special and unique compared to your competitors.</p>
-        <p className="p-allproduct-txt">In addition to the types and styles displayed on this page, some other box styles but not limited to are as follows:</p>
-        <ul style={{ listStyleType: 'disc', padding: '0 20px' }}>
-          <li>Bag</li>
-          <li>Cushion Board</li>
-          <li>Display Box</li>
-          <li>Folder & Envelopes</li>
-          <li>Gift Box</li>
-          <li>Inner Holdings</li>
-          <li>Label</li>
-          <li>Lid Hinged Base</li>
-          <li>Lock Bottom Tuck</li>
-          <li>Multi Style Template</li>
-          <li>Reverse Tuck</li>
-          <li>Trays & Top Base</li>
-          <li>Variant Lock End</li>
-          <li>Variant Tuck</li>
-          <li>Other</li>
-        </ul>
+        <h2 className="h2-allproduct-txt">Importance Of Custom CBD Packaging</h2>
+        <p className="p-allproduct-txt">CBD packaging is essential for various reasons. First off, it looks nice and catches people's attention when they're shopping. A survey found that 72% of buyers consider how a product is packaged before deciding to buy it. Having unique and attractive packaging can make your CBD product stand out on the shelves.</p>
+        <p className="p-allproduct-txt">Custom packaging is not just about looks; it's also about following the rules. CBD product regulations differ, and personalized packaging ensures that your product meets all the necessary guidelines, avoiding legal troubles. Being eco-friendly matters too. Many customers prefer brands that use sustainable packaging. Research shows that 64% of buyers are more likely to stick with a brand that cares about the environment.</p>
+        <p className="p-allproduct-txt">Moreover, having your packaging helps people remember your brand. This builds trust and keeps customers coming back. Simple and personalized CBD packaging is more than just a pretty wrapper; it's a smart move for attracting customers, following the rules, and making a positive impression.</p>
       </div>
       <div>
-        <h2 className="h2-allproduct-txt">Various Layout and Customization Options</h2>
-        <p className="p-allproduct-txt">No layout is impossible for us to attain. You might go with a monochromatic look or a fun, wild glamorous pattern, and also, we will certainly print accordingly. In the printing process, we guarantee that the color turns out as it was planned to be. To make your box more eye-catching and appealing, we provide a vast range of addons. If you want your packaging solution to acquire a particular deluxe element, you can get a gold/silver foiling on the package. The foiling will certainly add a unique premium touch and aesthetic value to the boxes.</p>
-        <p className="p-allproduct-txt">Likewise, you may emboss specific messages, quotes, or images on the package to make it look more prominent. You can further add dazzling patterns with a 3D characteristic touch. You might likewise get a personalized window box or die-cut variant to allow your customers to see what they will buy even without opening the pack.</p>
-        <p className="p-allproduct-txt">What makes us the most effective at what we do is our specialist as well as trustworthy staff. We get motivated by our customers' layout and see to it that their dreams are met. That is why we make it necessary that we provide the highest quality at cost-effective prices. Whatever your order, we will certainly provide it to you in 6 to 8 company days. If you require packages at a quicker notification, then we will certainly give as necessary. We also supply a flat view, 3D mockup, and physical examples (on request) of the boxes so you can bring any tweaks to the layout and be fully pleased.</p>
-        <p className="p-allproduct-txt">With many options and services to choose from, contact our representatives now to position your order.</p>
+        <h2 className="h2-allproduct-txt">Make Your CBD Packaging Boxes More Attractive</h2>
+        <p className="p-allproduct-txt">To improve and enhance the brand with its appearance you need impressive and dynamic CBD packaging because it can advertise your product as well. It is better for you if you get packaging at a rapid speed that meets high quality? Sire Printing not only takes care of your product design but also makes sure that its products have environmentally approved packaging. We make custom packaging that always takes care of the products of our clients not only attracts customers to choose their product from the shelf but also makes them proud. We take care of every aspect which includes quality of paper, shapes, design, color, and printing as well. So be with us to make your products and brand known to everyone. </p>
+      </div>
+      <div>
+        <h2 className="h2-allproduct-txt">Packaging Guidelines for CBD Products</h2>
+        <p className="p-allproduct-txt">As we provide the best and most impressive CBD packaging boxes that become your brand ambassador then how can we forget about the requirements and guidelines for CBD packaging? We are a box printing company that makes packaging boxes that are according to FDA guidelines. We make sure that our packaging not only competes with design standards but is secure for everyone as well. So be ready to get packaging boxes that increase your market presence and boost your sales as well. </p>
+      </div>
+      <div>
+        <h2 className="h2-allproduct-txt">High-Quality CBD Packaging at Wholesale Rate</h2>
+        <p className="p-allproduct-txt">Many medical and other products are made up of cannabidiol that needs to be packed in CBD packaging. That is the reason why the wholesale boxes are increasing day by day. So do you want to get minimalistic CBD packaging boxes at a wholesale rate? We have experts who make sure that you get printed CBD packaging boxes that have an impressive color combination and creative box structure having product safety as well. Our high packaging and printing standards give you packaging at a lesser cost that will win your heart and increase your business as well. Our goal is to provide our customers with a well-known reputation we never compromise on our CBD Packaging design and printing standards.</p>
+      </div>
+      <div>
+        <h2 className="h2-allproduct-txt">Sire Printing - Your Reliable Partner For CBD Box Packaging</h2>
+        <p className="pend-allproduct-txt">At Sire Printing, we don't just offer packaging - we deliver confidence. We're a team of experts who know how to handle all types of CBD products. We understand that good packaging keeps your products fresh and safe. Our boxes are not just simple containers. They're strong, durable, and designed to show off your brand's quality. With us, you're not just buying a box. You're choosing a reliable partner who cares about your product as much as you do. So, why wait? Choose Sire Printing for your packaging needs today. Remember, it's not just about the box. It's about the trust we build together.</p>
       </div>
     </div>
   );

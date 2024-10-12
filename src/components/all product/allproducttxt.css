@@ -1,24 +1,32 @@
 .div-allproduct-txt {
     margin: 10px 5%; /* Adjust the values as needed for top, right, and left margins */
     text-align: left; /* Center align text */
+     
   }
   
   .p-allproduct-txt {
     margin: 1rem 0; /* Space between paragraphs */
-  }
+   }
+   .pend-allproduct-txt {
+     margin-bottom: 2rem !important;
+   }
   
   .h2-allproduct-txt {
     font-weight: bold; /* Make headings bold */
-    font-size: 2rem; /* Set font size for headings */
+    font-size: 1.6rem; /* Set font size for headings */
+     
   }
   
   /* You can add styles for other heading tags if needed */
-  .h1-allproduct-txt,
+   
   .h3-allproduct-txt,
   .h4-allproduct-txt,
   .h5-allproduct-txt,
   .h6-allproduct-txt {
     font-weight: bold; /* Make headings bold */
-    font-size: 2rem; /* Set font size for headings */
+    font-size: 1.2rem; /* Set font size for headings */
+    margin-top: 1rem;
+     
   }
+ 
   

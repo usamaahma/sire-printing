@@ -85,12 +85,12 @@ function Cbdpackaging1() {
       <img
         className="img-cbdmain"
         src="../images/cbdmain.jpg" // Replace with the path to your image
-        alt="Sire Printing"
+        alt="cbd-main"
         style={{
           width: "100%", // Make the image responsive
           height: "auto", // Maintain aspect ratio
-          maxWidth: "90rem", // Set a maximum width
-          marginRight: "10px",
+           
+           
         }} // Adjust size as needed
       />
 

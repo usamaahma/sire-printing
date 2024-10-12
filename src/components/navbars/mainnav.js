@@ -53,7 +53,7 @@ function Mainnav1() {
                   Custom Box Styles
                 </Nav.Link>
               </NavDropdown>
-              <Nav.Link href="#action2" className="my-2 mx-2">
+              <Nav.Link as={Link} to="Custom-box-styles" className="my-2 mx-2">
                 Custom Box Styles
               </Nav.Link>
               <div
@@ -75,13 +75,13 @@ function Mainnav1() {
                   />
                 </Link>
               </div>
-              <Nav.Link href="#action2" className="my-2 mx-2">
+              <Nav.Link as={Link} to="Custom-stickers" className="my-2 mx-2">
                 Custom Stickers
               </Nav.Link>
-              <Nav.Link href="#action2" className="my-2 mx-2">
+              <Nav.Link as={Link} to="Christmas-boxes" className="my-2 mx-2">
                 Christmas Boxes
               </Nav.Link>
-              <Nav.Link href="#action2" className="my-2 mx-2">
+              <Nav.Link as={Link} to="portfolio" className="my-2 mx-2">
                 Portfolio
               </Nav.Link>
               <Button type="text" className="btn-mainnav ">
