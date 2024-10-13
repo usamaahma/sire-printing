@@ -1,116 +1,162 @@
-.test-review{
-
+/* Container for centering and responsiveness */
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  display: none !important; /* Forcefully hide the buttons */
 }
-.test-txt{
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(249,249,249);
-}
-.main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh; /* Full height of the viewport */
-    background-color: black; /* Main container color */
-}
-
-.outer-div {
-    width: 90%; /* Use percentage for responsiveness */
-    max-width: 600px; /* Maximum width */
-    height: 300px; /* Adjust height */
-    background-color: rgb(251,140,0); /* Outer div color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(-6deg); /* Slight tilt */
-    border-radius: 2px;
-}
-
-.inner-div {
-    width: 100%; /* Fill outer div */
-    height: 100%; /* Fill outer div */
-    background-color: rgb(66,66,66); /* Inner div color */
-    border-radius: 2px;
-    position: relative; /* Adjust for centering */
-    transform: rotate(6deg); /* Slight tilt */
-}
-
-.carousel-review-content {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align items horizontally */
-    text-align: center; /* Center text */
-    color: white; /* Set text color to white */
-    height: 100%; /* Fill the height of the parent */
-    justify-content: center; /* Center vertically */
-    margin-top: 20px; /* Add margin at the top */
-}
-
-.review-icon {
-    width: 50px; /* Set a fixed width for the image */
-    margin-bottom: 10px; /* Space below the icon */
-    margin-top: 1rem;
-}
-
-.review-text-container {
-    max-width: 80%; /* Optional: limit text width for better readability */
+.alice-carousel__dots {
+  display: none !important; /* Forcefully hide the dots */
 }
 
 
 
-.review-txt, .review-client-txt {
-    margin: 0; /* Remove default margin for cleaner layout */
-    margin-top: 1.5rem;
+
+
+.carousel-wrapper {
+  position: relative; /* Make wrapper relative for absolute buttons */
+  padding: 20px; /* Add some padding to avoid arrow overlap */
 }
 
+
+/* Hide pagination dots */
+
+
+.customerdiv {
+  text-align: center;
+  margin-top: 0.4rem;
+   
+  /* Adjust margin as needed */
+}
+
+/* Carousel wrapper styling */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Carousel container styling */
+.carousel-container1 {
+  width: 90%;
+  height: auto;
+  /* Adjust height for responsiveness */
+  padding: 2rem;
+  max-width: 1000px;
+  /* Increased max-width for the carousel container */
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  /* Rounded corners for carousel container */
+  /* Light gradient background */
+}
+
+/* Hide carousel indicators */
+.carousel-indicators {
+  display: none;
+}
+
+/* Ensure carousel items are displayed as block and centered */
+.carousel-item-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18rem;
+  /* Adjust height as needed */
+  width: 100%;
+  /* Full width of container */
+  padding: 1rem;
+  /* Add padding to ensure spacing around the card */
+}
+
+.ant-card .ant-card-body {
+  padding: 0;
+}
+
+/* Center card content */
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  color: #000000;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  box-shadow: none; /* Remove shadow */
+  margin: auto; /* Center the card horizontally */
+}
+
+/* Card avatar styling */
+.avatar-review {
+  width: 4rem;
+  /* Adjust avatar size */
+  height: 4rem;
+  /* Adjust avatar size */
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  /* Make the avatar circular */
+}
+
+/* Card title styling */
+.carousel-card h5 {
+  font-size: 1rem;
+  /* Smaller font size for title */
+  color: #070707;
+  margin: 0.5rem 0;
+}
+
+/* Card review styling */
+.carousel-card p {
+  font-size: 0.7rem;
+  /* Adjust font size for review text */
+  color: #070707;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+/* Hide carousel controls (Next and Prev icons) */
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 1024px) {
+  .carousel-container1 {
+    height: auto;
+    /* Adjust height for larger screens */
+  }
+}
 
 @media (max-width: 768px) {
-    .outer-div {
-        height: 320px; /* Adjust height for smaller screens */
-        width: 390px;
-    }
-
-    .inner-div {
-        height: 300px; /* Adjust height for smaller screens */
-        width: 390px;
-    }
-    .main-container {
-        height: 90vh;
-    }
-
+  .carousel-card {
+    max-width: 300px;
+    /* Further adjust card size for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-    .outer-div {
-        height: 300px; /* Further adjustment for very small screens */
-    }
-
-    .inner-div {
-        height: 300px; /* Further adjustment for very small screens */
-    }
-    .main-container {
-        height: 90vh;
-    }
-    
-}
-@media (max-width: 449px) {
-    .outer-div {
-        height: 320px; /* Adjusted height for very small screens */
-        width: 280px;
-        transform: rotate(-0deg); /* Slight tilt */
-    }
-
-    .inner-div {
-        height: 295px; /* Reduced height */
-        width: 280px; /* Adjusted width */
-        transform: rotate(0deg); /* Slight tilt */
-    }
-    
-    .main-container {
-        height: 100vh; /* Full height of the viewport */
-    }
-    .review-txt, .review-client-txt {
-        font-size: 10px;
-       }
+  .carousel-card {
+    max-width: 250px;
+    /* Even smaller card size */
+  }
 }
 
+@media (max-width: 425px) {
+  .carousel-card {
+    max-width: 250px;
+    /* Even smaller card size */
+    height: 30rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .carousel-card {
+    max-width: 250px;
+    /* Even smaller card size */
+    height: 30rem;
+  }
+}

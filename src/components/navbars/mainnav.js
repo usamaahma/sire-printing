@@ -26,7 +26,7 @@ function Mainnav1() {
               Menu
             </Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
+          <Offcanvas.Body className="margin">
             <Nav className="flex-column flex-lg-row justify-content-center align-items-center flex-grow-1 pe-3 text-color">
               <Nav.Link as={Link} to="all-products" className="my-2 mx-2">
                 All Products

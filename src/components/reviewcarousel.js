@@ -1,86 +1,76 @@
-import React from "react";
-import { Carousel } from "antd"; // Import the Carousel component
-import "./reviewcarousel.css";
+import React from 'react';
+import AliceCarousel from 'react-alice-carousel';
+import { Card, Avatar } from 'antd';
+import { Rate } from 'antd';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import './reviewcarousel.css';
 
-function ReviewCarousel() {
-  const contentStyle = {
-    margin: 0,
-    height: "300px",
-    color: "#fff",
-    lineHeight: "280px",
-    textAlign: "center",
-    background: "#364d79",
-  };
+// Carousel items
+const carouselItems = [
+  {
+    img: "../images/download.jpg",
+    name: "John Wick",
+    occupation: "Broker – About Roatan Real Estate",
+    review: "“Thrive exceeded our expectations in every way. They are honest, reliable, and handle all needs quickly. They deliver on their promises without any fuss.”"
+  },
+  {
+    img: "../images/download.jpg",
+    name: "ACP",
+    occupation: "Practice Manager – PARC Urology",
+    review: "“Thrive is incredible. They helped us grow our business so much that our biggest challenge now is managing the overflow. We're exactly where we wanted to be, thanks to them.”"
+  },
+  {
+    img: "../images/download.jpg",
+    name: "NINI",
+    occupation: "CEO – Accurate Leak and Line",
+    review: "“Working with Thrive has been a pleasure. Their dedication, exceptional support, and attention to our needs make us excited for a long-term partnership.”"
+  }
+];
+
+// Render carousel items
+const renderItems = () => (
+  carouselItems.map((item, index) => (
+    <div className="carousel-item-content" key={index}>
+      <Card className="carousel-card">
+        <Avatar className='avatar-review' src={item.img} />
+        <h5>{item.name}</h5>
+        <Rate disabled defaultValue={5} />
+        <p>{item.review}</p>
+      </Card>
+    </div>
+  ))
+);
+
+const ReviewCarousel = () => {
+  const carouselRef = React.useRef(null);
+
+  const slidePrev = () => carouselRef.current.slidePrev();
+  const slideNext = () => carouselRef.current.slideNext();
 
   return (
-    <div className="test-review"><h2 className="test-txt">TESTIMONIALS</h2>
-    <div className="main-container">
-      <div className="outer-div">
-        <div className="inner-div">
-          <Carousel autoplay dots={false}>
-            <div style={contentStyle}>
-              <div className="carousel-review-content">
-                <img
-                  src="../images/review1.avif"
-                  alt="Icon 1"
-                  className="review-icon"
-                />
-                <div className="review-text-container">
-                  <p className="review-txt">
-                    I've been working with Kevin for the past 6 months on a
-                    project and he has been very helpful! We initially had some
-                    issues with the printing of our boxes but they worked with
-                    us to make it right. Our boxes look beautiful!!
-                  </p>
-                  <p className="review-client-txt">GILHAD OHANA - CLIENT</p>
-                </div>
-              </div>
-            </div>
-
-            <div style={contentStyle}>
-              <div className="carousel-review-content">
-                <img
-                  src="../images/review1.avif"
-                  alt="Icon 1"
-                  className="review-icon"
-                />
-                <div className="review-text-container">
-                  <p className="review-txt">
-                    I've been working with Kevin for the past 6 months on a
-                    project and he has been very helpful! We initially had some
-                    issues with the printing of our boxes but they worked with
-                    us to make it right. Our boxes look beautiful!!
-                  </p>
-                  <p className="review-client-txt">GILHAD OHANA - CLIENT</p>
-                </div>
-              </div>
-            </div>
-
-            <div style={contentStyle}>
-              <div className="carousel-review-content">
-                <img
-                  src="../images/review1.avif"
-                  alt="Icon 1"
-                  className="review-icon"
-                />
-                <div className="review-text-container">
-                  <p className="review-txt">
-                    I've been working with Kevin for the past 6 months on a
-                    project and he has been very helpful! We initially had some
-                    issues with the printing of our boxes but they worked with
-                    us to make it right. Our boxes look beautiful!!
-                  </p>
-                  <p className="review-client-txt">GILHAD OHANA - CLIENT</p>
-                </div>
-              </div>
-            </div>
-            {/* Repeat for other carousel items */}
-          </Carousel>
+    <div className="customerdiv">
+      <h1 className="customers">Testimonials</h1>
+      {/* <p className="customer">Client highlighting our services and successful results.</p> */}
+      <div className="carousel-wrapper">
+        <div className="carousel-container1">
+          <AliceCarousel
+            ref={carouselRef} 
+            items={renderItems()}
+            responsive={{
+              0: { items: 1 },
+              568: { items: 2 },
+              1024: { items: 3 },
+            }}
+            controlsStrategy="alternate"
+            autoPlay
+            autoPlayInterval={3000}
+            infinite
+          />
+          
         </div>
       </div>
     </div>
-    </div>
   );
-}
+};
 
 export default ReviewCarousel;

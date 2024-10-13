@@ -65,9 +65,9 @@ const Faq1 = () => {
                 <div className="faq-columns">
                    
                     <div className="faq-questions-col">
-                    <div className="faq-heading-col">FAQs
+                    <div className="faq-heading-col"> 
                         <p className="frequently"><span className="span">Frequently</span> Asked Questions</p>
-                        <p  className="faq-heading-col1">Discover FAQs, Your Key to Clarity</p>
+                         
                     </div>
                         {faqs.map((faq, index) => (
                             <div key={index} className="faq-item">
