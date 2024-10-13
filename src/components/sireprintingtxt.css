@@ -1,47 +1,32 @@
 .sire-txt-main {
-    padding: 20px; /* Add padding to the main container */
-  }
-  
-  .column1-txt, .column2-txt {
-    margin: 10px; /* Margin around each column */
-  }
-  
-  .row1-txt, .row2-txt, .row3-txt, 
-  .row4-txt, .row5-txt, .row6-txt {
-    margin-bottom: 1rem; /* Space between rows */
-    text-align: left; /* Align text to the left */
-    background-color: #f0f0f0; /* Light gray background color */
-    border-radius: 2px; /* Border radius */
-    padding: 15px; /* Padding inside rows for better spacing */
-  }
-  
-  .h1-txt, .h2-txt, .h3-txt, 
-  .h4-txt, .h5-txt, .h6-txt {
-    margin: 0; /* Remove default margin */
-    font-weight: bold; /* Make headings bold */
-  }
-  
-  .p1-txt, .p2-txt, .p3-txt, 
-  .p4-txt, .p5-txt, .p6-txt {
-    margin: 0; /* Remove default margin */
-    margin-top: 1rem; /* Space above paragraphs */
-    font-size: 1rem;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .sire-txt-main {
-      padding: 10px; /* Adjust padding for smaller screens */
-    }
-  
-    .h1-txt, .h2-txt, .h3-txt, 
-    .h4-txt, .h5-txt, .h6-txt {
-      font-size: 1.2em; /* Adjust heading size for smaller screens */
-    }
-  
-    .p1-txt, .p2-txt, .p3-txt, 
-    .p4-txt, .p5-txt, .p6-txt {
-      font-size: 0.9em; /* Adjust paragraph size for smaller screens */
-    }
-  }
-  
+  padding: 20px;
+}
+
+.learn-txt {
+  font-size: 16px;
+}
+.how-txt{
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+.sire-txt-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.sire-txt-content {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+.img-sire-txt{
+  width: 80%;
+  border-radius: 2px;
+ 
+}
+.col2-sire{
+  display: flex;
+align-items: center;
+justify-content: center;
+}

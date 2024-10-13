@@ -53,7 +53,7 @@ function Christmas1() {
 
       <div className="allproduct-main">
         <Row className="allproduct-row">
-          <Col xs={24} md={14} className="allproduct-col1">
+        <Col span={17} xs={24} md={17} className="allproduct-col1">
             <p className="allproduct-txt">Christmas Boxes</p>
             <Row>
               {cardData.map((card, index) => (
@@ -75,7 +75,7 @@ function Christmas1() {
             </Row>
           </Col>
 
-          <Col xs={24} md={10} className="simpletable-right-column">
+          <Col span={7} xs={24} md={7} className="simpletable-right-column">
             <Christmasform />
           </Col>
         </Row>

@@ -1,5 +1,5 @@
 #faq {
-    padding: 40px 20px;
+     
     background-color: #f9f9f9;
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center content horizontally */
@@ -34,6 +34,7 @@
     padding: 10px;
     background-color: #fff;
     cursor: pointer;
+    margin: 0 50px 20px;
 }
 
 .faq-item:hover .faq-toggle-icon {
@@ -49,7 +50,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
-    font-weight: bold;
+    
     color: #333;
     margin-bottom: 10px;
 }
@@ -72,20 +73,21 @@
     margin-top: 2rem;
 }
 
-.faq-heading-col1 {
+/* .faq-heading-col1 {
     flex: 1;
     margin-bottom: 3rem;
     font-size: 1rem;
     font-weight: bold;
     color: #444;
     text-align: center;
-}
+} */
 
 .frequently {
     flex: 1;
     font-size: 2rem;
     font-weight: bold;
     color: #050505;
+    margin-bottom: 3rem !important;
 }
 
 /* Responsive Adjustments */
@@ -93,8 +95,8 @@
     .faq-columns {
         flex-direction: column;
     }
-    .faq-heading-col, .faq-questions-col {
+    /* .faq-heading-col, .faq-questions-col {
         flex: none;
         margin-bottom: 20px;
-    }
+    } */
 }
