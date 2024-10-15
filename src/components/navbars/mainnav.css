@@ -1,18 +1,116 @@
 .btn-mainnav {
+  background-color: black !important;
+  border-color: black !important;
+  color: white;
+  border: none; /* Remove border if needed */
+  font-size: 13px !important; /* Adjust button text size to make it smaller */
+  padding: 8px 16px !important; /* Adjust button padding for a smaller button */
+  font-weight: bold !important;
+}
+
+.btn-mainnav:hover {
+  background-color: rgb(
+    253,
+    249,
+    249
+  ) !important; /* Change hover color as needed */
+  color: rgb(8, 8, 8) !important; /* Ensure text color stays black on hover */
+  font-weight: bold;
+}
+
+.text-color {
+  font-weight: bold;
+  font-size: 14px; /* Keep link text size as is */
+}
+
+.nav-link {
+  font-size: 14px; /* Keep Nav.Link text size as is */
+}
+
+.nav-dropdown-toggle {
+  font-size: 14px; /* Keep NavDropdown text size as is */
+}
+
+/* Optional: Adjust the dropdown items */
+.dropdown-item {
+  font-size: 14px; /* Keep dropdown item text size as is */
+}
+
+.logo1 {
+  position: absolute;
+  left: 50%; /* Position it halfway from the left */
+  transform: translateX(-50%); /* Shift it back by half its width */
+  z-index: 9999; /* High z-index to ensure it sits above other elements */
+}
+.logo2 {
+  position: absolute;
+  right: 20px;  /* Aligns it to the right of the container */
+  top: 50%; /* Position it vertically centered */
+  transform: translateY(-50%); /* Shift it back by half its height */
+  z-index: 9999; /* High z-index to ensure it sits above other elements */
+}
+
+
+.navbar {
+  width: 100%;
+}
+
+@media (max-width: 1299px) {
+  .text-color {
+    font-weight: bold;
+    font-size: 12px; /* Keep link text size as is */
+  }
+  .btn-mainnav {
     background-color: black !important;
     border-color: black !important;
     color: white;
     border: none; /* Remove border if needed */
+    font-size: 10px !important; /* Adjust button text size to make it smaller */
+    padding: 8px 16px !important; /* Adjust button padding for a smaller button */
+    font-weight: bold !important;
   }
-  
-  .btn-mainnav:hover {
-    background-color: rgb(253, 249, 249) !important; /* Change hover color as needed */
-    color: rgb(8, 8, 8) !important; /* Ensure text color stays white on hover */
-    font-weight: bold;
-  }
+}
+@media (max-width: 1172px) {
   .text-color {
-     font-weight: bold;
+    font-weight: bold;
+    font-size: 11px; /* Keep link text size as is */
   }
-  .margin{
-    
+  .btn-mainnav {
+    background-color: black !important;
+    border-color: black !important;
+    color: white;
+    border: none; /* Remove border if needed */
+    font-size: 8px !important; /* Adjust button text size to make it smaller */
+    padding: 8px 16px !important; /* Adjust button padding for a smaller button */
+    font-weight: bold !important;
   }
+}
+@media (max-width: 1105px) {
+  .text-color {
+    font-weight: bold;
+    font-size: 10px; /* Keep link text size as is */
+  }
+  .btn-mainnav {
+    background-color: black !important;
+    border-color: black !important;
+    color: white;
+    border: none; /* Remove border if needed */
+    font-size: 7px !important; /* Adjust button text size to make it smaller */
+    padding: 8px 16px !important; /* Adjust button padding for a smaller button */
+    font-weight: bold !important;
+  }
+}
+@media (min-width: 991px) {
+  .logo1 {
+    display: none; /* Hides the logo */
+  }
+  .logo2 {
+    display: none; /* Hides the logo */
+  }
+}
+@media (max-width: 1046px) {
+  .text-color {
+    font-weight: bold;
+    font-size: 8px; /* Keep link text size as is */
+  }
+}

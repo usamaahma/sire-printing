@@ -20,7 +20,7 @@ function Sireprintingtxt1() {
           <img
             src="../images/how.avif"
             alt="Descriptive Alt Text"
-            className="img-sire-txt"
+            className="img-sire-txt"  
           />
         </Col>
         <Col span={12} sm={12} xs={24}>

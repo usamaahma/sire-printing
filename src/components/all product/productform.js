@@ -1,6 +1,5 @@
 import { Button, Form, Select, Input, Upload, Row, Col } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import React from "react";
 
 const { Option } = Select;
 

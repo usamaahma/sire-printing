@@ -6,12 +6,6 @@
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap */
 }
-.footer-input {
-  margin-top: 1.5rem;
-  width: 80%; /* Adjust this value as needed */
-   
-}
-
 
 /* Styles for columns */
 .footersire-column {
@@ -19,10 +13,62 @@
   flex: 0 0 50%; /* 2 columns (50% width each) */
   padding: 10px; /* Padding for spacing */
 }
+
+/* Adjust spacing for paragraphs */
+.sirefooter-p-txt {
+  font-size: 1rem;
+  margin: 10px 0; /* Add top and bottom margin for spacing */
+  font-weight: normal; /* Remove bold */
+}
+
+/* Styles for input */
+.footer-input {
+  margin-top: 1.5rem;
+  width: 80%; /* Adjust this value as needed */
+  height: 2.5rem;
+}
+
+/* Other existing styles remain unchanged */
+.footer-input-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Add margin for spacing */
+}
+
+/* Button styles */
 .submit-button {
   margin-top: 1.5rem;
   margin-left: 1rem;
+  background-color: #7c7b7b; /* Button background color */
+  color: #fff; /* White text color for button */
+  padding: 10px 15px; /* Adjust padding for button */
+  border: none; /* Remove default border */
+  border-radius: 2px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  height: 2.5rem;
+  display: flex; /* Center icon in button */
+  align-items: center; /* Center icon vertically */
 }
+
+.footer-visaimg {
+  margin-top: 1.5rem;
+}
+
+/* Add spacing for headings */
+.get-txt {
+  font-size: 1.6rem;
+  margin: 16px 0; /* Add margin for spacing */
+  font-weight: normal; /* Remove bold */
+}
+
+/* Social icons */
+.footersire-social-icons {
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-start; /* Align icons to the left */
+  gap: 10px; /* Space between icons */
+  margin-top: 1.5rem;
+}
+
 /* Responsive styles */
 @media (max-width: 1000px) {
   .footersire-column {
@@ -36,69 +82,6 @@
   }
 }
 
-.footersire-column img {
-  max-width: 100%; /* Ensure images are responsive */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Other existing styles remain unchanged */
-.footer-input-container {
-  display: flex;
-  align-items: center; /* Center items vertically */
-  margin-bottom: 10px; /* Add margin for spacing */
-}
-
-.footer-input {
-  padding: 10px;
-  width: 100%; /* Full width on small screens */
-  border: 1px solid #ccc; /* Border style */
-  border-radius: 2px; /* Rounded corners */
-  margin-right: -5px; /* Reduce gap with button */
-}
-
-.submit-button {
-  background-color: #7c7b7b; /* Button background color */
-  color: #fff; /* White text color for button */
-  padding: 10px 15px; /* Adjust padding for button */
-  border: none; /* Remove default border */
-  border-radius: 2px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
-  height: 2.7rem;
-  display: flex; /* Center icon in button */
-  align-items: center; /* Center icon vertically */
-}
-
-.submit-button svg {
-  font-size: 20px; /* Adjust icon size */
-  color: #fff; /* Icon color */
-}
-
-.footersire-social-icons {
-  display: flex; /* Use flexbox for layout */
-  justify-content: flex-start; /* Align icons to the left */
-  gap: 10px; /* Space between icons */
-  margin-top: 1.5rem;
-}
-
-.footersire-social-icons svg {
-  font-size: 30px; /* Adjust icon size */
-  cursor: pointer; /* Change cursor to pointer */
-}
-
-.get-txt {
-  font-size: 1.6rem;
-  font-weight: bold; /* Make text bold */
-}
-
-.footer-visaimg {
-  margin-top: 1.5rem;
-}
-
-/* Make all paragraph text bold */
-.sirefooter-p-txt {
-  font-weight: bold; /* Make text bold */
-  font-size: 1rem;
-}
 @media (max-width: 575px) {
   .footersire-footer {
     display: flex;
@@ -118,10 +101,6 @@
     justify-content: center; /* Center the input and button */
   }
 
-  .footer-input {
-    margin-right: 0; /* Reset right margin for centered input */
-  }
-
   .submit-button {
     margin-top: 1rem; /* Adjust top margin for better spacing */
   }
@@ -129,8 +108,4 @@
   .footersire-social-icons {
     justify-content: center; /* Center social icons */
   }
-  .submit-button {
-     margin-top: 1.4rem;
-  }
 }
-

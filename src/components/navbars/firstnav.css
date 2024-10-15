@@ -1,15 +1,10 @@
-.navbar {
-  padding: 0 20px;
-}
-
-.nav-item {
-  margin-right: 15px;
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .nav-item {
-    margin-right: 10px; /* Adjust margin on smaller screens */
+ 
+ 
+@media (max-width: 992px) {
+  .nav-main {
+    display:none !important;  /* Use !important to force it */
   }
 }
+
+ 
+ 
