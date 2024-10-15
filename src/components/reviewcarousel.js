@@ -8,19 +8,19 @@ import './reviewcarousel.css';
 // Carousel items
 const carouselItems = [
   {
-    img: "../images/download.jpg",
+    img: "../images/review.jpg",
     name: "John Wick",
     occupation: "Broker – About Roatan Real Estate",
     review: "“Thrive exceeded our expectations in every way. They are honest, reliable, and handle all needs quickly. They deliver on their promises without any fuss.”"
   },
   {
-    img: "../images/download.jpg",
+    img: "../images/review.jpg",
     name: "ACP",
     occupation: "Practice Manager – PARC Urology",
     review: "“Thrive is incredible. They helped us grow our business so much that our biggest challenge now is managing the overflow. We're exactly where we wanted to be, thanks to them.”"
   },
   {
-    img: "../images/download.jpg",
+    img: "../images/review.jpg",
     name: "NINI",
     occupation: "CEO – Accurate Leak and Line",
     review: "“Working with Thrive has been a pleasure. Their dedication, exceptional support, and attention to our needs make us excited for a long-term partnership.”"
@@ -44,8 +44,7 @@ const renderItems = () => (
 const ReviewCarousel = () => {
   const carouselRef = React.useRef(null);
 
-  const slidePrev = () => carouselRef.current.slidePrev();
-  const slideNext = () => carouselRef.current.slideNext();
+ 
 
   return (
     <div className="customerdiv">

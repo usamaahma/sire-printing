@@ -4,17 +4,32 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./mainnav.css";
 
 function Mainnav1() {
+  
   return (
     <Navbar
       expand="lg"
-      className="bg-body-tertiary sticky-top mb-0"
-      style={{ margin: 0 }}
+      className="bg-body-tertiary sticky-top"
+      style={{ width: "100%" }} // Full width for the background
     >
       <Container fluid>
+        <Link to="/" className="logo1">
+          <img
+            src="../images/sire logo.png"
+            alt="Sire Printing"
+            style={{
+              width: "120px",
+              height: "50px",
+            }}
+          />
+        </Link>
+       
+        <FaSearch className="logo2" style={{ fontSize: "1.3rem", color: "black" }} />
+
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
@@ -49,32 +64,20 @@ function Mainnav1() {
                 <NavDropdown.Item href="#action5" className="text-color">
                   Something else here
                 </NavDropdown.Item>
-                <Nav.Link href="#action2" className="my-2 mx-2">
-                  Custom Box Styles
-                </Nav.Link>
               </NavDropdown>
               <Nav.Link as={Link} to="Custom-box-styles" className="my-2 mx-2">
                 Custom Box Styles
               </Nav.Link>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  margin: "0 15px",
-                }}
-              >
-                <Link to="/">
-                  <img
-                    src="../images/sire logo.png" // Replace with the path to your image
-                    alt="Sire Printing"
-                    style={{
-                      width: "120px",
-                      height: "50px",
-                      marginRight: "10px",
-                    }} // Adjust size as needed
-                  />
-                </Link>
-              </div>
+              <Link to="/" className="logo">
+                <img
+                  src="../images/sire logo.png"
+                  alt="Sire Printing"
+                  style={{
+                    width: "120px",
+                    height: "50px",
+                  }}
+                />
+              </Link>
               <Nav.Link as={Link} to="Custom-stickers" className="my-2 mx-2">
                 Custom Stickers
               </Nav.Link>
@@ -84,7 +87,7 @@ function Mainnav1() {
               <Nav.Link as={Link} to="portfolio" className="my-2 mx-2">
                 Portfolio
               </Nav.Link>
-              <Button type="text" className="btn-mainnav ">
+              <Button type="text" className="btn-mainnav">
                 Get a Free Quote
               </Button>
             </Nav>
