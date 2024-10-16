@@ -1,0 +1,172 @@
+/* General styles */
+.centered-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .centered-row {
+    width: 100%;
+    display: flex;
+  }
+  
+  .text-column {
+    text-align: left;
+  }
+  
+  .img-fluid {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .expresstext-clothing {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .largetext-express {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  .image-post {
+    width: 10rem; /* Fixed width for post image */
+  }
+  
+  .list-express {
+    font-size: large;
+    font-weight: 600;
+  }
+  
+  .hero-firstdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Use flex-start for alignment */
+    margin-top: 1rem; /* Add margin for separation */
+  }
+  
+  .second-firstdiv {
+    border: solid 2px #436886;
+    padding: 1rem;
+    width: 60%; /* Set to 100% for responsive behavior */
+    max-width: 400px; /* Optional: set a max-width for better appearance */
+    border-radius: 2rem;
+  }
+  
+  .order-list {
+    list-style-type: decimal;
+    width: 90%;
+    font-size: 1rem;
+  }
+  
+  .our-productexpress {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .main-image-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Ensure it takes full width */
+  }
+  
+  .main-image-container {
+    overflow: hidden; /* Ensure the image stays within the container when enlarged */
+    position: relative;
+    cursor: crosshair; /* Optional: Changes cursor to indicate interaction */
+  }
+  
+  .main-image {
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.2s ease, transform-origin 0.2s ease; /* Smooth transition */
+    transform-origin: center center; /* Set default transform origin to center */
+  }
+  
+  /* Magnifying effect */
+  .main-image-container:hover .main-image {
+    transform: scale(2); /* Scale the image when hovering */
+    cursor: crosshair; /* Optional: Changes cursor to indicate interaction */
+  }
+  
+  .thumbnail-carousel {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 1rem 0; /* Add vertical padding */
+    background-color: white; /* Background color for contrast */
+  }
+  
+  .thumbnail-image {
+    width: 75px; /* Width of thumbnails */
+    max-height: 80px; /* Set a max height for thumbnails */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between thumbnails */
+    cursor: pointer; /* Indicate that thumbnails are clickable */
+    transition: transform 0.2s, border-color 0.2s; /* Smooth scale effect */
+    border: 2px solid lightgray; /* Default border color for unselected images */
+    border-radius: 5px; /* Rounded corners for thumbnails */
+    padding: 2px; /* Padding inside the border */
+    background-color: white; /* Background color for thumbnails */
+  }
+  
+  .thumbnail-image.selected {
+    border-color: #436886; /* Darker border color for selected image */
+    transform: scale(1.1); /* Optional: Slightly scale up selected image */
+  }
+  
+  .thumbnail-image:hover {
+    border-color: gray; /* Change border color on hover for unselected images */
+  }
+  
+  /* Media Query for screens 724px and smaller */
+  @media (max-width: 724px) {
+    .hero-firstdiv {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text for all child elements */
+    }
+  
+    .second-firstdiv {
+      width: auto; /* Reset width for small screens */
+      padding: 0.5rem; /* Adjust padding for a better fit */
+    }
+  
+    .expresstext-clothing {
+      font-size: 1.5rem; /* Smaller font size */
+    }
+  
+    .largetext-express {
+      font-size: 1rem; /* Smaller font size */
+    }
+  
+    .our-productexpress {
+      font-size: 1.2rem; /* Smaller font size for product process title */
+    }
+  
+    .image-post {
+      width: 100%; /* Ensure the image takes full width */
+      margin: 0 auto; /* Center align the image */
+    }
+  
+    .centered-row {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+  
+    .text-column,
+    .image-column {
+      width: 100%; /* Full width on small screens */
+      margin-bottom: 2rem; /* Space between columns */
+      text-align: center; /* Center align the content */
+    }
+  
+    .list-express,
+    .order-list {
+      padding-left: 15px; /* Adjust padding for lists on smaller screens */
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .second-firstdiv {
+      width: auto; /* Reset width for very small screens */
+    }
+  }
+  

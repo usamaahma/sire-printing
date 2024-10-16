@@ -7,49 +7,104 @@
   background-color: #ffffff; /* Optional background for columns */
   border: 1px solid #e0e0e0; /* Optional border */
   border-radius: 4px; /* Rounded corners */
+  /* margin-left: 4rem; */
+  height: auto;
 }
+.column1-content {
+  padding: 10px; /* Padding inside each column */
+  background-color: #ffffff; /* Optional background for columns */
+  border: 1px solid #e0e0e0; /* Optional border */
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 2rem;
+  margin-left: 2.5rem;
+  margin-bottom: 2rem;
+}
+.nested-column-content {
+  margin-bottom: -4rem;
+}
+
 .center-text-small {
   text-align: center;
 }
 .image-gallery-small {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap */
-    gap: 16px; /* Space between items */
-
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 16px; /* Space between items */
 }
-  
-  .image-card-small {
-    flex: 0 0 calc(50% - 16px); /* Each card takes up 50% of the row minus gap */
-    box-sizing: border-box; /* Ensure padding is included in width */
+
+.image-card-small {
+  flex: 0 0 calc(50% - 16px); /* Each card takes up 50% of the row minus gap */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.image-wrapper-small {
+  border-radius: 4px; /* Rounded corners */
+  text-align: center; /* Center align content */
+}
+
+.responsive-image-small {
+  max-width: 50%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image-caption-small {
+  margin-top: 8px; /* Space between image and caption */
+  font-size: 14px; /* Font size for caption */
+}
+.rigid-txt {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.txt-rigid-maindiv {
+  padding-top: 2rem;
+}
+/* Media query for small screens */
+@media (max-width: 1073px) {
+  .column1-content {
+    margin-left: 1rem;
+    width: 96%;
   }
-  
-  .image-wrapper-small {
-     border-radius: 4px; /* Rounded corners */
-     text-align: center; /* Center align content */
+}
+@media (max-width: 991px) {
+  .nested-column-content {
+    margin-bottom: 0 !important;
   }
-  
+
   .responsive-image-small {
-    max-width: 50%; /* Ensure image is responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 20%;
   }
-  
-  .image-caption-small {
-    margin-top: 8px; /* Space between image and caption */
-    font-size: 14px; /* Font size for caption */
+}
+@media (max-width: 937px) {
+  .column1-content {
   }
-  .rigid-txt{
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-     
+}
+@media (max-width: 650px) {
+  .column-content {
+    width: 100%;
   }
-  .txt-rigid-maindiv{
-     padding-top: 2rem;
+}
+@media (max-width: 600px) {
+  .image-card-small {
+    flex: 0 0 100%; /* Stack cards vertically on small screens */
   }
-  /* Media query for small screens */
-  @media (max-width: 600px) {
-    .image-card-small {
-      flex: 0 0 100%; /* Stack cards vertically on small screens */
-    }
+}
+@media (max-width: 555px) {
+  .column-content {
+    width: 80%;
+    margin-left: 4rem;
   }
-  
+}
+@media (max-width: 486px) {
+  .column1-content {
+    width: 125%;
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .column-content {
+    width: 70%;
+  }
+   
+}
