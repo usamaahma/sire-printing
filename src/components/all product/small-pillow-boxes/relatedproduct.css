@@ -1,0 +1,25 @@
+.head-txt {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.custom-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem; /* Added margin for left and right */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    width: 90%; /* Make sure it takes full width within the column */
+}
+
+.custom-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.title-custom {
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 160, 21);
+    height: 3rem;
+}
