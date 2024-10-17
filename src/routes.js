@@ -12,6 +12,7 @@ import Customstickerpage from './pages/customstickerpage';
 import Christmasboxpage from './pages/christmasboxpage';
 import Portfoliopage1 from './pages/portfoliopage';
 import SmallPillowPage from './pages/smallpillowpage';
+import Kraftpage from './pages/kraftpage';
  
  
  
@@ -33,6 +34,7 @@ const AppRoutes = () => {
                     <Route path="Christmas-boxes" element={<Christmasboxpage />} />
                     <Route path="portfolio" element={<Portfoliopage1 />} />
                     <Route path='small-pillow-boxes' element={<SmallPillowPage/>}/>
+                    <Route path='kraft-cereal-boxes' element={<Kraftpage/>}/>
                 </Routes>
                 <Footer1 />
             </>

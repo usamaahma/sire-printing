@@ -1,8 +1,9 @@
 import React from "react";
 import { Button, Form, Select, Input, Upload, Row, Col } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import "./smallpillow.css"; // Ensure you have your CSS file for styling
-import Smallpillowimg1 from "./smallpillowimg";
+ 
+import Kraftimg1 from "./kraftimg";
+ 
 
 const { Option } = Select;
 const imagesData = [
@@ -16,7 +17,7 @@ const imagesData = [
   { src: "../images/freedelivery.webp", text: "Free Delivery" },
 ];
 
-const Smallpillow = () => {
+const Kraftcereal1 = () => {
   const handleFinish = (values) => {
     console.log("Form Values: ", values);
   };
@@ -24,7 +25,7 @@ const Smallpillow = () => {
     <div className="smallpillow-form">
       <div className="txt-rigid-maindiv">
         {" "}
-        <p className="rigid-txt">Small Pillow Boxes</p>
+        <p className="rigid-txt">Kraft Cereal Boxes</p>
       </div>
       <Row style={{ display: "flex", justifyContent: "center" }}>
         {" "}
@@ -39,7 +40,7 @@ const Smallpillow = () => {
           <div className="column-content">
             <div className="column-img-main">
               {/* Content for the first column */}
-              <Smallpillowimg1 />
+              <Kraftimg1 />
             </div>
           </div>
         </Col>
@@ -241,4 +242,4 @@ const Smallpillow = () => {
   );
 };
 
-export default Smallpillow;
+export default Kraftcereal1;

@@ -59,11 +59,29 @@
 .txt-rigid-maindiv {
   padding-top: 2rem;
 }
+.small-label {
+  font-size: 13px; 
+  color: #000;  
+} 
 /* Media query for small screens */
+@media (max-width: 1252px) {
+  .small-label {
+    font-size: 12px; 
+    color: #000; 
+    
+  }
+}
 @media (max-width: 1073px) {
   .column1-content {
     margin-left: 1rem;
     width: 96%;
+  }
+}
+@media (min-width: 992px) {
+  .small-label {
+    font-size: 11px;  
+    color: #000;  
+    font-weight: bold;
   }
 }
 @media (max-width: 991px) {
@@ -77,6 +95,7 @@
 }
 @media (max-width: 937px) {
   .column1-content {
+
   }
 }
 @media (max-width: 650px) {
@@ -98,13 +117,13 @@
 @media (max-width: 486px) {
   .column1-content {
     width: 125%;
-    margin-left: -1rem;
+    margin-left: -1.2rem;
   }
 }
 
 @media (max-width: 425px) {
   .column-content {
-    width: 70%;
+    width: 75%;
   }
    
 }

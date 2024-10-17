@@ -10,7 +10,11 @@ const cardData = [
     image: "../images/allproduct1.png",
     link: "/small-pillow-boxes",
   },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
+  {
+    title: "Kraft Cereal Boxes",
+    image: "../images/allproduct2.png",
+    link: "/kraft-cereal-boxes",
+  },
   { title: "Incense Boxes", image: "../images/allproduct3.png" },
   { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
   { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
@@ -84,6 +88,13 @@ function Allproduct1() {
                       <Card.Meta
                         title={
                           card.title === "Small Pillow Boxes" ? (
+                            <Link
+                              to={card.link}
+                              className="allproduct-card-link"
+                            >
+                              {card.title}
+                            </Link>
+                          ) : card.title === "Kraft Cereal Boxes" ? (
                             <Link
                               to={card.link}
                               className="allproduct-card-link"

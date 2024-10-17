@@ -65,6 +65,13 @@
     color: #070707 !important;
     border-color: #070707;
 }
+
+.allproduct-card-link{
+  color: #070707;
+}
+.allproduct-card-link:hover{
+  color: white;
+}
 /* Responsive adjustments */
  
  

@@ -1,0 +1,36 @@
+.finishing-custom-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem; /* Added margin for left and right */
+    overflow: hidden; /* Ensure the zoomed image does not overflow the card */
+}
+
+.finishing-image-container {
+    position: relative; /* Position relative to contain absolute elements */
+}
+
+.finishing-image-container img {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px; /* Match the card's border radius */
+    transition: transform 0.3s; /* Smooth transition for zoom effect */
+}
+
+.finishing-image-container:hover img {
+    transform: scale(1.2); /* Slightly zoom in the image on hover */
+}
+
+.finishing-overlay {
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width of the card */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    text-align: center; /* Center the text */
+}
+.finishing-head-txt{
+    text-align: center;
+    font-weight: bold;
+}
