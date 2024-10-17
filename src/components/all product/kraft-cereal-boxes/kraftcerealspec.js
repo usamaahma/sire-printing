@@ -1,8 +1,7 @@
 import React from "react";
 import { Row, Col } from "antd";
 import { Table } from "antd";
-import "./smallpillowspec.css";
-import Smallpillowcarousel from "./smallpillowcarousel";
+import Kraftcarousel from "./kraftcarousel";
 
 const columns = [
   {
@@ -16,7 +15,7 @@ const data = [
   {
     key: "1",
     boxspecs: "Dimensions",
-    description: "All Sizes Available",
+    description: "	All styles available including Seal End, Gable Style, Pop Display Style",
   },
   {
     key: "2",
@@ -26,13 +25,13 @@ const data = [
   {
     key: "3",
     boxspecs: "Included Options",
-    description: "Gloss/Matte Lamination, Die Cutting, Pasting",
+    description: "	Perforation, Die Cutting, Pre-Scored, Pre-Glued",
   },
   {
     key: "4",
     boxspecs: "Additional Options",
     description:
-      "Perforation, PVC Window Patch, Cardboard/Foam Inserts, Raised Ink, Foil Stamping, Spot UV, Embossing, Debossing.",
+      "	Spot UV, Hot Foil Stamping, Raised Ink, Embossing",
   },
   {
     key: "5",
@@ -53,10 +52,10 @@ const data = [
   {
     key: "8",
     boxspecs: "Assembling",
-    description: "Pre-Assembled, Ready to use.",
+    description: "Eco-friendly assembling, shipped flat.",
   },
 ];
-function Smallpillowspec() {
+function Kraftspec() {
    
 
   return (
@@ -67,7 +66,7 @@ function Smallpillowspec() {
           <div className="text-column">
             <div className="tablehead-div">
               <p className="tablehead-txt">
-                Rigid Cigarette Boxes Specifications
+              Kraft Cereal Boxes Specifications
               </p>
             </div>
             <Table columns={columns} dataSource={data} size="middle" />
@@ -80,11 +79,11 @@ function Smallpillowspec() {
             <p className="tablehead-txt">Customer Feedback</p>
           </div>
 
-           <Smallpillowcarousel/>
+           <Kraftcarousel/>
         </Col>
       </Row>
     </div>
   );
 }
 
-export default Smallpillowspec;
+export default Kraftspec;
