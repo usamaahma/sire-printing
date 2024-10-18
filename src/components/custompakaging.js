@@ -1,19 +1,20 @@
 import React from 'react';
 import { Card, Row, Col } from 'antd';
+import { Link } from "react-router-dom";
 import './custompakaging.css';
 
 const cardData = [
-  { title: 'CBD Packaging', image: '../images/card1.webp' },
-  { title: 'Custom Retail Packaging', image: '../images/card2.webp' },
-  { title: 'Rigid Boxes', image: '../images/card3.webp' },
-  { title: 'Food Packaging', image: '../images/card4.webp' },
-  { title: 'Cosmetic Packaging Boxes', image: '../images/card5.webp' },
-  { title: 'Eco-Friendly Packaging', image: '../images/card6.webp' },
-  { title: 'Woven Labels', image: '../images/card7.webp' },
-  { title: 'Custom Hang Tags', image: '../images/card8.webp' },
-  { title: 'Woven Embroidered Patches', image: '../images/card9.webp' },
-  { title: 'Christmas Boxes', image: '../images/card10.webp' },
-  { title: 'Cardboard Boxes', image: '../images/card11.webp' },
+  { title: 'CBD Packaging', image: '../images/card1.webp', link: "/CBD-Packaging" },
+  { title: 'Custom Retail Packaging', image: '../images/card2.webp', link: "/custom-retail-packaging" },
+  { title: 'Rigid Boxes', image: '../images/card3.webp', link: "/rigid-boxes" },
+  { title: 'Food Packaging', image: '../images/card4.webp', link: "/food-packaging" },
+  { title: 'Cosmetic Packaging Boxes', image: '../images/card5.webp', link: "/cosmetic-packaging" },
+  { title: 'Eco-Friendly Packaging', image: '../images/card6.webp', link: "/eco-friendly-packaging" },
+  { title: 'Woven Labels', image: '../images/card7.webp', link: "/woven-labels" },
+  { title: 'Custom Hang Tags', image: '../images/card8.webp', link: "/custom-hang-tags" },
+  { title: 'Woven Embroidered Patches', image: '../images/card9.webp', link: "/woven-embroidered-patches" },
+  { title: 'Christmas Boxes', image: '../images/card10.webp', link: "/christmas-boxes" },
+  { title: 'Cardboard Boxes', image: '../images/card11.webp', link: "/cardboard-boxes" },
 ];
 
 function Custompakaging1() {
@@ -23,13 +24,15 @@ function Custompakaging1() {
       <Row gutter={16}>
         {cardData.map((card, index) => (
           <Col key={index} xs={12} sm={8} md={6} lg={6}>
-            <Card
-              className="custom-card"
-              hoverable
-              cover={<img alt={card.title} src={card.image} />}
-            >
-              <Card.Meta title={card.title} className='title-custom'/>
-            </Card>
+            <Link to={card.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Card
+                className="custom-card"
+                hoverable
+                cover={<img alt={card.title} src={card.image} />}
+              >
+                <Card.Meta title={card.title} className='title-custom' />
+              </Card>
+            </Link>
           </Col>
         ))}
       </Row>

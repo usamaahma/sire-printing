@@ -1,27 +1,45 @@
 .portfolio-container {
-    padding: 20px; /* Add some padding around the container */
-    text-align: center;
-    margin-left: 5rem;  /* Add left margin */
-    margin-right: 5rem; /* Add right margin */
-  }
-  
-  .portfolio-txt {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 3rem !important;
-  }
-  
-  .portfolio-card {
-    transition: transform 0.2s; /* Animation for hover effect */
-    width: 95%; /* Decrease the width of the cards */
-    padding: 0% !important;
-     
-  }
-  
-  .portfolio-card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-  }
-  .ant-card .ant-card-body{
-    padding: 0% !important;
-  }
-  
+  padding: 20px; /* Add some padding around the container */
+  text-align: center;
+  margin-left: 5rem; /* Add left margin */
+  margin-right: 5rem; /* Add right margin */
+}
+
+.portfolio-txt {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 3rem !important;
+}
+
+.portfolio-card {
+  transition: transform 0.2s; /* Animation for hover effect */
+  width: 95%; /* Decrease the width of the cards */
+  padding: 0% !important;
+}
+.image-modal-post {
+  width: 60%; /* Make the image take the full width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Remove any inline spacing */
+  margin: 0 auto;
+}
+.ant-modal .ant-modal-content{
+  background-color: transparent !important;
+}
+.ant-modal {
+  background-color: transparent; /* Remove the modal background color */
+  padding: 0; /* Remove padding from the modal */
+  margin-top: 3rem;
+  box-shadow: none; /* Remove any shadow, if desired */
+}
+.ant-modal-body {
+  background-color: transparent; /* Remove the modal background color */
+  padding: 0; /* Remove padding from the modal body */
+  background-color: transparent !important;
+  border: none; /* Remove the border, if needed */
+}
+.portfolio-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+.ant-card .ant-card-body {
+  padding: 0% !important;
+}

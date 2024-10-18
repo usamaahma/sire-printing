@@ -4,16 +4,19 @@ import "./portcards.css";
 
 // Sample data for the cards
 const cardData = [
-  { id: 1, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 2, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 3, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 4, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 5, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 6, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 7, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 8, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 9, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
-  { id: 10, images: ["../images/portfolio1.avif", "../images/portfolio2.avif"] },
+  { id: 1, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
+  { id: 2, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
+  { id: 3, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"]},
+  { id: 4, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
+  { id: 5, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
+  { id: 6, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
+  { id: 7, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
+  { id: 8, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
+  { id: 9, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
+  {
+    id: 10,
+    images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] ,
+  },
 ];
 
 function Portcards1() {
@@ -49,12 +52,15 @@ function Portcards1() {
         visible={visible}
         footer={null}
         onCancel={handleCancel}
-        width={800}
       >
-        <Carousel dots>
+        <Carousel dots arrows>
           {currentImages.map((img, index) => (
             <div key={index}>
-              <img alt={`carousel-${index}`} src={img} style={{ width: "100%" }} />
+              <img
+                className="image-modal-post"
+                alt={`carousel-${index}`}
+                src={img}
+              />
             </div>
           ))}
         </Carousel>
