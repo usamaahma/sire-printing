@@ -13,6 +13,9 @@ import Christmasboxpage from './pages/christmasboxpage';
 import Portfoliopage1 from './pages/portfoliopage';
 import SmallPillowPage from './pages/smallpillowpage';
 import Kraftpage from './pages/kraftpage';
+import Rigidciggeratebox from './pages/cbd-packaging/rigidciggeratebox';
+import Luxurycigarbox from './pages/cbd-packaging/luxurycigarbox';
+import Incenseboxpage from './pages/All-products/incenseboxpage';
  
  
  
@@ -35,6 +38,9 @@ const AppRoutes = () => {
                     <Route path="portfolio" element={<Portfoliopage1 />} />
                     <Route path='small-pillow-boxes' element={<SmallPillowPage/>}/>
                     <Route path='kraft-cereal-boxes' element={<Kraftpage/>}/>
+                    <Route path='rigid-cigarette-boxes' element={<Rigidciggeratebox/>}/>
+                    <Route path='luxury-cigar-boxes' element={<Luxurycigarbox/>}/>
+                    <Route path='incense-boxes' element={<Incenseboxpage/>}/>
                 </Routes>
                 <Footer1 />
             </>
