@@ -10,6 +10,7 @@ import {
   FaLinkedin,
   FaPaperPlane,
 } from "react-icons/fa"; // Import icons
+import { Link } from "react-router-dom";
 import { FaPhone } from "react-icons/fa6";
 import "./footer.css";
 
@@ -75,7 +76,9 @@ function Footer1() {
           <p className="sirefooter-p-txt">About Us</p>
           <p className="sirefooter-p-txt">Contact Us</p>
           <p className="sirefooter-p-txt">Portfolio</p>
-          <p className="sirefooter-p-txt">Blogs</p>
+          <Link to="/Blogs" className="sirefooter-p-txt">
+            Blogs
+          </Link>
           <p className="sirefooter-p-txt">Sitemap</p>
           <p className="sirefooter-p-txt">Privacy Policy</p>
           <p className="sirefooter-p-txt">Terms And Conditions</p>
