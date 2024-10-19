@@ -16,6 +16,10 @@ import Kraftpage from './pages/kraftpage';
 import Rigidciggeratebox from './pages/cbd-packaging/rigidciggeratebox';
 import Luxurycigarbox from './pages/cbd-packaging/luxurycigarbox';
 import Incenseboxpage from './pages/All-products/incenseboxpage';
+import Smallmailerboxpage from './pages/cbd-packaging/smallmailerboxpage';
+import Blog from './components/blogs/blog';
+import Foodpack from './components/blogs/foodpackaging';
+import Tenreasonsccboxes from './components/blogs/tenreasonsccboxes';
  
  
  
@@ -41,6 +45,10 @@ const AppRoutes = () => {
                     <Route path='rigid-cigarette-boxes' element={<Rigidciggeratebox/>}/>
                     <Route path='luxury-cigar-boxes' element={<Luxurycigarbox/>}/>
                     <Route path='incense-boxes' element={<Incenseboxpage/>}/>
+                    <Route path='small-mailer-boxes' element={<Smallmailerboxpage/>}/>
+                    <Route path='Blogs' element={<Blog/>}/>
+                    <Route path='food-packaging' element={<Foodpack/>}/>
+                    <Route path='10-reasons-to-love-custom-cereal-boxes' element={<Tenreasonsccboxes/>}/>
                 </Routes>
                 <Footer1 />
             </>
