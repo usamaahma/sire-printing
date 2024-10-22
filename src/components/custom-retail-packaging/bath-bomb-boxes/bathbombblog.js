@@ -8,23 +8,17 @@ const { Meta } = Card;
 
 const blogData = [
   {
-    title: "How to Create Custom Incense Boxes That Sell?",
+    title: "Custom Bath Bomb Packaging Boxes Enhance Your Sales With Style",
     description:
-      "As the demand for custom incense boxes continues to rise, it has become increasingly important for businesses to... ",
-    btitle: " Food packaging",
-    imgSrc: "../images/blog1.avif",
+      "Bath bombs are concentrated foam baths made from a combination of wet and dry components such as essential...",
+    btitle: "Custom Retail Packaging",
+    imgSrc: "../images/bathblog.png",
   },
-  {
-    title: "How Can CBD Packaging Help Your Business?",
-    description:
-      "Many new firms have joined the CBD product industry as a consequence of the products' rapid popularity and...",
-    btitle: " CBD Packaging",
-    imgSrc: "../images/blog2.avif",
-  },
+  
   
 ];
 
-function Smallrelatedblog() {
+function Bathrelatedblog() {
   return (
    
     <div className="blog-container">
@@ -58,4 +52,4 @@ function Smallrelatedblog() {
   );
 }
 
-export default Smallrelatedblog;
+export default Bathrelatedblog;

@@ -117,15 +117,12 @@ function Foodpack() {
                 <div className="card-txt-blog">
                   <Meta
                     className="blog-cardtxt"
-                    title={<Link to={`/blog/${blog.id}`}>{blog.title}</Link>}
+                    title={<Link to="/10-reasons-to-love-custom-cereal-boxes" className="blog-links">{blog.title}</Link>}
                     description={blog.description}
                   />
                   <div className="blog-icon">
                     <RxHamburgerMenu />
-                    <Link
-                      to={`/food-packaging/${blog.btitle}`}
-                      className="blog-links"
-                    >
+                    <Link to="/food-packaging" className="blog-links">
                       <p className="blog-cardtxt1">{blog.btitle}</p>
                     </Link>
                   </div>

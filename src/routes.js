@@ -20,6 +20,10 @@ import Smallmailerboxpage from './pages/cbd-packaging/smallmailerboxpage';
 import Blog from './components/blogs/blog';
 import Foodpack from './components/blogs/foodpackaging';
 import Tenreasonsccboxes from './components/blogs/tenreasonsccboxes';
+import Retailpackagingpage from './pages/retail-packaging-page/retailpackagingpage';
+import Bathbombpage from './pages/retail-packaging-page/bathbombpage';
+import Candleboxespage from './pages/retail-packaging-page/candleboxespage';
+import Candyboxpage from './pages/retail-packaging-page/candyboxpage';
  
  
  
@@ -36,6 +40,7 @@ const AppRoutes = () => {
                     <Route path="/" element={<Landingpage1 />} />
                     <Route path="all-products" element={<Allproductspage1 />} />
                     <Route path="CBD-Packaging" element={<Cbdpackagingpage />} />
+                    <Route path="custom-Retail-Packaging" element={<Retailpackagingpage />}/>
                     <Route path="Custom-box-styles" element={<Customboxpage />} />
                     <Route path="Custom-stickers" element={<Customstickerpage />} />
                     <Route path="Christmas-boxes" element={<Christmasboxpage />} />
@@ -49,6 +54,10 @@ const AppRoutes = () => {
                     <Route path='Blogs' element={<Blog/>}/>
                     <Route path='food-packaging' element={<Foodpack/>}/>
                     <Route path='10-reasons-to-love-custom-cereal-boxes' element={<Tenreasonsccboxes/>}/>
+                    <Route path='Bath-bomb-boxes' element={<Bathbombpage/>}/>
+                    <Route path='candle-boxes' element={<Candleboxespage/>}/>
+                    <Route path='candy-boxes' element={<Candyboxpage/>}/>
+
                 </Routes>
                 <Footer1 />
             </>

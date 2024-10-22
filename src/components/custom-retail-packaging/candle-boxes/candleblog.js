@@ -8,23 +8,17 @@ const { Meta } = Card;
 
 const blogData = [
   {
-    title: "How to Create Custom Incense Boxes That Sell?",
+    title: "The Power Of Custom Candle Boxes In Marketing",
     description:
-      "As the demand for custom incense boxes continues to rise, it has become increasingly important for businesses to... ",
-    btitle: " Food packaging",
-    imgSrc: "../images/blog1.avif",
+      "In the bustling marketplace, creating a standout brand presence is more than just offering a unique product. It's...",
+    btitle: "Custom Retail Packaging",
+    imgSrc: "../images/candleblog.avif",
   },
-  {
-    title: "How Can CBD Packaging Help Your Business?",
-    description:
-      "Many new firms have joined the CBD product industry as a consequence of the products' rapid popularity and...",
-    btitle: " CBD Packaging",
-    imgSrc: "../images/blog2.avif",
-  },
+  
   
 ];
 
-function Smallrelatedblog() {
+function Candleblog() {
   return (
    
     <div className="blog-container">
@@ -58,4 +52,4 @@ function Smallrelatedblog() {
   );
 }
 
-export default Smallrelatedblog;
+export default Candleblog;
