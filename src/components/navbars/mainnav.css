@@ -54,6 +54,10 @@
 .navbar {
   width: 100%;
 }
+.dropdown img {
+  margin-right: 8px; /* Adjust the spacing as needed */
+}
+
 
 @media (max-width: 1299px) {
   .text-color {

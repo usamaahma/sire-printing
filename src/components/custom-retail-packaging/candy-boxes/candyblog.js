@@ -8,23 +8,24 @@ const { Meta } = Card;
 
 const blogData = [
   {
-    title: "How to Create Custom Incense Boxes That Sell?",
+    title: "Savor the Moment: Crafting Unique Candy Box Packaging",
     description:
-      "As the demand for custom incense boxes continues to rise, it has become increasingly important for businesses to... ",
-    btitle: " Food packaging",
-    imgSrc: "../images/blog1.avif",
+      "When it comes to indulging in sweet treats, presentation matters just as much as the taste. Whether you're...",
+    btitle: " Food Packaging",
+    imgSrc: "../images/candyblog1.avif",
   },
   {
-    title: "How Can CBD Packaging Help Your Business?",
+    title: "Surround Yourself With Custom Candy Packaging, Not Negativity",
     description:
-      "Many new firms have joined the CBD product industry as a consequence of the products' rapid popularity and...",
-    btitle: " CBD Packaging",
-    imgSrc: "../images/blog2.avif",
+      "Do you wish to give your desserts a glistening appearance? If you answered yes, the best alternative for...",
+    btitle: "Custom Retail Packaging",
+    imgSrc: "../images/candyblog2.png",
   },
+  
   
 ];
 
-function Smallrelatedblog() {
+function Candyblog() {
   return (
    
     <div className="blog-container">
@@ -58,4 +59,4 @@ function Smallrelatedblog() {
   );
 }
 
-export default Smallrelatedblog;
+export default Candyblog;

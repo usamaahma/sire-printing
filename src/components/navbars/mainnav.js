@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import "./mainnav.css";
 
 function Mainnav1() {
-  
   return (
     <Navbar
       expand="lg"
@@ -27,8 +26,11 @@ function Mainnav1() {
             }}
           />
         </Link>
-       
-        <FaSearch className="logo2" style={{ fontSize: "1.3rem", color: "black" }} />
+
+        <FaSearch
+          className="logo2"
+          style={{ fontSize: "1.3rem", color: "black" }}
+        />
 
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
@@ -49,22 +51,68 @@ function Mainnav1() {
               <Nav.Link as={Link} to="CBD-Packaging" className="my-2 mx-2">
                 CBD Packaging
               </Nav.Link>
-              <NavDropdown
-                title="Custom Boxes"
-                id="offcanvasNavbarDropdown"
-                className="my-2 mx-2"
-              >
-                <NavDropdown.Item href="#action3" className="text-color">
-                  Action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action4" className="text-color">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5" className="text-color">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
+
+
+<NavDropdown
+  title="Custom Boxes"
+  id="offcanvasNavbarDropdown"
+  className="dropdown"
+>
+  <div style={{ maxHeight: '400px', maxWidth: '900px', overflowY: 'auto' }} className="d-flex flex-column">
+    <NavDropdown.Item as={Link} to="/custom-Retail-Packaging" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav1.png" />  Custom Retail Packaging 
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/rigidBoxes" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav2.png" /> Rigid Boxes
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/coffeeBag" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav3.png" /> Coffee Bag Food Packaging
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/cosmetics" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav4.png" /> Cosmetics Packaging Boxes
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/sustainable" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav5.png" /> Sustainable Eco-Friendly Packaging
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/pillow" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav6.png" /> Custom Pillow Packaging Boxes
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/giftBox" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav7.png" /> Gift Packaging Boxes
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/soap" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav8.png" /> Soap Packaging Boxes
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/medical" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav9.png" /> Custom Medicine Packaging
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/hangTags" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav10.png" /> Custom Hang Tags
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/wovenPatches" className="text-color d-flex align-items-center mb-2">
+      <img src="../images/nav11.png" /> Woven Embroidered Patches
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/corrugatedBoxes" className="text-color d-flex align-items-center mb-2">
+    <img src="../images/nav4.png" /> Corrugated Boxes
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/kraftPaper" className="text-color d-flex align-items-center mb-2">
+    <img src="../images/nav4.png" /> Kraft Paper Boxes
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/customDisplay" className="text-color d-flex align-items-center mb-2">
+    <img src="../images/nav4.png" />Custom Display Boxes
+    </NavDropdown.Item>
+    <NavDropdown.Item as={Link} to="/customMailer" className="text-color d-flex align-items-center mb-2">
+    <img src="../images/nav4.png" />Custom Mailer Boxes
+    </NavDropdown.Item>
+  </div>
+</NavDropdown>
+
+
+
+
+
+
+
               <Nav.Link as={Link} to="Custom-box-styles" className="my-2 mx-2">
                 Custom Box Styles
               </Nav.Link>

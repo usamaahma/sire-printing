@@ -5,7 +5,7 @@ import './custompakaging.css';
 
 const cardData = [
   { title: 'CBD Packaging', image: '../images/card1.webp', link: "/CBD-Packaging" },
-  { title: 'Custom Retail Packaging', image: '../images/card2.webp', link: "/custom-retail-packaging" },
+  { title: 'Custom Retail Packaging', image: '../images/card2.webp', link: "/custom-Retail-Packaging" },
   { title: 'Rigid Boxes', image: '../images/card3.webp', link: "/rigid-boxes" },
   { title: 'Food Packaging', image: '../images/card4.webp', link: "/food-packaging" },
   { title: 'Cosmetic Packaging Boxes', image: '../images/card5.webp', link: "/cosmetic-packaging" },
