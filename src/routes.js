@@ -24,6 +24,10 @@ import Retailpackagingpage from './pages/retail-packaging-page/retailpackagingpa
 import Bathbombpage from './pages/retail-packaging-page/bathbombpage';
 import Candleboxespage from './pages/retail-packaging-page/candleboxespage';
 import Candyboxpage from './pages/retail-packaging-page/candyboxpage';
+import Rigidboxespage from './pages/Rigid-boxes/rigidboxespage';
+import Cellphoneboxpage from './pages/Rigid-boxes/cellphoneboxpage';
+import Collapsiblerigidboxpage from './pages/Rigid-boxes/collapsiblerigidboxpage';
+import Walletrigidboxpage from './pages/Rigid-boxes/walletrigidboxpage';
  
  
  
@@ -57,6 +61,10 @@ const AppRoutes = () => {
                     <Route path='Bath-bomb-boxes' element={<Bathbombpage/>}/>
                     <Route path='candle-boxes' element={<Candleboxespage/>}/>
                     <Route path='candy-boxes' element={<Candyboxpage/>}/>
+                    <Route path='rigid-boxes' element={<Rigidboxespage/>}/>
+                    <Route path='cell-phone-boxes' element={<Cellphoneboxpage/>}/>
+                    <Route path='collapsible-rigid-boxes' element={<Collapsiblerigidboxpage/>}/>
+                    <Route path='wallet-rigid-boxes' element={<Walletrigidboxpage/>}/>
 
                 </Routes>
                 <Footer1 />

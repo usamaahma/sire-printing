@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Row, Col } from 'antd';
 import { Link } from "react-router-dom";
-import './custompakaging.css';
+
 
 const cardData = [
   { title: 'CBD Packaging', image: '../images/card1.webp', link: "/CBD-Packaging" },
