@@ -28,6 +28,11 @@ import Rigidboxespage from './pages/Rigid-boxes/rigidboxespage';
 import Cellphoneboxpage from './pages/Rigid-boxes/cellphoneboxpage';
 import Collapsiblerigidboxpage from './pages/Rigid-boxes/collapsiblerigidboxpage';
 import Walletrigidboxpage from './pages/Rigid-boxes/walletrigidboxpage';
+import Landfoodpackage from './pages/land-foodpackaging/landfoodpackage';
+import Bakeryboxpage from './pages/land-foodpackaging/bakeryboxpage';
+import Burgerboxpage from './pages/land-foodpackaging/burgerboxpage';
+import Cerealboxpage from './pages/land-foodpackaging/cerealboxpage';
+import Cosmeticpackagingpage from './pages/cosmetic-packaging/cosmeticpackagingpage';
  
  
  
@@ -65,6 +70,11 @@ const AppRoutes = () => {
                     <Route path='cell-phone-boxes' element={<Cellphoneboxpage/>}/>
                     <Route path='collapsible-rigid-boxes' element={<Collapsiblerigidboxpage/>}/>
                     <Route path='wallet-rigid-boxes' element={<Walletrigidboxpage/>}/>
+                    <Route path='food-package' element={<Landfoodpackage/>}/>
+                    <Route path='bakery-boxes' element={<Bakeryboxpage/>}/>
+                    <Route path='burger-boxes' element={<Burgerboxpage/>}/>
+                    <Route path='cereal-boxes' element={<Cerealboxpage/>}/>
+                    <Route path='cosmetic-packaging-boxes' element={<Cosmeticpackagingpage/>}/>
 
                 </Routes>
                 <Footer1 />

@@ -7,9 +7,17 @@
   padding: 8px 16px !important; /* Adjust button padding for a smaller button */
   font-weight: bold !important;
 }
-.drawer{
-  margin-top: 4.3rem;
+.navbar {
+  width: 100%;
+  z-index: 1000 !important; /* Lower zIndex to ensure drawer appears above */
+  position: relative; /* Ensure it's positioned */
 }
+
+.drawer {
+  z-index: 10000 !important; /* Force zIndex of drawer */
+}
+ 
+
 .btn-mainnav:hover {
   background-color: rgb(
     253,
@@ -189,17 +197,26 @@ content: '';
     font-weight: bold;
     font-size: 10px; /* Keep link text size as is */
   }
-  .btn-mainnav {
+  .button {
     background-color: black !important;
     border-color: black !important;
     color: white;
     border: none; /* Remove border if needed */
-    font-size: 7px !important; /* Adjust button text size to make it smaller */
-    padding: 8px 16px !important; /* Adjust button padding for a smaller button */
+    font-size: 9px !important; /* Adjust button text size to make it smaller */
+    padding: 6px 12px !important; /* Adjust button padding for a smaller button */
     font-weight: bold !important;
   }
 }
+
+
+@media (max-width: 1046px) {
+  .text-color {
+    font-weight: bold;
+     
+  }
+}
 @media (min-width: 991px) {
+  
   .logo1 {
     display: none; /* Hides the logo */
   }
@@ -207,9 +224,12 @@ content: '';
     display: none; /* Hides the logo */
   }
 }
-@media (max-width: 1046px) {
+@media (max-width: 991px) {
   .text-color {
     font-weight: bold;
-    font-size: 8px; /* Keep link text size as is */
+     font-size: 13px;
   }
+.logo{
+  display: none;
+}
 }

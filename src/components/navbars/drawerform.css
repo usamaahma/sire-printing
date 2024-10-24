@@ -2,38 +2,31 @@
     width: 100%;
     max-width: 200px; /* Adjust max-width as needed */
     padding: 10px 20px;
-    background-color: #070707;
+    background-color: #070707; /* Black background */
     color: white;
     border: 2px solid transparent;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 4rem;
-    font-weight: bold;
+    font-weight: bold; /* Bold text */
 }
-  
+
 .drawerform-submit-button:hover {
     background-color: #fcfcfc !important;
     color: #070707 !important;
     border-color: #070707;
 }
-  
-.drawerform-sticky-div {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure it stays on top of the content */
-}
-  
+
 .drawerform-input {
-    border-color: rgb(131, 130, 130);
+    border-color: rgb(131, 130, 130); /* Default border color */
+    font-weight: bold; /* Bold text for inputs */
 }
-  
+
 .drawerform-input:hover {
-    border-color: black;
+    border-color: black; /* Change border color to black on hover */
 }
-  
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .drawerform-sticky-div {
-        padding: 10px;
-    }
+
+/* Add bold text to labels */
+.ant-form-item-label > label {
+    font-weight: bold; /* Bold text for labels */
 }

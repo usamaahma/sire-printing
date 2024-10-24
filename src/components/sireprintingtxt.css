@@ -4,6 +4,7 @@
 
 .learn-txt {
   font-size: 16px;
+   
 }
 .how-txt{
   text-align: center;
@@ -26,7 +27,14 @@
  
 }
 .col2-sire{
-  display: flex;
+display: flex;
 align-items: center;
 justify-content: center;
+}
+@media (max-width: 575px) {
+  .learn-txt {
+    font-size: 16px;
+     text-align: center;
+     margin-left: 1.5rem;
+  }
 }

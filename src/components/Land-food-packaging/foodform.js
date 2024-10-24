@@ -1,31 +1,34 @@
 import { Button, Form, Select, Input, Upload, Row, Col } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import './drawerform.css';
+import React from "react";
 
 const { Option } = Select;
 
-function Drawerform() {
+function Foodform() {
   const handleFinish = (values) => {
     console.log("Form Values: ", values);
   };
 
   return (
-    <div className=" ">
+    <div className="allproduct-form-sticky-div">
+      <div className="div-beatform-txt">
+        <p className="allproduct-beat-txt">Beat My Quote</p>
+      </div>
       <Form layout="vertical" onFinish={handleFinish}>
         <Row gutter={16}>
           <Col span={6}>
             <Form.Item>
-              <Input className="drawerform-input" placeholder="Length" />
+              <Input className="input-allproduct" placeholder="Length" />
             </Form.Item>
           </Col>
           <Col span={6}>
             <Form.Item>
-              <Input className="drawerform-input" placeholder="Width" />
+              <Input className="input-allproduct" placeholder="Width" />
             </Form.Item>
           </Col>
           <Col span={6}>
             <Form.Item>
-              <Input className="drawerform-input" placeholder="Depth" />
+              <Input className="input-allproduct" placeholder="Depth" />
             </Form.Item>
           </Col>
           <Col span={6}>
@@ -33,7 +36,7 @@ function Drawerform() {
               <Select
                 defaultValue="inches"
                 style={{ width: "100%" }}
-                className="drawerform-input"
+                className="input-allproduct"
               >
                 <Option value="inches">Inches</Option>
                 <Option value="cm">cm</Option>
@@ -48,8 +51,8 @@ function Drawerform() {
             <Form.Item label="Choose Product">
               <Select
                 placeholder="Select Product"
-                className="drawerform-input"
-                style={{ width: "100%" }}
+                className="input-allproduct"
+                style={{ width: "100%" }} // or specify a specific width, e.g., "300px"
               >
                 <Option value="product1">Product 1</Option>
                 <Option value="product2">Product 2</Option>
@@ -72,16 +75,16 @@ function Drawerform() {
           <Col span={8}>
             <Form.Item label="Quantity">
               <Input
-                className="drawerform-input"
+                className="input-allproduct"
                 type="number"
                 placeholder="Enter Quantity"
               />
             </Form.Item>
           </Col>
           <Col span={8}>
-            <Form.Item label="Phone" className="drawerform-input">
+            <Form.Item label="Phone" className="input-allproduct">
               <Input
-                className="drawerform-input"
+                className="input-allproduct"
                 placeholder="Enter Your Phone Number"
               />
             </Form.Item>
@@ -89,7 +92,7 @@ function Drawerform() {
           <Col span={8}>
             <Form.Item label="Full Name">
               <Input
-                className="drawerform-input"
+                className="input-allproduct"
                 placeholder="Enter Your Full Name"
               />
             </Form.Item>
@@ -99,7 +102,7 @@ function Drawerform() {
           <Col span={12}>
             <Form.Item label="Email">
               <Input
-                className="drawerform-input"
+                className="input-allproduct"
                 type="email"
                 placeholder="Enter Your Email"
               />
@@ -108,7 +111,7 @@ function Drawerform() {
           <Col span={12}>
             <Form.Item label="Upload File">
               <Upload>
-                <Button className="drawerform-input" icon={<UploadOutlined />}>
+                <Button className="input-allproduct" icon={<UploadOutlined />}>
                   Upload
                 </Button>
               </Upload>
@@ -128,7 +131,7 @@ function Drawerform() {
               <Button
                 type="primary"
                 htmlType="submit"
-                className="drawerform-submit-button"
+                className="allproduct-form-submit-button"
               >
                 Submit
               </Button>
@@ -140,4 +143,4 @@ function Drawerform() {
   );
 }
 
-export default Drawerform;
+export default Foodform;
