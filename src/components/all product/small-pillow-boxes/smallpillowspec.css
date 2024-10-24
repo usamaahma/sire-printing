@@ -14,9 +14,7 @@
     padding: 20px; /* Add padding to the container */
 }
 
-.text-column {
-    margin-left: 20px; /* Left margin for the text column */
-}
+ 
 .tablehead-div {
     display: flex;               
     justify-content: center;    
@@ -41,4 +39,8 @@
     max-height: 400px;      
     object-fit: cover;     
   }
-  
+  @media (max-width: 375px) {
+    .tablehead-txt {
+       font-size: 1rem;
+    }
+  }

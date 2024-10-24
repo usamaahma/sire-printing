@@ -231,13 +231,13 @@ function Mainnav1() {
       </Navbar>
       <Drawer
         className="drawer"
-        title="Request a Quote"
+        title="Request A Quote"
         placement="right"
         closable={true}
         onClose={onClose}
         visible={visible}
-        width={620} // You can adjust the width as needed
-        style={{ zIndex: 1001 }} // Ensure it appears above other content
+        width={520} // You can adjust the width as needed
+        style={{ zIndex: 2000 }} // Set a higher zIndex for the drawer
       >
         <Drawerform />
       </Drawer>
