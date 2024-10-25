@@ -20,9 +20,12 @@
   margin: 10px 0; /* Add top and bottom margin for spacing */
   font-weight: normal; /* Remove bold */
   color: #fff;
+  text-decoration: none;
+  display: block;
 }
 .sirefooter-p-txt:hover {
   color:  rgb(255,160,21);
+  text-decoration: underline;
 }
 
 /* Styles for input */
@@ -63,6 +66,7 @@
   font-size: 1.6rem;
   margin: 16px 0; /* Add margin for spacing */
   font-weight: normal; /* Remove bold */
+  
 }
 
 /* Social icons */

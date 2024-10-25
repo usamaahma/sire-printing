@@ -94,21 +94,21 @@ function Mainnav1() {
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       as={Link}
-                      to="/coffeeBag"
+                      to="/food-package"
                       className="text-color d-flex align-items-center mb-2"
                     >
-                      <img src="../images/nav3.png" /> Coffee Bag Food Packaging
+                      <img src="../images/nav3.png" /> Food Packaging
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       as={Link}
-                      to="/cosmetics"
+                      to="/cosmetic-packaging-boxes"
                       className="text-color d-flex align-items-center mb-2"
                     >
                       <img src="../images/nav4.png" /> Cosmetics Packaging Boxes
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       as={Link}
-                      to="/sustainable"
+                      to="/sustain"
                       className="text-color d-flex align-items-center mb-2"
                     >
                       <img src="../images/nav5.png" /> Sustainable Eco-Friendly
