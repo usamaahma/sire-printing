@@ -1,40 +1,48 @@
 .sire-txt-main {
-   width: 95%;
+  width: 95%;
+  max-width: 800px; /* Set a max width for better readability */
+  margin: 0 auto; /* Center the content in the parent */
+  text-align: left; /* Left align text */
+}
+
+.img-sire-txt {
+  width: 70%; /* Make the image smaller */
+  max-width: 400px; /* Set a max width for the image */
+  border-radius: 8px;
+  margin: 20px auto; /* Center the image with auto margins */
+  display: block; /* Ensure the image is a block element for centering */
+}
+
+.how-txt {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px; /* Add some space below the title */
+  text-align: center;
 }
 
 .learn-txt {
   font-size: 16px;
-   
 }
-.how-txt{
-  text-align: center;
-  font-size: 2.1rem;
-  font-weight: bold;
-}
+
 .sire-txt-title {
   font-size: 1.5em;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 15px 0; /* Add space above and below each title */
 }
 
 .sire-txt-content {
   font-size: 1em;
   margin-bottom: 15px;
+  line-height: 1.6; /* Improve readability with line height */
 }
-.img-sire-txt{
-  width: 80%;
-  border-radius: 2px;
- 
-}
-.col2-sire{
-display: flex;
-align-items: center;
-justify-content: center;
-}
-@media (max-width: 575px) {
-  .learn-txt {
-    font-size: 16px;
-     text-align: center;
-     margin-left: 1.5rem;
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .sire-txt-main {
+    width: 90%; /* Slightly larger on smaller screens */
+  }
+
+  .img-sire-txt {
+    width: 100%; /* Make the image full width on smaller screens */
   }
 }

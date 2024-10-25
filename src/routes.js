@@ -33,6 +33,8 @@ import Bakeryboxpage from './pages/land-foodpackaging/bakeryboxpage';
 import Burgerboxpage from './pages/land-foodpackaging/burgerboxpage';
 import Cerealboxpage from './pages/land-foodpackaging/cerealboxpage';
 import Cosmeticpackagingpage from './pages/cosmetic-packaging/cosmeticpackagingpage';
+import Aboutus from './components/about-us/aboutus';
+import Contactus from './components/contact-us/contactus';
  
  
  
@@ -75,6 +77,8 @@ const AppRoutes = () => {
                     <Route path='burger-boxes' element={<Burgerboxpage/>}/>
                     <Route path='cereal-boxes' element={<Cerealboxpage/>}/>
                     <Route path='cosmetic-packaging-boxes' element={<Cosmeticpackagingpage/>}/>
+                    <Route path='about-us' element={<Aboutus/>}/>
+                    <Route path='contact-us' element={<Contactus/>}/>
 
                 </Routes>
                 <Footer1 />

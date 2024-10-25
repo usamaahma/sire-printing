@@ -73,15 +73,48 @@ function Footer1() {
         </Col>
         <Col xs={24} sm={12} md={8} lg={6} className="footersire-column">
           <p className="get-txt">Useful Links</p>
-          <p className="sirefooter-p-txt">About Us</p>
-          <p className="sirefooter-p-txt">Contact Us</p>
-          <p className="sirefooter-p-txt">Portfolio</p>
-          <Link to="/Blogs" className="sirefooter-p-txt">
-            Blogs
-          </Link>
-          <p className="sirefooter-p-txt">Sitemap</p>
-          <p className="sirefooter-p-txt">Privacy Policy</p>
-          <p className="sirefooter-p-txt">Terms And Conditions</p>
+
+          <p>
+            <Link to="/about-us" className="sirefooter-p-txt">
+              About Us
+            </Link>
+          </p>
+
+          <p>
+            <Link to="/contact-us" className="sirefooter-p-txt">
+              Contact Us
+            </Link>
+          </p>
+
+          <p className="sirefooter-p-txt">
+            <Link to="/portfolio" className="sirefooter-p-txt">
+              Portfolio
+            </Link>
+          </p>
+
+          <p>
+            <Link to="/blogs" className="sirefooter-p-txt">
+              Blogs
+            </Link>
+          </p>
+
+          <p className="sirefooter-p-txt">
+            <Link to="/sitemap" className="sirefooter-p-txt">
+              Sitemap
+            </Link>
+          </p>
+
+          <p className="sirefooter-p-txt">
+            <Link to="/privacy-policy" className="sirefooter-p-txt">
+              Privacy Policy
+            </Link>
+          </p>
+
+          <p className="sirefooter-p-txt">
+            <Link to="/terms-and-conditions" className="sirefooter-p-txt">
+              Terms And Conditions
+            </Link>
+          </p>
         </Col>
       </Row>
     </div>

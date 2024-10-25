@@ -1,157 +1,152 @@
-/* Container for centering and responsiveness */
+/* General Carousel Settings */
 .alice-carousel__prev-btn,
-.alice-carousel__next-btn {
-  display: none !important; /* Forcefully hide the buttons */
-}
+.alice-carousel__next-btn,
 .alice-carousel__dots {
-  display: none !important; /* Forcefully hide the dots */
+  display: none !important; /* Forcefully hide buttons and dots */
 }
 
 .pillowcarousel-wrapper {
-  position: relative; /* Make wrapper relative for absolute buttons */
-  padding: 20px; /* Add some padding to avoid arrow overlap */
+  position: relative; /* Wrapper positioning */
+  padding: 20px; /* Padding */
 }
 
-/* Hide pagination dots */
-
-.pillowcarousel-customerdiv {
-  text-align: center;
-  margin-top: 0.4rem;
-  /* Adjust margin as needed */
-}
-
-/* Carousel wrapper styling */
-.pillowcarousel-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* Carousel container styling */
+/* Carousel Container Styling */
 .pillowcarousel-container1 {
   width: 90%;
-  height: auto;
-  /* Adjust height for responsiveness */
-  padding: 2rem;
-  max-width: 1000px;
-  /* Increased max-width for the carousel container */
-  overflow: hidden;
+  max-width: 1000px; /* Set a max width */
+  overflow: hidden; /* Hide overflow */
   position: relative;
   border-radius: 15px;
-  background-color: #f8f8f8;
+  margin-top: 2rem;
 }
 
-/* Hide carousel indicators */
-.carousel-indicators {
-  display: none;
-}
-
-/* Ensure carousel items are displayed as block and centered */
+/* Item Content Styling */
 .pillowcarousel-item-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 18rem;
-  /* Adjust height as needed */
-  width: 100%;
-  /* Full width of container */
-  padding: 1rem;
-  /* Add padding to ensure spacing around the card */
+  width: 100%; /* Full width */
+  padding: 1rem; /* Padding */
 }
 
-.ant-card .ant-card-body {
-  padding: 0;
-}
-
-/* Center card content */
+/* Card Styling */
 .pillowcarousel-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
-  max-width: 420px;
-  color: #000000;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  box-shadow: none; /* Remove shadow */
-  margin: auto; /* Center the card horizontally */
+  width: 100%; /* Full width */
+  height: fit-content;
+  color: #ffffff; /* Text color */
+  padding: 1rem; /* Padding for better spacing */
+  border: none; /* No border */
+  background: url("../../../../public/images/customerbackground.jpg") no-repeat
+    center center;
+  background-size: contain; /* Cover the background */
+  box-shadow: none; /* No shadow */
+  margin: auto; /* Center the card */
+  clip-path: polygon(18.6% 0%, 100% 0%, 85.3% 100%, 0% 100%);
 }
 
-/* Card avatar styling */
+/* Avatar Styling */
 .pillowcarousel-avatar-review {
-  width: 4rem;
-  /* Adjust avatar size */
-  height: 4rem;
-  /* Adjust avatar size */
-  margin-bottom: 1rem;
-  border-radius: 50%;
-  /* Make the avatar circular */
+  width: 4rem; /* Avatar size */
+  height: 4rem; /* Avatar size */
+  margin-bottom: 1rem; /* Spacing */
+  border-radius: 50%; /* Circular */
 }
 
-/* Card title styling */
+/* Title Styling */
 .pillowcarousel-card h5 {
-  font-size: 1rem;
-  /* Smaller font size for title */
-  color: #070707;
-  margin: 0.5rem 0;
+  font-size: 1rem; /* Title size */
+  color: #070707; /* Title color */
+  margin: 0.5rem 0; /* Margin */
 }
 
-/* Card review styling */
+/* Review Text Styling */
 .pillowcarousel-card p {
-  font-size: 0.7rem;
-  /* Adjust font size for review text */
-  color: #070707;
-  line-height: 1.4;
-  margin-bottom: 1rem;
+  font-size: xx-small; /* Adjusted size */
+  font-weight: bold;
+  margin-left: 15%;
+  width: 70%; /* Slightly increased width for text */
+  color: #070707; /* Text color */
+  line-height: 1.5; /* Better line height for readability */
+  margin-bottom: 1rem; /* Bottom margin */
 }
 
-/* Hide carousel controls (Next and Prev icons) */
-.carousel-control-prev,
-.carousel-control-next {
-  display: none;
-}
- 
-  
-  
-
-/* Media queries for different screen sizes */
+/* Media Queries */
 @media (max-width: 1024px) {
-  .pillowcarousel-container1 {
-    height: auto;
-    /* Adjust height for larger screens */
+  .pillowcarousel-card {
+    background-size: contain; /* Full coverage */
+    padding: 1rem; /* Padding for smaller screens */
+  }
+
+  .pillowcarousel-avatar-review {
+    width: 3rem; /* Smaller avatar size */
+    height: 3rem; /* Smaller avatar size */
+  }
+
+  .pillowcarousel-card h5 {
+    font-size: 0.9rem; /* Smaller heading */
+  }
+
+  .pillowcarousel-card p {
+    font-size: x-small; /* Smaller review text */
+    width: 70%; /* Adjust width */
+    margin-left: 10%; /* Adjust margin */
   }
 }
 
 @media (max-width: 768px) {
   .pillowcarousel-card {
-    max-width: 300px;
-    /* Further adjust card size for smaller screens */
+    background-size: cover; /* Full coverage */
+    padding: 0.5rem; /* Reduced padding */
+  }
+
+  .pillowcarousel-avatar-review {
+    width: 2.5rem; /* Even smaller avatar */
+    height: 2.5rem; /* Even smaller avatar */
+  }
+
+  .pillowcarousel-card h5 {
+    font-size: 0.8rem; /* Smaller heading */
+  }
+
+  .pillowcarousel-card p {
+    font-size: xx-small; /* Smaller review text */
+    width: 70%; /* Adjust width */
+    margin-left: 12%; /* Adjust margin */
   }
 }
 
 @media (max-width: 480px) {
   .pillowcarousel-card {
-    max-width: 250px;
-    /* Even smaller card size */
+    max-width: 100%; /* Full width */
+    height: auto; /* Auto height for smaller devices */
   }
-}
 
-@media (max-width: 425px) {
-  .pillowcarousel-card {
-    max-width: 250px;
-    /* Even smaller card size */
-    height: 30rem;
+  .pillowcarousel-card h5 {
+    font-size: 0.7rem; /* Smaller heading */
+  }
+
+  .pillowcarousel-card p {
+    font-size: xx-small; /* Smaller review text */
+    width: 80%; /* Full width */
+    margin-left: 8%; /* Adjust margin */
   }
 }
 
 @media (max-width: 375px) {
-  .pillowcarousel-card {
-    max-width: 250px;
-    /* Even smaller card size */
-    height: 30rem;
+  .pillowcarousel-avatar-review {
+    width: 2rem; /* Smallest avatar size */
+    height: 2rem; /* Smallest avatar size */
+  }
+
+  .pillowcarousel-card h5 {
+    font-size: 0.6rem; /* Smallest heading */
+  }
+
+  .pillowcarousel-card p {
+    font-size: xxx-small; /* Smallest review text */
   }
 }
