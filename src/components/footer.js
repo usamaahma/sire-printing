@@ -105,13 +105,13 @@ function Footer1() {
           </p>
 
           <p className="sirefooter-p-txt">
-            <Link to="/privacy-policy" className="sirefooter-p-txt">
+            <Link to="/privacy" className="sirefooter-p-txt">
               Privacy Policy
             </Link>
           </p>
 
           <p className="sirefooter-p-txt">
-            <Link to="/terms-and-conditions" className="sirefooter-p-txt">
+            <Link to="/Terms and conditions" className="sirefooter-p-txt">
               Terms And Conditions
             </Link>
           </p>

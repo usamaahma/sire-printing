@@ -36,7 +36,7 @@ const Enjoysire1 = () => {
                   alt={image.text}
                   className="responsive-image1" // Use a class for styles
                 />
-                <p style={{ marginTop: "8px", fontSize: "14px" }}>
+                <p style={{ marginTop: "8px", fontSize: "14px", fontWeight: "bold" }}>
                   {image.text}
                 </p>
               </div>
