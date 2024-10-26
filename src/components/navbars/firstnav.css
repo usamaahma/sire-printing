@@ -1,4 +1,9 @@
  
+.firstnav-num:hover {
+  font-weight: bold;
+  color: rgb(65, 62, 62);
+}
+ 
  
 @media (max-width: 992px) {
   .nav-main {

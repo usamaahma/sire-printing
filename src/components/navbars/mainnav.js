@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -8,6 +7,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Drawer } from "antd";
+import { Row, Col } from "antd";
 import "./mainnav.css";
 import Drawerform from "./drawerform";
 
@@ -66,130 +66,123 @@ function Mainnav1() {
                 </Nav.Link>
 
                 <NavDropdown
-                  title="Custom Boxes"
-                  id="offcanvasNavbarDropdown"
-                  className="dropdown"
-                >
-                  <div
-                    style={{
-                      maxHeight: "400px",
-                      maxWidth: "900px",
-                      overflowY: "auto",
-                    }}
-                    className="d-flex flex-column"
-                  >
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/custom-Retail-Packaging"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav1.png" /> Custom Retail Packaging
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/rigid-boxes"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav2.png" /> Rigid Boxes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/food-package"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav3.png" /> Food Packaging
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/cosmetic-packaging-boxes"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav4.png" /> Cosmetics Packaging Boxes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/sustain"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav5.png" /> Sustainable Eco-Friendly
-                      Packaging
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/pillow"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav6.png" /> Custom Pillow Packaging
-                      Boxes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/giftBox"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav7.png" /> Gift Packaging Boxes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/soap"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav8.png" /> Soap Packaging Boxes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/medical"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav9.png" /> Custom Medicine Packaging
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/hangTags"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav10.png" /> Custom Hang Tags
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/wovenPatches"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav11.png" /> Woven Embroidered
-                      Patches
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/corrugatedBoxes"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav4.png" /> Corrugated Boxes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/kraftPaper"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav4.png" /> Kraft Paper Boxes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/customDisplay"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav4.png" />
-                      Custom Display Boxes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/customMailer"
-                      className="text-color d-flex align-items-center mb-2"
-                    >
-                      <img src="../images/nav4.png" />
-                      Custom Mailer Boxes
-                    </NavDropdown.Item>
-                  </div>
-                </NavDropdown>
+  title="Custom Boxes"
+  id="offcanvasNavbarDropdown"
+  className="dropdown"
+>
+  <div
+    className="mainnav-dropdown-maindiv"
+    style={{
+       width: "100%", // Full width
+       marginTop: "10px", // Add top margin
+      overflowY: "auto", // Enable scrolling if needed
+    }}
+  >
+    <Row style={{ margin: 0, flexWrap: "wrap" }}>
+      {[
+        {
+          to: "/custom-Retail-Packaging",
+          img: "../images/nav1.png",
+          text: "Custom Retail Packaging",
+        },
+        {
+          to: "/rigid-boxes",
+          img: "../images/nav2.png",
+          text: "Rigid Boxes",
+        },
+        {
+          to: "/food-package",
+          img: "../images/nav3.png",
+          text: "Food Packaging",
+        },
+        {
+          to: "/cosmetic-packaging-boxes",
+          img: "../images/nav4.png",
+          text: "Cosmetics Packaging Boxes",
+        },
+        {
+          to: "/sustain",
+          img: "../images/nav5.png",
+          text: "Sustainable Eco-Friendly Packaging",
+        },
+        {
+          to: "/pillow",
+          img: "../images/nav6.png",
+          text: "Custom Pillow Packaging Boxes",
+        },
+        {
+          to: "/giftBox",
+          img: "../images/nav7.png",
+          text: "Gift Packaging Boxes",
+        },
+        {
+          to: "/soap",
+          img: "../images/nav8.png",
+          text: "Soap Packaging Boxes",
+        },
+        {
+          to: "/medical",
+          img: "../images/nav9.png",
+          text: "Custom Medicine Packaging",
+        },
+        {
+          to: "/hangTags",
+          img: "../images/nav10.png",
+          text: "Custom Hang Tags",
+        },
+        {
+          to: "/wovenPatches",
+          img: "../images/nav11.png",
+          text: "Woven Embroidered Patches",
+        },
+        {
+          to: "/corrugatedBoxes",
+          img: "../images/nav4.png",
+          text: "Corrugated Boxes",
+        },
+        {
+          to: "/kraftPaper",
+          img: "../images/nav4.png",
+          text: "Kraft Paper Boxes",
+        },
+        {
+          to: "/customDisplay",
+          img: "../images/nav4.png",
+          text: "Custom Display Boxes",
+        },
+        {
+          to: "/customMailer",
+          img: "../images/nav4.png",
+          text: "Custom Mailer Boxes",
+        },
+      ].map((item, index) => (
+        <Col
+          xs={24}  
+          sm={24} 
+          md={24}  
+          lg={12} // Three columns on large screens
+          xl={8}
+          key={index}
+          style={{ padding: 0 }}
+        >
+          <NavDropdown.Item
+            as={Link}
+            to={item.to}
+            className="text-color d-flex align-items-center"
+            style={{ width: "100%", textAlign: "left", fontWeight: "bold"  }}
+          >
+            <img
+              src={item.img}
+              alt={item.text}
+              style={{ marginRight: "5px" }}
+            />
+            {item.text}
+          </NavDropdown.Item>
+        </Col>
+      ))}
+    </Row>
+  </div>
+</NavDropdown>
 
                 <Nav.Link
                   as={Link}

@@ -7,11 +7,11 @@ import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import './firstnav.css';
+import "./firstnav.css";
 
 function Firstnav1() {
   return (
-    <div className="nav-main" >
+    <div className="nav-main">
       <Navbar
         expand="lg"
         className="mb-0"
@@ -35,64 +35,100 @@ function Firstnav1() {
               className="d-flex align-items-center mx-2"
               style={{ color: "black" }}
             >
-              <div
+              <a
+                href="tel:+447745807425"
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
-                  width: "38px",
-                  height: "36px",
-                  backgroundColor: "black",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                  marginRight: "5px",
+                  textDecoration: "none",
+                  color: "black",
                 }}
               >
-                <FaPhoneAlt style={{ fontSize: "1.3rem", color: "white" }} />
-              </div>
-              <p style={{ margin: 0 }}>Call Us: +123 456 7890</p>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "38px",
+                    height: "36px",
+                    backgroundColor: "black",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                    marginRight: "5px",
+                  }}
+                >
+                  <FaPhoneAlt style={{ fontSize: "1.3rem", color: "white" }} />
+                </div>
+                <p style={{ margin: 0 }} className="firstnav-num">
+                  Call Us: 077 45807425
+                </p>
+              </a>
             </Nav.Item>
 
             <Nav.Item
               className="d-flex align-items-center mx-2"
               style={{ color: "black" }}
             >
-              <div
+              <a
+                href="mailto:support@sireprinting.co.uk" // Mailto link
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
-                  width: "38px",
-                  height: "36px",
-                  backgroundColor: "black",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                  marginRight: "5px",
+                  textDecoration: "none",
+                  color: "black",
                 }}
               >
-                <MdOutlineEmail style={{ fontSize: "1.3rem", color: "white" }} />
-              </div>
-              <p style={{ margin: 0 }}>info@example.com</p>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "38px",
+                    height: "36px",
+                    backgroundColor: "black",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                    marginRight: "5px",
+                  }}
+                >
+                  <MdOutlineEmail
+                    style={{ fontSize: "1.3rem", color: "white" }}
+                  />
+                </div>
+                <p style={{ margin: 0 }}  className="firstnav-num">Email: support@sireprinting.co.uk</p>
+              </a>
             </Nav.Item>
 
             <Nav.Item
               className="d-flex align-items-center mx-2"
               style={{ color: "black" }}
             >
-              <div
+              <a
+                href="https://wa.me/447745807425" // WhatsApp link with the provided number
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
-                  width: "38px",
-                  height: "36px",
-                  backgroundColor: "black",
-                  borderRadius: "5px",
-                  cursor: "pointer",
+                  textDecoration: "none",
+                  color: "black",
                 }}
+                target="_blank" // Open in a new tab
+                rel="noopener noreferrer" // Security feature
               >
-                <SiWhatsapp style={{ fontSize: "1.3rem", color: "white" }} />
-              </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "38px",
+                    height: "36px",
+                    backgroundColor: "black",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                  }}
+                >
+                  <SiWhatsapp style={{ fontSize: "1.3rem", color: "white" }} />
+                </div>
+              </a>
             </Nav.Item>
           </Nav>
 

@@ -35,6 +35,8 @@ import Cerealboxpage from './pages/land-foodpackaging/cerealboxpage';
 import Cosmeticpackagingpage from './pages/cosmetic-packaging/cosmeticpackagingpage';
 import Aboutus from './components/about-us/aboutus';
 import Contactus from './components/contact-us/contactus';
+import Privacy from './components/privacy-policy/privacy';
+import Term from './components/term-condition/termandcondition';
  
  
  
@@ -79,6 +81,8 @@ const AppRoutes = () => {
                     <Route path='cosmetic-packaging-boxes' element={<Cosmeticpackagingpage/>}/>
                     <Route path='about-us' element={<Aboutus/>}/>
                     <Route path='contact-us' element={<Contactus/>}/>
+                    <Route path='privacy' element={<Privacy/>}/>
+                    <Route path='Terms and conditions' element={<Term/>}/>
 
                 </Routes>
                 <Footer1 />
