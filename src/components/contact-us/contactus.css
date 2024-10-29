@@ -36,11 +36,11 @@
 }
 
 .info-text {
-  margin-left: 5px; /* Additional space to the left of the text */
+  margin-left: 4px; /* Additional space to the left of the text */
   font-size: 1.5rem; /* Increase text size if needed */
 }
 .info-text1 {
-  margin-left: 5px; /* Additional space to the left of the text */
+  margin-left: 4px; /* Additional space to the left of the text */
   font-size: 1.5rem; /* Increase text size if needed */
 }
 .info-text {
@@ -90,4 +90,10 @@
     0.5
   ); /* Maintain lightened black border on focus */
   outline: none; /* Remove default focus outline */
+}
+@media (max-width: 375px) {
+  .info-text,.info-text1{
+    font-size: 1.3rem;
+  }
+
 }
