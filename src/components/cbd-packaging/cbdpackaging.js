@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "antd";
+import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import Cbdform from "./cbdform";
 import './cbdpackaging.css';
@@ -51,7 +52,26 @@ function Cbdpackaging1() {
           height: "auto",
         }}
       />
-
+   <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                    CBD Packaging
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
       <div className="allproduct-main">
         <Row className="allproduct-row">
           <Col span={17} xs={24} md={17} className="allproduct-col1">

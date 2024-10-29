@@ -37,6 +37,7 @@ import Aboutus from './components/about-us/aboutus';
 import Contactus from './components/contact-us/contactus';
 import Privacy from './components/privacy-policy/privacy';
 import Term from './components/term-condition/termandcondition';
+import GetAQuote from './components/Get a quote/getaquote';
  
  
  
@@ -83,6 +84,7 @@ const AppRoutes = () => {
                     <Route path='contact-us' element={<Contactus/>}/>
                     <Route path='privacy' element={<Privacy/>}/>
                     <Route path='Terms and conditions' element={<Term/>}/>
+                    <Route path='get a quote' element={<GetAQuote/>}/>
 
                 </Routes>
                 <Footer1 />

@@ -127,3 +127,17 @@
   text-align: center;
   align-items: center;
 }
+/* breadcrumb */
+.breadcrumb-container {
+  background-color:  rgb(237,239,240); /* Set background color to gray */
+  padding: 20px; /* Optional: Add some padding for better appearance */
+}
+.breadcrumb-title {
+  font-weight: bold; /* Make the font bold */
+  font-size: 1rem; /* Set font size to 1 rem */
+}
+.breadcrumb-link {
+  font-weight: bold; /* Make the font bold */
+  color: orange; /* Change the color to orange */
+  font-size: 1rem; /* Increase font size (adjust as needed) */
+}

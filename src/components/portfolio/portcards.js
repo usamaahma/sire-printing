@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Modal, Carousel } from "antd";
+import { Breadcrumb } from "antd";
 import "./portcards.css";
 
 // Sample data for the cards
@@ -33,6 +34,27 @@ function Portcards1() {
   };
 
   return (
+    <div>
+         <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                   Portfolio
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
     <div className="portfolio-container">
       <p className="portfolio-txt">Portfolio</p>
       <Row justify="center" gutter={[16, 16]}>
@@ -65,6 +87,7 @@ function Portcards1() {
           ))}
         </Carousel>
       </Modal>
+    </div>
     </div>
   );
 }

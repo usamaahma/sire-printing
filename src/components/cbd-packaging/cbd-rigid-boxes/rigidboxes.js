@@ -1,9 +1,8 @@
 import React from "react";
 import { Button, Form, Select, Input, Upload, Row, Col } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
- 
+import { Breadcrumb } from "antd";
 import Rigidimg1 from "./rigidimg";
- 
 
 const { Option } = Select;
 const imagesData = [
@@ -23,6 +22,31 @@ const Rigid1 = () => {
   };
   return (
     <div className="smallpillow-form">
+      <div className="breadcrumb-container">
+        <Breadcrumb
+          items={[
+            {
+              title: (
+                <a href="/" className="breadcrumb-title">
+                  Home
+                </a>
+              ),
+            },
+            {
+              title: (
+                <a href="/CBD-Packaging" className="breadcrumb-title">
+                  CBD Packaging
+                </a>
+              ),
+            },
+            {
+              title: (
+                <span className="breadcrumb-link">Rigid Cigarette Boxes</span>
+              ),
+            },
+          ]}
+        />
+      </div>
       <div className="txt-rigid-maindiv">
         {" "}
         <p className="rigid-txt">Rigid Cigarette Boxes</p>
@@ -108,7 +132,7 @@ const Rigid1 = () => {
                           <Select
                             placeholder="Select Product"
                             className="input-allproduct"
-                            style={{ width: "100%" }}  
+                            style={{ width: "100%" }}
                           >
                             <Option value="product1">Product 1</Option>
                             <Option value="product2">Product 2</Option>
@@ -118,9 +142,9 @@ const Rigid1 = () => {
                       </Col>
 
                       <Col span={12}>
-                        <Form.Item label={
-                            <span className="small-label">Color</span>
-                          }>
+                        <Form.Item
+                          label={<span className="small-label">Color</span>}
+                        >
                           <Select placeholder="Select Color">
                             <Option value="red">Red</Option>
                             <Option value="blue">Blue</Option>
@@ -131,9 +155,9 @@ const Rigid1 = () => {
                     </Row>
                     <Row gutter={16}>
                       <Col span={12}>
-                        <Form.Item label={
-                            <span className="small-label">Quantity</span>
-                          }>
+                        <Form.Item
+                          label={<span className="small-label">Quantity</span>}
+                        >
                           <Input
                             className="input-allproduct"
                             type="number"
@@ -142,9 +166,10 @@ const Rigid1 = () => {
                         </Form.Item>
                       </Col>
                       <Col span={12}>
-                        <Form.Item label={
-                            <span className="small-label">Phone</span>
-                          } className="input-allproduct">
+                        <Form.Item
+                          label={<span className="small-label">Phone</span>}
+                          className="input-allproduct"
+                        >
                           <Input
                             className="input-allproduct"
                             placeholder="Enter Your Phone Number"
@@ -164,9 +189,9 @@ const Rigid1 = () => {
                     </Row>
                     <Row gutter={16}>
                       <Col span={12}>
-                        <Form.Item label={
-                            <span className="small-label">Email</span>
-                          }>
+                        <Form.Item
+                          label={<span className="small-label">Email</span>}
+                        >
                           <Input
                             className="input-allproduct"
                             type="email"
@@ -175,9 +200,11 @@ const Rigid1 = () => {
                         </Form.Item>
                       </Col>
                       <Col span={12}>
-                        <Form.Item label={
+                        <Form.Item
+                          label={
                             <span className="small-label">Upload File</span>
-                          }>
+                          }
+                        >
                           <Upload>
                             <Button
                               className="input-allproduct"

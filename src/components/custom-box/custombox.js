@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "antd";
+import { Breadcrumb } from "antd";
 import Customform from "./customboxform";
 
 const cardData = [
@@ -51,6 +52,26 @@ function Custombox1() {
            
         }} // Adjust size as needed
       />
+         <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                    Custom Box Styles
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
 
       <div className="allproduct-main">
         <Row className="allproduct-row">

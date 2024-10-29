@@ -1,4 +1,5 @@
 import React from "react";
+import { Breadcrumb } from "antd";
 import "./termandcondition.css";
 
 function Term() {
@@ -13,6 +14,26 @@ function Term() {
           height: "auto",
         }}
       />
+         <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                    Terms & Conditions
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
       <h1 className="term-heading">Terms & Conditions</h1>
 
       <h2 className="term-subheading">Comment to Privacy</h2>

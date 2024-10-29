@@ -1,10 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Breadcrumb } from "antd";
 import "./tenreasonsccboxes.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 function Tenreasonsccboxes() {
   return (
+    <div>
+        <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <a href="/blogs" className="breadcrumb-title">
+                    Blogs
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <a href="/food-packaging" className="breadcrumb-title">
+                    Food Packaging
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                    10 Reasons To Love Custom Cereal Boxes
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
     <div>
         <img
           className="img-cbdmain"
@@ -193,6 +229,7 @@ function Tenreasonsccboxes() {
           artistry and skill that went into its packaging.
         </p>
       </div>
+    </div>
     </div>
   );
 }
