@@ -1,9 +1,10 @@
 import React from 'react';
+import { Breadcrumb } from "antd";
 import './privacy.css';
 
 function Privacy() {
   return (
-    <div className="privacy-container">
+     <div className="privacy-container">
         <img
         className="img-cbdmain"
         src="../images/privacy.webp"
@@ -13,6 +14,26 @@ function Privacy() {
           height: "auto",
         }}
       />
+         <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                    Privacy Policy
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
       <h1 className="privacy-heading">Privacy Policy</h1>
       <h2 className="privacy-subheading">PRIVACY AND SECURITY</h2>
       <p className="privacy-text">

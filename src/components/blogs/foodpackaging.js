@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Row, Col } from "antd";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import "./blog.css";
 
@@ -96,6 +97,34 @@ const blogData = [
 function Foodpack() {
   return (
     <div>
+        <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <a href="/blogs" className="breadcrumb-title">
+                    Blogs
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                    Food Packaging
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
+    <div>
       <img
         className="img-cbdmain"
         src="../images/foodpackaging.gif"
@@ -132,6 +161,7 @@ function Foodpack() {
           ))}
         </Row>
       </div>
+    </div>
     </div>
   );
 }

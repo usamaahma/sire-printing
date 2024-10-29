@@ -1,8 +1,30 @@
 import React from 'react';
+import { Breadcrumb } from "antd";
 import './aboutus.css';
 
 function Aboutus() {
   return (
+    <div>
+         <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                   About Us
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
     <div className="about-container">
       <h1 className="about-title">About Us</h1>
       <p className="about-text">
@@ -23,6 +45,7 @@ function Aboutus() {
       <p className="about-text">
         We utilize the environment and customer-friendly raw material for printing boxes without compromising the top quality. Our competent and experienced employees enable you to experience flawless printing. We can effectively cater to tiny in addition to bulk orders within the stipulated amount of time. We likewise offer a unique price cut provided now and then to maintain our consumer's happiness level. We have something for everyone and each occasion, services, and product. You can have a look at our high-quality packaging items on our internet site.
       </p>
+    </div>
     </div>
   );
 }

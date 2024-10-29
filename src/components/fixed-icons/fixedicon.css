@@ -1,0 +1,44 @@
+.fixed-icons {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* Hide by default */
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000; /* Ensure icons are above other content */
+}
+
+.icon-container {
+    background-color: black; /* Square background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 8px; /* Space around icons */
+    margin: 10px 0; /* Space between squares */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px; /* Set width for the square */
+    height: 35px; /* Set height for the square */
+}
+
+.main-icons {
+    color: white; /* Icon color */
+    font-size: 18px; /* Adjust icon size */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Use flex to center */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Full height of the container */
+    width: 100%; /* Full width of the container */
+}
+
+.main-icons:hover {
+    color: orange; /* Change color on hover */
+}
+
+/* Show icons on screens 576px and smaller */
+@media (max-width: 576px) {
+    .fixed-icons {
+        display: flex; /* Show on small screens */
+    }
+}

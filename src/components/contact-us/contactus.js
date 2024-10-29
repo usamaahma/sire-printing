@@ -2,10 +2,32 @@ import React from "react";
 import { Row, Col, Form, Input, Button } from "antd";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail,IoLocationSharp  } from "react-icons/io5";
+import { Breadcrumb } from "antd";
 import "./contactus.css";
 
 function Contactus() {
   return (
+    <div>
+         <div className="breadcrumb-container">
+          <Breadcrumb
+            items={[
+              {
+                title: (
+                  <a href="/" className="breadcrumb-title">
+                    Home
+                  </a>
+                ),
+              },
+              {
+                title: (
+                  <span className="breadcrumb-link">
+                    Contact Us
+                  </span>
+                ),
+              },
+            ]}
+          />
+        </div>
     <div className="contact-container">
       <Row justify="space-around">
         {/* Form Column */}
@@ -72,6 +94,7 @@ function Contactus() {
           </div>
         </Col>
       </Row>
+    </div>
     </div>
   );
 }
