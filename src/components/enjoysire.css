@@ -10,7 +10,7 @@
 }
 
 .responsive-image1 {
-  width: 70%; /* Make the image take the full width of its container */
+  width: 80%; /* Make the image take the full width of its container */
    height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Rounded corners */
   transition: transform 0.3s; /* Smooth transition */
