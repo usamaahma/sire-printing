@@ -10,7 +10,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
     margin: 1rem;
-    width: 90%;
+    width: 93%;
     position: relative; /* Make the card a positioned element */
     overflow: hidden; /* Prevent overflow for the overlay */
     height: 300px; /* Set a fixed height for consistency */
