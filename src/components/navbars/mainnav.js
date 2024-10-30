@@ -14,6 +14,7 @@ import Drawerform from "./drawerform";
 function Mainnav1() {
   const [visible, setVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false); // Track collapse state
   const inputRef = useRef(null);
 
   const toggleSearch = () => {
@@ -30,6 +31,10 @@ function Mainnav1() {
     if (event.key === "Enter") {
       setIsOpen(false);
     }
+  };
+
+  const handleNavClick = () => {
+    setExpanded(false); // Collapse the navbar when a nav item is clicked
   };
 
   useEffect(() => {
@@ -79,23 +84,24 @@ function Mainnav1() {
               onKeyPress={handleKeyPress}
             />
           )}
-          <Navbar.Toggle aria-controls="offcanvasNavbar" />
+          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={() => setExpanded(!expanded)} />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
             placement="end"
+            show={expanded} // Control the visibility of the Offcanvas
           >
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header closeButton onClick={handleNavClick}>
               <Offcanvas.Title id="offcanvasNavbarLabel" className="text-color">
                 Menu
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="margin">
               <Nav className="flex-column flex-lg-row justify-content-center align-items-center flex-grow-1 pe-3 text-color">
-                <Nav.Link as={Link} to="all-products" className="my-2 mx-2">
+                <Nav.Link as={Link} to="all-products" className="my-2 mx-2" onClick={handleNavClick}>
                   All Products
                 </Nav.Link>
-                <Nav.Link as={Link} to="CBD-Packaging" className="my-2 mx-2">
+                <Nav.Link as={Link} to="CBD-Packaging" className="my-2 mx-2" onClick={handleNavClick}>
                   CBD Packaging
                 </Nav.Link>
 
@@ -194,7 +200,7 @@ function Mainnav1() {
                           xs={24}
                           sm={24}
                           md={24}
-                          lg={12} // Three columns on large screens
+                          lg={12}
                           xl={8}
                           key={index}
                           style={{ padding: 0 }}
@@ -208,6 +214,7 @@ function Mainnav1() {
                               textAlign: "left",
                               fontWeight: "bold",
                             }}
+                            onClick={handleNavClick} // Collapse on item click
                           >
                             <img
                               src={item.img}
@@ -226,6 +233,7 @@ function Mainnav1() {
                   as={Link}
                   to="Custom-box-styles"
                   className="my-2 mx-2"
+                  onClick={handleNavClick}
                 >
                   Custom Box Styles
                 </Nav.Link>
@@ -239,13 +247,13 @@ function Mainnav1() {
                     }}
                   />
                 </Link>
-                <Nav.Link as={Link} to="Custom-stickers" className="my-2 mx-2">
+                <Nav.Link as={Link} to="Custom-stickers" className="my-2 mx-2" onClick={handleNavClick}>
                   Custom Stickers
                 </Nav.Link>
-                <Nav.Link as={Link} to="Christmas-boxes" className="my-2 mx-2">
+                <Nav.Link as={Link} to="Christmas-boxes" className="my-2 mx-2" onClick={handleNavClick}>
                   Christmas Boxes
                 </Nav.Link>
-                <Nav.Link as={Link} to="portfolio" className="my-2 mx-2">
+                <Nav.Link as={Link} to="portfolio" className="my-2 mx-2" onClick={handleNavClick}>
                   Portfolio
                 </Nav.Link>
                 <div>
