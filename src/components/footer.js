@@ -5,11 +5,11 @@ import {
   FaMapMarkerAlt,
   FaShippingFast,
   FaFacebook,
-  FaTwitter,
   FaInstagram,
   FaLinkedin,
   FaPaperPlane,
 } from "react-icons/fa"; // Import icons
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FaPhone } from "react-icons/fa6";
 import "./footer.css";
@@ -30,29 +30,36 @@ function Footer1() {
               <FaPaperPlane />
             </button>
           </div>
-          <p className="sirefooter-p-txt">
+          <p className="sirefooter-p-txt1">
             Subscribe to our newsletter and stay updated with our new products,
             policies, and terms.
           </p>
-          <img src="../images/googleplay.png" alt="Additional" />
+          <img
+            src="../images/googleplay.png"
+            alt="Additional"
+            style={{ marginTop: "1rem" }}
+          />
         </Col>
         <Col xs={24} sm={12} md={8} lg={6} className="footersire-column">
           <p className="get-txt">Get In Touch</p>
-          <p className="sirefooter-p-txt">
-            <FaPhone /> (410) 834-9965
-          </p>
-          <p className="sirefooter-p-txt">
+          <a href="tel:+447745807425" className="sirefooter-p-txt">
+            <FaPhone /> 077 45807425
+          </a>
+          <a
+            href="mailto:support@sireprinting.com"
+            className="sirefooter-p-txt"
+          >
             <FaEnvelope /> support@sireprinting.com
-          </p>
-          <p className="sirefooter-p-txt">
+          </a>
+          <p className="sirefooter-p-txt1">
             <FaMapMarkerAlt /> 626 92nd Street, Brooklyn NY 11220
           </p>
-          <p className="sirefooter-p-txt">
+          <p className="sirefooter-p-txt1">
             <FaShippingFast /> 100% Free shipping all across USA
           </p>
           <div className="footersire-social-icons">
             <FaFacebook />
-            <FaTwitter />
+            <FaXTwitter/>
             <FaInstagram />
             <FaLinkedin />
           </div>
@@ -99,7 +106,7 @@ function Footer1() {
           </p>
 
           <p className="sirefooter-p-txt">
-            <Link to="/sitemap" className="sirefooter-p-txt">
+            <Link to="/site-map" className="sirefooter-p-txt">
               Sitemap
             </Link>
           </p>
@@ -117,6 +124,11 @@ function Footer1() {
           </p>
         </Col>
       </Row>
+      <div className="footer-copyright">
+        <p className="footer-p">
+          Copyright ©2020 - 2024 Sire Printing | The Custom Websites
+        </p>
+      </div>
     </div>
   );
 }

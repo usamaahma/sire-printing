@@ -1,0 +1,42 @@
+.sitemap-container {
+    padding: 20px;
+}
+
+.sitemap-section {
+    margin: 20px 0;
+    background-color: #f0f2f5; /* Light background for contrast */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sitemap-title {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: left;
+}
+
+.sitemap-category {
+    margin: 10px 0 5px; /* Add margin above the category */
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.sitemap-item {
+    margin: 0; /* Remove margin to eliminate space */
+    padding: 2px 0; /* Minimal padding for readability */
+    font-size: 0.9em;
+    color: #555;
+}
+
+.sitemap-col {
+    background: #ffffff; /* Column background */
+    padding: 10px; /* Keep some padding for internal spacing */
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.sitemap-col:hover {
+    transform: scale(1.02);
+}
