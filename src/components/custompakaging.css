@@ -9,7 +9,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 1rem; /* Added margin for left and right */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-    width: 93%; /* Make sure it takes full width within the column */
+    width: 95% !important; /* Make sure it takes full width within the column */
 }
 
 .custom-card:hover {
