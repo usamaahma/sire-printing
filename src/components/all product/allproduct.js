@@ -6,97 +6,31 @@ import "./allproduct.css";
 import Productform from "./productform";
 
 const cardData = [
-  {
-    title: "Small Pillow Boxes",
-    image: "../images/allproduct1.png",
-    link: "/small-pillow-boxes",
-  },
-  {
-    title: "Kraft Cereal Boxes",
-    image: "../images/allproduct2.png",
-    link: "/kraft-cereal-boxes",
-  },
-  {
-    title: "Incense Boxes",
-    image: "../images/allproduct3.png",
-    link: "/incense-boxes",
-  },
   { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
   { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-  { title: "Incense Boxes", image: "../images/allproduct3.png" },
 ];
 
 function Allproduct1() {
   return (
     <div>
-        <div className="breadcrumb-container">
-          <Breadcrumb
-            items={[
-              {
-                title: (
-                  <a href="/" className="breadcrumb-title">
-                    Home
-                  </a>
-                ),
-              },
-              {
-                title: (
-                  <span className="breadcrumb-link">
-                    All Packaging Products
-                  </span>
-                ),
-              },
-            ]}
-          />
-        </div>
+      <div className="breadcrumb-container">
+        <Breadcrumb
+          items={[
+            {
+              title: (
+                <a href="/" className="breadcrumb-title">
+                  Home
+                </a>
+              ),
+            },
+            {
+              title: (
+                <span className="breadcrumb-link">All Packaging Products</span>
+              ),
+            },
+          ]}
+        />
+      </div>
       <div className="allproduct-main">
         <Row className="allproduct-row">
           <Col span={17} xs={24} md={17} className="allproduct-col1">
