@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Col, Row } from "antd";
 import { Breadcrumb } from "antd";
 import Christmasform from "./christmasform";
+import Productform from "../all product/productform";
  
 
 const cardData = [
@@ -97,7 +98,7 @@ function Christmas1() {
           </Col>
 
           <Col span={7} xs={24} md={7} className="simpletable-right-column">
-            <Christmasform />
+            <Productform />
           </Col>
         </Row>
       </div>

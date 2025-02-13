@@ -2,15 +2,25 @@ import React from "react";
 import { Card, Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import Retailform from "./retailpackagingform";
- 
-const cardData = [
-  { title: "Bath Bomb Boxes", image: "../images/bath-bomb.png", link: "/Bath-bomb-boxes" },
-  { title: "Candle Boxes", image: "../images/candle.png", link: "/candle-boxes" },
-  { title: "Candy Boxes", image: "../images/candy-box.png", link: "/Candy-boxes" },
- 
-   
-];
+import Productform from "../all product/productform";
 
+const cardData = [
+  {
+    title: "Bath Bomb Boxes",
+    image: "../images/bath-bomb.png",
+    link: "/Bath-bomb-boxes",
+  },
+  {
+    title: "Candle Boxes",
+    image: "../images/candle.png",
+    link: "/candle-boxes",
+  },
+  {
+    title: "Candy Boxes",
+    image: "../images/candy-box.png",
+    link: "/Candy-boxes",
+  },
+];
 
 function Retailpackaging1() {
   return (
@@ -33,7 +43,10 @@ function Retailpackaging1() {
               {cardData.map((card, index) => (
                 <Col xs={24} sm={12} md={12} lg={8} key={index}>
                   <div className="allproduct-card-main">
-                    <Link to={card.link || '#'} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link
+                      to={card.link || "#"}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       <Card
                         className="allproduct-card"
                         hoverable
@@ -52,7 +65,7 @@ function Retailpackaging1() {
           </Col>
 
           <Col span={7} xs={24} md={7} className="simpletable-right-column">
-            <Retailform />
+            <Productform />
           </Col>
         </Row>
       </div>

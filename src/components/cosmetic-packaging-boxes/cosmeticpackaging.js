@@ -2,15 +2,17 @@ import React from "react";
 import { Card, Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import Cosmeticform from "./cosmeticform";
- 
+import Productform from "../all product/productform";
 
 const cardData = [
   { title: "Bakery Boxes", image: "../images/beard.png", link: "/ " },
   { title: "Burger Boxes", image: "../images/body oil.png", link: "/ " },
-  { title: "Cereal Boxes", image: "../images/cosmetic sleeves.png", link: "/ " },
-  
+  {
+    title: "Cereal Boxes",
+    image: "../images/cosmetic sleeves.png",
+    link: "/ ",
+  },
 ];
-
 
 function Cosmetic1() {
   return (
@@ -33,7 +35,10 @@ function Cosmetic1() {
               {cardData.map((card, index) => (
                 <Col xs={24} sm={12} md={12} lg={8} key={index}>
                   <div className="allproduct-card-main">
-                    <Link to={card.link || '#'} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link
+                      to={card.link || "#"}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       <Card
                         className="allproduct-card"
                         hoverable
@@ -52,7 +57,7 @@ function Cosmetic1() {
           </Col>
 
           <Col span={7} xs={24} md={7} className="simpletable-right-column">
-            <Cosmeticform />
+            <Productform />
           </Col>
         </Row>
       </div>

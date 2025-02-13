@@ -1,16 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "antd";
 import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
-import "./allproduct.css";
 import Productform from "./productform";
-
-const cardData = [
-  { title: "Small Pillow Boxes", image: "../images/allproduct1.png" },
-  { title: "Kraft Cereal Boxes", image: "../images/allproduct2.png" },
-];
+import { products } from "../../utils/axios";
+import { useNavigate } from "react-router-dom";
+import "./allproduct.css";
 
 function Allproduct1() {
+  const [allProducts, setAllProducts] = useState([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  const handleClick = (product) => {
+    if (!product.title || !product._id) {
+      console.error("Product name or ID is missing", product);
+      return;
+    }
+    const productNameSlug = product.title.toLowerCase().replace(/\s+/g, "-");
+    navigate(`/product-detail/${productNameSlug}/${product._id}`);
+  };
+  useEffect(() => {
+    const fetchProductsData = async () => {
+      try {
+        const response = await products.get("/"); // Replace with your API URL
+        setAllProducts(response.data); // Assuming the response contains an array of blogs
+        console.log(response.data);
+      } catch (err) {
+        setError("Failed to load blogs."); // Set error if request fails
+      } finally {
+        setLoading(false); // Set loading to false after the data is fetched or if an error occurs
+      }
+    };
+
+    fetchProductsData(); // Call the fetch function
+  }, []); // Empty dependency array ensures this only runs once when the component mounts
+
   return (
     <div>
       <div className="breadcrumb-container">
@@ -36,21 +62,27 @@ function Allproduct1() {
           <Col span={17} xs={24} md={17} className="allproduct-col1">
             <p className="allproduct-txt">All Products</p>
             <Row>
-              {cardData.map((card, index) => (
+              {allProducts.map((card, index) => (
                 <Col xs={24} sm={12} md={12} lg={8} key={index}>
                   <div className="allproduct-card-main">
-                    <Link to={card.link} className="allproduct-card-link">
-                      <Card
-                        className="allproduct-card"
-                        hoverable
-                        cover={<img alt={card.title} src={card.image} />}
-                      >
-                        <Card.Meta
-                          title={card.title}
-                          className="allproduct-card-title"
+                    <Card
+                      className="allproduct-card"
+                      hoverable
+                      cover={
+                        <img
+                          alt={card.title}
+                          src={card.image}
+                          className="allproduct-card-image"
                         />
-                      </Card>
-                    </Link>
+                      }
+                      onClick={() => handleClick(card)} // This will navigate properly
+                      style={{ cursor: "pointer" }}
+                    >
+                      <Card.Meta
+                        title={card.title}
+                        className="allproduct-card-title"
+                      />
+                    </Card>
                   </div>
                 </Col>
               ))}

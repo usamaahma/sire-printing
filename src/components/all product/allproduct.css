@@ -16,23 +16,20 @@
   max-width: 200px; /* Adjust max-width as needed */
 }
 .allproduct-form-sticky-div {
-    position: sticky;
-    top: 0;
-    padding-top: 5rem !important;
-    /* z-index: 1000;   */
-    padding: 20px;
-    border-radius: 2px;
-     
-     
-  }
-  .input-allproduct{
-    border-color: rgb(131, 130, 130);
-      
-  }
-  .input-allproduct:hover{
-    border-color: black;
-  }
- 
+  position: sticky;
+  top: 0;
+  padding-top: 5rem !important;
+  /* z-index: 1000;   */
+  padding: 20px;
+  border-radius: 2px;
+}
+.input-allproduct {
+  border-color: rgb(131, 130, 130);
+}
+.input-allproduct:hover {
+  border-color: black;
+}
+
 .div-beatform-txt {
   margin: 0 0 1rem 0; /* Reduce margin to make it compact */
   background-color: rgb(255, 160, 21);
@@ -60,21 +57,23 @@
   margin-bottom: 4rem;
   font-weight: bold;
 }
-.allproduct-form-submit-button:hover{
-    background-color: #fcfcfc !important;
-    color: #070707 !important;
-    border-color: #070707;
+.allproduct-form-submit-button:hover {
+  background-color: #fcfcfc !important;
+  color: #070707 !important;
+  border-color: #070707;
 }
 
-.allproduct-card-link{
+.allproduct-card-link {
   color: #070707;
 }
-.allproduct-card-link:hover{
+.allproduct-card-link:hover {
   color: white;
 }
+.allproduct-card-image {
+  width: 5rem;
+  height: 15rem;
+}
 /* Responsive adjustments */
- 
- 
 
 @media (max-width: 768px) {
   .allproduct-form-sticky-div {
@@ -111,7 +110,7 @@
 .allproduct-card {
   width: 16.5rem;
   border-radius: 8px; /* Rounded corners */
-    /* Subtle shadow for depth */
+  /* Subtle shadow for depth */
   transition: transform 0.3s; /* Smooth hover effect */
 }
 
@@ -129,7 +128,7 @@
 }
 /* breadcrumb */
 .breadcrumb-container {
-  background-color:  rgb(237,239,240); /* Set background color to gray */
+  background-color: rgb(237, 239, 240); /* Set background color to gray */
   padding: 20px; /* Optional: Add some padding for better appearance */
 }
 .breadcrumb-title {

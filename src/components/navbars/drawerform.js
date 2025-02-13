@@ -1,40 +1,60 @@
-import { Button, Form, Select, Input, Upload, Row, Col } from "antd";
-import { UploadOutlined } from "@ant-design/icons";
-import './drawerform.css';
+import { useState } from "react";
+import { Button, Form, Select, Input, Upload, Row, Col, message } from "antd";
+import FileUpload from "../fileupload"; // File upload component import
+import "./drawerform.css";
+import { getquote } from "../../utils/axios";
 
 const { Option } = Select;
 
 function Drawerform() {
-  const handleFinish = (values) => {
-    console.log("Form Values: ", values);
+  const [loading, setLoading] = useState(false);
+  const [form] = Form.useForm();
+
+  const handleFinish = async (values) => {
+    setLoading(true);
+
+    // Ensure file URL is available before submission
+    if (!values.uploadFile) {
+      message.error("Please upload a file before submitting!");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const response = await getquote.post("/", values);
+      console.log("API Response: ", response.data);
+      message.success("Form submitted successfully!");
+      form.resetFields();
+    } catch (error) {
+      console.error("API Error: ", error);
+      message.error(error.response?.data?.message || "Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className=" ">
-      <Form layout="vertical" onFinish={handleFinish}>
+    <div>
+      <Form form={form} layout="vertical" onFinish={handleFinish}>
         <Row gutter={16}>
           <Col span={6}>
-            <Form.Item>
-              <Input className="drawerform-input" placeholder="Length" />
+            <Form.Item name="length">
+              <Input placeholder="Length" />
             </Form.Item>
           </Col>
           <Col span={6}>
-            <Form.Item>
-              <Input className="drawerform-input" placeholder="Width" />
+            <Form.Item name="width">
+              <Input placeholder="Width" />
             </Form.Item>
           </Col>
           <Col span={6}>
-            <Form.Item>
-              <Input className="drawerform-input" placeholder="Depth" />
+            <Form.Item name="depth">
+              <Input placeholder="Depth" />
             </Form.Item>
           </Col>
           <Col span={6}>
-            <Form.Item>
-              <Select
-                defaultValue="inches"
-                style={{ width: "100%" }}
-                className="drawerform-input"
-              >
+            <Form.Item name="inches">
+              <Select defaultValue="inches">
                 <Option value="inches">Inches</Option>
                 <Option value="cm">cm</Option>
                 <Option value="mm">mm</Option>
@@ -45,21 +65,16 @@ function Drawerform() {
 
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item label="Choose Product">
-              <Select
-                placeholder="Select Product"
-                className="drawerform-input"
-                style={{ width: "100%" }}
-              >
+            <Form.Item name="chooseProduct" label="Choose Product">
+              <Select placeholder="Select Product">
                 <Option value="product1">Product 1</Option>
                 <Option value="product2">Product 2</Option>
                 <Option value="product3">Product 3</Option>
               </Select>
             </Form.Item>
           </Col>
-
           <Col span={12}>
-            <Form.Item label="Color">
+            <Form.Item name="colors" label="Color">
               <Select placeholder="Select Color">
                 <Option value="red">Red</Option>
                 <Option value="blue">Blue</Option>
@@ -68,69 +83,60 @@ function Drawerform() {
             </Form.Item>
           </Col>
         </Row>
+
         <Row gutter={16}>
           <Col span={8}>
-            <Form.Item label="Quantity">
-              <Input
-                className="drawerform-input"
-                type="number"
-                placeholder="Enter Quantity"
-              />
+            <Form.Item name="quantity" label="Quantity">
+              <Input type="number" placeholder="Enter Quantity" />
             </Form.Item>
           </Col>
           <Col span={8}>
-            <Form.Item label="Phone" className="drawerform-input">
-              <Input
-                className="drawerform-input"
-                placeholder="Enter Your Phone Number"
-              />
+            <Form.Item name="phoneNumber" label="Phone">
+              <Input placeholder="Enter Your Phone Number" />
             </Form.Item>
           </Col>
           <Col span={8}>
-            <Form.Item label="Full Name">
-              <Input
-                className="drawerform-input"
-                placeholder="Enter Your Full Name"
+            <Form.Item name="fullName" label="Full Name">
+              <Input placeholder="Enter Your Full Name" />
+            </Form.Item>
+          </Col>
+        </Row>
+
+        <Row gutter={16}>
+          <Col span={12}>
+            <Form.Item name="email" label="Email">
+              <Input type="email" placeholder="Enter Your Email" />
+            </Form.Item>
+          </Col>
+          <Col span={12}>
+            <Form.Item name="uploadFile" label="Upload File">
+              <FileUpload
+                onUploadSuccess={(url) =>
+                  form.setFieldsValue({ uploadFile: url })
+                }
               />
             </Form.Item>
           </Col>
         </Row>
-        <Row gutter={16}>
-          <Col span={12}>
-            <Form.Item label="Email">
-              <Input
-                className="drawerform-input"
-                type="email"
-                placeholder="Enter Your Email"
-              />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item label="Upload File">
-              <Upload>
-                <Button className="drawerform-input" icon={<UploadOutlined />}>
-                  Upload
-                </Button>
-              </Upload>
-            </Form.Item>
-          </Col>
-        </Row>
+
         <Row gutter={16}>
           <Col span={24}>
-            <Form.Item label="Message">
+            <Form.Item name="message" label="Message">
               <Input.TextArea placeholder="Enter Your Message" rows={2} />
             </Form.Item>
           </Col>
         </Row>
+
         <Row>
           <Col span={24} style={{ textAlign: "center" }}>
             <Form.Item>
               <Button
                 type="primary"
                 htmlType="submit"
-                className="drawerform-submit-button"
+                loading={loading}
+                disabled={loading}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </Button>
             </Form.Item>
           </Col>

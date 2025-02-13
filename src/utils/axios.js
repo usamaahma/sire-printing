@@ -6,6 +6,12 @@ const baseURL = process.env.REACT_APP_API_URL; // Make sure your .env file is co
 const sireperks = axios.create({
   baseURL: `${baseURL}/sireperks`, // Ensure this is the correct endpoint for login
 });
+const products = axios.create({
+  baseURL: `${baseURL}/products`,
+});
+const getquote = axios.create({
+  baseURL: `${baseURL}/getquote`, // Ensure this is the correct endpoint for login
+});
 
 // Generic request interceptor for all instances
 const requestInterceptor = (req) => {
@@ -21,5 +27,7 @@ const errorInterceptor = (err) => {
 
 // Apply interceptors for each axios instance
 sireperks.interceptors.request.use(requestInterceptor, errorInterceptor);
+products.interceptors.request.use(requestInterceptor, errorInterceptor);
+getquote.interceptors.request.use(requestInterceptor, errorInterceptor);
 
-export { sireperks };
+export { sireperks, products, getquote };

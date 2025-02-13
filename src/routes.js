@@ -39,6 +39,7 @@ import Privacy from './components/privacy-policy/privacy';
 import Term from './components/term-condition/termandcondition';
 import GetAQuote from './components/Get a quote/getaquote';
 import Sitemap from './components/site-map/sitemap';
+import ProductDetail from './components/productdetail/productdetail';
  
  
  
@@ -54,6 +55,7 @@ const AppRoutes = () => {
                 <Routes>
                     <Route path="/" element={<Landingpage1 />} />
                     <Route path="all-products" element={<Allproductspage1 />} />
+                    <Route path="/product-detail/:name/:id" element={<ProductDetail />} />
                     <Route path="CBD-Packaging" element={<Cbdpackagingpage />} />
                     <Route path="custom-Retail-Packaging" element={<Retailpackagingpage />}/>
                     <Route path="Custom-box-styles" element={<Customboxpage />} />
