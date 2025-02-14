@@ -12,7 +12,9 @@ const products = axios.create({
 const getquote = axios.create({
   baseURL: `${baseURL}/getquote`, // Ensure this is the correct endpoint for login
 });
-
+const category = axios.create({
+  baseURL: `${baseURL}/category`, // Ensure this is the correct endpoint for login
+});
 // Generic request interceptor for all instances
 const requestInterceptor = (req) => {
   // Optionally add authorization headers or custom logic
@@ -29,5 +31,6 @@ const errorInterceptor = (err) => {
 sireperks.interceptors.request.use(requestInterceptor, errorInterceptor);
 products.interceptors.request.use(requestInterceptor, errorInterceptor);
 getquote.interceptors.request.use(requestInterceptor, errorInterceptor);
+category.interceptors.request.use(requestInterceptor, errorInterceptor);
 
-export { sireperks, products, getquote };
+export { sireperks, products, getquote, category };

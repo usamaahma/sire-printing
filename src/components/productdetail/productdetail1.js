@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form, Select, Input, Row, Col, message } from "antd";
 import { Breadcrumb } from "antd";
 import Productimg1 from "./productimg";
 import FileUpload from "../fileupload";
-import { getquote } from "../../utils/axios";
+import { category, getquote } from "../../utils/axios";
 
 const { Option } = Select;
 const imagesData = [
@@ -19,7 +19,34 @@ const imagesData = [
 
 const ProductDetail1 = ({ product }) => {
   const [loading, setLoading] = useState(false);
+  const [categoryName, setCategoryName] = useState(false);
+  const [error, setError] = useState("");
+
   const [form] = Form.useForm();
+
+  useEffect(() => {
+    console.log("Product:", product);
+    console.log("Product Category:", product?.category);
+
+    if (!product?.category) {
+      console.error("Category is missing, API call will not proceed.");
+      return;
+    }
+
+    const fetchProduct = async () => {
+      try {
+        const response = await category.get(`${product?.category}`);
+        setCategoryName(response.data.title);
+      } catch (err) {
+        console.error("Failed to load product details:", err);
+        setError("Failed to load product details.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [product?.category]);
 
   const handleFinish = async (values) => {
     setLoading(true);
@@ -33,7 +60,6 @@ const ProductDetail1 = ({ product }) => {
 
     try {
       const response = await getquote.post("/", values);
-      console.log("API Response: ", response.data);
       message.success("Form submitted successfully!");
       form.resetFields();
     } catch (error) {
@@ -58,12 +84,16 @@ const ProductDetail1 = ({ product }) => {
             {
               title: (
                 <a href="/CBD-Packaging" className="breadcrumb-title">
-                  {product?.category}
+                  {categoryName}
                 </a>
               ),
             },
             {
-              title: <span className="breadcrumb-link">{product?.title}</span>,
+              title: (
+                <span className="breadcrumb-link">
+                  {product?.titlerelatedProducts[0].title}
+                </span>
+              ),
             },
           ]}
         />

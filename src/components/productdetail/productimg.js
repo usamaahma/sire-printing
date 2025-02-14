@@ -3,7 +3,7 @@ import { Col, Row } from "antd";
 
 function Productimg1({ product }) {
   const thumbnailImages =
-    product?.details?.titlerelatedProducts?.[0]?.details?.images || [];
+    product?.titlerelatedProducts?.[0]?.details?.images || [];
 
   const [selectedImage, setSelectedImage] = useState(thumbnailImages[0]);
 
