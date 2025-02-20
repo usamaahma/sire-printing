@@ -235,7 +235,7 @@ function Mainnav1() {
                   className="my-2 mx-2"
                   onClick={handleNavClick}
                 >
-                  Custom Box Styles
+                  Custom Box Styles 
                 </Nav.Link>
                 <Link to="/" className="logo">
                   <img

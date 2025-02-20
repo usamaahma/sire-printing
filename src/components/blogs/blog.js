@@ -1,163 +1,130 @@
-import React from "react";
-import { Card, Row, Col } from "antd";
+import React, { useEffect, useState } from "react";
+import { Card, Row, Col, Breadcrumb } from "antd";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import "./blog.css";
+import { blogs, category } from "../../utils/axios"; // Ensure correct import
 
 const { Meta } = Card;
 
-const blogData = [
-  {
-    title: "How to Create Custom Incense Boxes That Sell?",
-    description:
-      "As the demand for custom incense boxes continues to rise, it has become increasingly important for businesses to... ",
-    btitle: " Food packaging",
-    imgSrc: "../images/blog1.avif",
-  },
-  {
-    title: "How Can CBD Packaging Help Your Business?",
-    description:
-      "Many new firms have joined the CBD product industry as a consequence of the products' rapid popularity and...",
-    btitle: " CBD Packaging",
-    imgSrc: "../images/blog2.avif",
-  },
-  {
-    title: "Best & Modern Sleek Packaging For 20 Incense Sticks",
-    description:
-      "In the world of incense, packaging is essential for maintaining the product's quality as well as improving the...",
-    btitle: "Custom Packaging Boxes",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-  {
-    title: "Best Vape Cartridge Packaging Boxes For 0.5ml & 1ml Vape...",
-    description:
-      "Vape cartridges have become very popular in recent years, offering a suitable and sensible way to enjoy various...",
-    btitle: " Custom Retail Packaging",
-    imgSrc: "../images/blog3.png",
-  },
-];
-
 function Blog() {
+  const [blogsData, setBlogsData] = useState([]);
+  const [categories, setCategories] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await blogs.get("/");
+        setBlogsData(response.data);
+
+        // Extract category IDs
+        const categoryIds = [
+          ...new Set(response.data.map((blog) => blog.category)),
+        ];
+
+        // Fetch category titles
+        fetchCategories(categoryIds);
+      } catch (err) {
+        console.error("Failed to load blogs:", err);
+        setError("Failed to load blogs.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  const fetchCategories = async (categoryIds) => {
+    try {
+      const categoryResponses = await Promise.all(
+        categoryIds.map((id) => category.get(`/${id}`))
+      );
+
+      // Map categories by ID
+      const categoryData = {};
+      categoryResponses.forEach((res, index) => {
+        categoryData[categoryIds[index]] = res.data.title;
+      });
+
+      setCategories(categoryData);
+    } catch (err) {
+      console.error("Failed to load categories:", err);
+    }
+  };
+
   return (
     <div>
-        <div className="breadcrumb-container">
-          <Breadcrumb
-            items={[
-              {
-                title: (
-                  <a href="/" className="breadcrumb-title">
-                    Home
-                  </a>
-                ),
-              },
-              {
-                title: (
-                  <span className="breadcrumb-link">
-                   Blogs
-                  </span>
-                ),
-              },
-            ]}
-          />
-        </div>
-    <div>
+      <div className="breadcrumb-container">
+        <Breadcrumb
+          items={[
+            {
+              title: (
+                <a href="/" className="breadcrumb-title">
+                  Home
+                </a>
+              ),
+            },
+            {
+              title: <span className="breadcrumb-link">Blogs</span>,
+            },
+          ]}
+        />
+      </div>
+      <div>
         <img
-        className="img-cbdmain"
-        src="../images/foodpackaging.gif"
-        alt="cbd-main"
-        style={{
-          width: "100%",
-          height: "auto",
-          marginBottom: "2rem",
-          marginTop:"2rem",
-        }}
-      />
-   
-    <div className="blog-container">
-      <p className="blog-headi">Blogs</p>
-      <Row gutter={[16, 16]} justify="center">
-        {blogData.map((blog, index) => (
-          <Col key={index} xs={24} sm={12} md={12} lg={12}>
-            <Card
-              className="blog-card"
-              cover={<img alt="example" src={blog.imgSrc} />}
-            >
-              <div className="card-txt-blog">
-                <Meta
-                  className="blog-cardtxt"
-                  title={<Link to="/10-reasons-to-love-custom-cereal-boxes" className="blog-links">{blog.title}</Link>}
-                  description={blog.description}
-                />
-                <div className="blog-icon">
-                  <RxHamburgerMenu />
-                  <Link to="/food-packaging" className="blog-links">
-                    <p className="blog-cardtxt1">{blog.btitle}</p>
-                  </Link>
-                </div>
-              </div>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </div>
-    </div>
+          className="img-cbdmain"
+          src="../images/foodpackaging.gif"
+          alt="cbd-main"
+          style={{
+            width: "100%",
+            height: "auto",
+            marginBottom: "2rem",
+            marginTop: "2rem",
+          }}
+        />
+
+        <div className="blog-container">
+          <p className="blog-headi">Blogs</p>
+          <Row gutter={[16, 16]} justify="center">
+            {blogsData.map((blog, index) => (
+              <Col key={index} xs={24} sm={12} md={12} lg={12}>
+                <Card
+                  className="blog-card"
+                  cover={<img alt="example" src={blog.image} />}
+                >
+                  <div className="card-txt-blog">
+                    <Meta
+                      className="blog-cardtxt"
+                      title={
+                        <Link to={`/blog/${blog._id}`} className="blog-links">
+                          {blog.title}
+                        </Link>
+                      }
+                      description={blog.description}
+                    />
+                    <div className="blog-icon">
+                      <RxHamburgerMenu />
+                      <Link
+                        to={`/blogs/${categories[blog.category]}/${
+                          blog.category
+                        }`}
+                        className="blog-links"
+                      >
+                        <p className="blog-cardtxt1">
+                          {categories[blog.category] || "Loading..."}
+                        </p>
+                      </Link>
+                    </div>
+                  </div>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      </div>
     </div>
   );
 }

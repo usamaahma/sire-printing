@@ -1,42 +1,63 @@
-import { Button, Form, Select, Input, Upload, Row, Col } from "antd";
-import { UploadOutlined } from "@ant-design/icons";
+import React, { useState } from "react";
+import { Button, Form, Select, Input, Upload, Row, Col, message } from "antd";
+import { getquote } from "../../utils/axios"; // API call ke liye import
+import FileUpload from "../fileupload";
 
 const { Option } = Select;
 
 function Productform() {
-  const handleFinish = (values) => {
-    console.log("Form Values: ", values);
-  };
+  const [loading, setLoading] = useState(false);
+  const [form] = Form.useForm();
 
+  const handleFinish = async (values) => {
+    setLoading(true);
+    console.log(values.uploadFile, "uploadedfile");
+    // Ensure file URL is available before submission
+    if (!values.uploadFile) {
+      message.error("Please upload a file before submitting!");
+      setLoading(false);
+      return;
+    }
+
+    console.log(values, "formdata"); // Debugging ke liye
+
+    try {
+      const response = await getquote.post("/", values);
+      console.log("API Response: ", response.data);
+      message.success("Form submitted successfully!");
+      form.resetFields();
+    } catch (error) {
+      console.error("API Error: ", error);
+      message.error(error.response?.data?.message || "Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="allproduct-form-sticky-div">
       <div className="div-beatform-txt">
         <p className="allproduct-beat-txt">Beat My Quote</p>
       </div>
-      <Form layout="vertical" onFinish={handleFinish}>
+      <Form form={form} layout="vertical" onFinish={handleFinish}>
         <Row gutter={16}>
           <Col span={6}>
-            <Form.Item>
+            <Form.Item name="length">
               <Input className="input-allproduct" placeholder="Length" />
             </Form.Item>
           </Col>
           <Col span={6}>
-            <Form.Item>
+            <Form.Item name="width">
               <Input className="input-allproduct" placeholder="Width" />
             </Form.Item>
           </Col>
           <Col span={6}>
-            <Form.Item>
+            <Form.Item name="depth">
               <Input className="input-allproduct" placeholder="Depth" />
             </Form.Item>
           </Col>
           <Col span={6}>
-            <Form.Item>
-              <Select
-                defaultValue="inches"
-                style={{ width: "100%" }}
-                className="input-allproduct"
-              >
+            <Form.Item name="inches">
+              <Select defaultValue="inches" className="input-allproduct">
                 <Option value="inches">Inches</Option>
                 <Option value="cm">cm</Option>
                 <Option value="mm">mm</Option>
@@ -44,24 +65,18 @@ function Productform() {
             </Form.Item>
           </Col>
         </Row>
-
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item label="Choose Product">
-              <Select
-                placeholder="Select Product"
-                className="input-allproduct"
-                style={{ width: "100%" }} // or specify a specific width, e.g., "300px"
-              >
+            <Form.Item name="chooseProduct" label="Choose Product">
+              <Select placeholder="Select Product" className="input-allproduct">
                 <Option value="product1">Product 1</Option>
                 <Option value="product2">Product 2</Option>
                 <Option value="product3">Product 3</Option>
               </Select>
             </Form.Item>
           </Col>
-
           <Col span={12}>
-            <Form.Item label="Color">
+            <Form.Item name="colors" label="Color">
               <Select placeholder="Select Color">
                 <Option value="red">Red</Option>
                 <Option value="blue">Blue</Option>
@@ -72,7 +87,7 @@ function Productform() {
         </Row>
         <Row gutter={16}>
           <Col span={8}>
-            <Form.Item label="Quantity">
+            <Form.Item name="quantity" label="Quantity">
               <Input
                 className="input-allproduct"
                 type="number"
@@ -81,7 +96,7 @@ function Productform() {
             </Form.Item>
           </Col>
           <Col span={8}>
-            <Form.Item label="Phone" className="input-allproduct">
+            <Form.Item name="phoneNumber" label="Phone">
               <Input
                 className="input-allproduct"
                 placeholder="Enter Your Phone Number"
@@ -89,7 +104,7 @@ function Productform() {
             </Form.Item>
           </Col>
           <Col span={8}>
-            <Form.Item label="Full Name">
+            <Form.Item name="fullName" label="Full Name">
               <Input
                 className="input-allproduct"
                 placeholder="Enter Your Full Name"
@@ -99,7 +114,7 @@ function Productform() {
         </Row>
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item label="Email">
+            <Form.Item name="email" label="Email">
               <Input
                 className="input-allproduct"
                 type="email"
@@ -108,22 +123,27 @@ function Productform() {
             </Form.Item>
           </Col>
           <Col span={12}>
-            <Form.Item label="Upload File">
-              <Upload>
-                <Button className="input-allproduct" icon={<UploadOutlined />}>
-                  Upload
-                </Button>
-              </Upload>
+            <Form.Item name="uploadFile" label="Upload File">
+              <FileUpload
+                onUploadSuccess={(url) =>
+                  form.setFieldsValue({ uploadFile: url })
+                }
+              />
             </Form.Item>
           </Col>
         </Row>
         <Row gutter={16}>
           <Col span={24}>
-            <Form.Item label="Message">
-              <Input.TextArea placeholder="Enter Your Message" rows={2} />
+            <Form.Item name="message" label="Message">
+              <Input.TextArea
+                className="input-allproduct"
+                placeholder="Enter Your Message"
+                rows={2}
+              />
             </Form.Item>
           </Col>
         </Row>
+
         <Row>
           <Col span={24} style={{ textAlign: "center" }}>
             <Form.Item>
@@ -131,8 +151,10 @@ function Productform() {
                 type="primary"
                 htmlType="submit"
                 className="allproduct-form-submit-button"
+                loading={loading}
+                disabled={loading}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </Button>
             </Form.Item>
           </Col>

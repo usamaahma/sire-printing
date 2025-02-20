@@ -2,15 +2,25 @@ import React from "react";
 import { Card, Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import Foodform from "./foodform";
- 
+import Productform from "../all product/productform";
 
 const cardData = [
-  { title: "Bakery Boxes", image: "../images/bakerybox.png", link: "/bakery-boxes" },
-  { title: "Burger Boxes", image: "../images/burgerbox.png", link: "/burger-boxes" },
-  { title: "Cereal Boxes", image: "../images/cerealbox.png", link: "/cereal-boxes" },
-  
+  {
+    title: "Bakery Boxes",
+    image: "../images/bakerybox.png",
+    link: "/bakery-boxes",
+  },
+  {
+    title: "Burger Boxes",
+    image: "../images/burgerbox.png",
+    link: "/burger-boxes",
+  },
+  {
+    title: "Cereal Boxes",
+    image: "../images/cerealbox.png",
+    link: "/cereal-boxes",
+  },
 ];
-
 
 function Foodpackage1() {
   return (
@@ -33,7 +43,10 @@ function Foodpackage1() {
               {cardData.map((card, index) => (
                 <Col xs={24} sm={12} md={12} lg={8} key={index}>
                   <div className="allproduct-card-main">
-                    <Link to={card.link || '#'} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link
+                      to={card.link || "#"}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       <Card
                         className="allproduct-card"
                         hoverable
@@ -52,7 +65,7 @@ function Foodpackage1() {
           </Col>
 
           <Col span={7} xs={24} md={7} className="simpletable-right-column">
-            <Foodform />
+            <Productform />
           </Col>
         </Row>
       </div>

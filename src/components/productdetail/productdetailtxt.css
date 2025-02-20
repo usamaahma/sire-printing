@@ -1,0 +1,28 @@
+.rigidpage-container {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 2rem;
+}
+
+.rigidpage-heading {
+    font-size: 1.5em; /* Adjust size as needed */
+    margin: 10px 0;
+}
+
+.rigidpage-txt {
+    font-size: 1em; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space between paragraphs */
+    text-align: left;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .rigidpage-heading {
+        font-size: 1.2em;
+    }
+    
+    .rigidpage-txt {
+        font-size: 0.9em;
+    }
+}

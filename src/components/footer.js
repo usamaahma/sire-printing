@@ -1,5 +1,6 @@
-import React, {useState} from "react";
-import { Row, Col, Form,Button,Input,message } from "antd";
+import React, { useState } from "react";
+import { Row, Col, Form, Button, Input, message } from "antd";
+import { newsletter } from "../utils/axios";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -37,8 +38,10 @@ function Footer1() {
           response.data &&
           response.data.message === "Email already subscribed"
         ) {
-          message.info("You already subscribed, thank you!");
+          // If the response has message "Email already subscribed"
+          message.info("You are already subscribed, thank you!");
         } else {
+          // If subscription is successful
           message.success("You have successfully subscribed!");
         }
       })
@@ -49,13 +52,14 @@ function Footer1() {
           // Handle error based on server response status
           if (error.response.status === 400) {
             if (error.response.data.message === "Email already subscribed") {
-              message.warning("You already subscribed, thank you!");
+              // If server responds with email already subscribed
+              message.warning("You are already subscribed, thank you!");
             } else {
-              message.error("Something went wrong, please try again!");
+              message.error("You are already subscribed, thank you!");
             }
           } else {
             // Handle other error statuses
-            message.error("Something went wrong, please try again!");
+            message.error("You are already subscribed, thank you!");
           }
         } else if (error.request) {
           // Handle network error
@@ -68,6 +72,7 @@ function Footer1() {
         }
       });
   };
+
   return (
     <div className="footersire-footer">
       <Row gutter={16}>
@@ -76,7 +81,8 @@ function Footer1() {
           <div className="footer-input-container">
             <Form
               onFinish={onFinish}
-              layout="inline" // Optional: to display the input and button inline
+              layout="inline" // Ensures input and button are inline
+              style={{}} // Ensures form uses full width
             >
               <Form.Item
                 name="email"
@@ -90,6 +96,7 @@ function Footer1() {
                     message: "Please enter a valid email address!",
                   },
                 ]}
+                style={{ margin: 0 }} // Removes default margin from Form.Item
               >
                 <Input
                   type="email"
@@ -99,7 +106,10 @@ function Footer1() {
                   className="footer-input"
                 />
               </Form.Item>
-              <Form.Item>
+
+              <Form.Item
+                style={{ margin: 0 }} // Removes default margin from Form.Item
+              >
                 <Button
                   type="primary"
                   htmlType="submit"
@@ -205,7 +215,7 @@ function Footer1() {
       </Row>
       <div className="footer-copyright">
         <p className="footer-p">
-          Copyright ©2020 - 2024 Sire Printing | The Custom Websites
+          Copyright ©2020 - 2025 Sire Printing | The Custom Websites
         </p>
       </div>
     </div>

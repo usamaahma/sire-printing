@@ -36,32 +36,34 @@
 }
 
 /* Styles for input */
-.footer-input {
-  margin-top: 1.5rem;
-  width: 80%; /* Adjust this value as needed */
-  height: 2.5rem;
-}
-
-/* Other existing styles remain unchanged */
 .footer-input-container {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center; /* Align vertically in the center */
+  margin-top: 10px;
   margin-bottom: 10px; /* Add margin for spacing */
+  width: 100%; /* Ensure container takes up the full width */
 }
 
-/* Button styles */
-.submit-button {
-  margin-top: 1.5rem;
-  margin-left: 1rem;
-  background-color: #7c7b7b; /* Button background color */
-  color: #fff; /* White text color for button */
-  padding: 10px 15px; /* Adjust padding for button */
-  border: none; /* Remove default border */
-  border-radius: 2px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
+.footer-input {
+  width: 100%; /* Ensure the input takes full available width */
   height: 2.5rem;
-  display: flex; /* Center icon in button */
+   
+}
+
+.submit-button {
+  height: 2.5rem;
+  padding: 10px 15px;
+  background-color: #7c7b7b;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; /* Center icon inside button */
   align-items: center; /* Center icon vertically */
+  width: auto; /* Allow button to fit content */
+  min-width: 3rem; /* Set a minimum width for the button */
+  margin-left: 3px;
 }
 
 .footer-visaimg {
@@ -116,7 +118,21 @@
     flex: 0 0 50%; /* 2 columns per row */
   }
 }
+@media (max-width: 768px) {
+  .footer-input-container {
+    flex-direction: column; /* Stack input and button vertically on small screens */
+    gap: 0.5rem; /* Reduce gap on smaller screens */
+  }
 
+  .footer-input {
+    width: 100%; /* Full width on smaller screens */
+  }
+  
+  .submit-button {
+    width: 100%; /* Button takes full width on small screens */
+    
+  }
+}
 @media (max-width: 600px) {
   .footersire-column {
     flex: 0 0 100%; /* 1 column per row */
@@ -138,13 +154,14 @@
     text-align: center; /* Center align text within columns */
   }
 
-  .footer-input-container {
-    justify-content: center; /* Center the input and button */
+  /* .footer-input-container {
+    justify-content: center;  
+    
   }
 
   .submit-button {
-    margin-top: 1.5rem; /* Adjust top margin for better spacing */
-  }
+    margin-top: 1.5rem;  
+  } */
 
   .footersire-social-icons {
     justify-content: center; /* Center social icons */

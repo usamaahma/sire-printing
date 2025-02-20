@@ -1,38 +1,71 @@
-import React from 'react';
-import { Button, Form, Select, Input, Upload, Row, Col } from "antd";
-import { UploadOutlined } from "@ant-design/icons";
-import './getaquote.css';
+import React, { useState } from "react";
+import { Button, Form, Select, Input, Upload, Row, Col, message } from "antd";
+import FileUpload from "../fileupload";
+import { getquote } from "../../utils/axios"; // API call ke liye import
+import "./getaquote.css";
 
 const { Option } = Select;
 
 function GetAQuote() {
-  const handleFinish = (values) => {
-    console.log("Form Values: ", values);
+  const [loading, setLoading] = useState(false);
+  const [form] = Form.useForm();
+
+  const handleFinish = async (values) => {
+    setLoading(true);
+    console.log(values.uploadFile, "uploadedfile");
+    // Ensure file URL is available before submission
+    if (!values.uploadFile) {
+      message.error("Please upload a file before submitting!");
+      setLoading(false);
+      return;
+    }
+
+    console.log(values, "formdata"); // Debugging ke liye
+
+    try {
+      const response = await getquote.post("/", values);
+      console.log("API Response: ", response.data);
+      message.success("Form submitted successfully!");
+      form.resetFields();
+    } catch (error) {
+      console.error("API Error: ", error);
+      message.error(error.response?.data?.message || "Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="geta-quote-container">
       <div className="geta-quote-form">
-        <h1 style={{ fontWeight: 'bold', textAlign: 'center', marginBottom:'25px' }}>Get a Quote</h1>
-        <Form layout="vertical" onFinish={handleFinish}>
+        <h1
+          style={{
+            fontWeight: "bold",
+            textAlign: "center",
+            marginBottom: "25px",
+          }}
+        >
+          Get a Quote
+        </h1>
+        <Form form={form} layout="vertical" onFinish={handleFinish}>
           <Row gutter={16}>
             <Col span={6}>
-              <Form.Item>
+              <Form.Item name="length">
                 <Input className="geta-input" placeholder="Length" />
               </Form.Item>
             </Col>
             <Col span={6}>
-              <Form.Item>
+              <Form.Item name="width">
                 <Input className="geta-input" placeholder="Width" />
               </Form.Item>
             </Col>
             <Col span={6}>
-              <Form.Item>
+              <Form.Item name="depth">
                 <Input className="geta-input" placeholder="Depth" />
               </Form.Item>
             </Col>
             <Col span={6}>
-              <Form.Item>
+              <Form.Item name="inches">
                 <Select
                   defaultValue="inches"
                   style={{ width: "100%" }}
@@ -48,7 +81,7 @@ function GetAQuote() {
 
           <Row gutter={16}>
             <Col span={12}>
-              <Form.Item label="Choose Product">
+              <Form.Item name="chooseProduct" label="Choose Product">
                 <Select
                   placeholder="Select Product"
                   className="geta-select"
@@ -62,7 +95,7 @@ function GetAQuote() {
             </Col>
 
             <Col span={12}>
-              <Form.Item label="Color">
+              <Form.Item name="colors" label="Color">
                 <Select placeholder="Select Color" className="geta-select">
                   <Option value="red">Red</Option>
                   <Option value="blue">Blue</Option>
@@ -74,7 +107,7 @@ function GetAQuote() {
 
           <Row gutter={16}>
             <Col span={8}>
-              <Form.Item label="Quantity">
+              <Form.Item name="quantity" label="Quantity">
                 <Input
                   className="geta-input"
                   type="number"
@@ -83,7 +116,7 @@ function GetAQuote() {
               </Form.Item>
             </Col>
             <Col span={8}>
-              <Form.Item label="Phone">
+              <Form.Item name="phoneNumber" label="Phone">
                 <Input
                   className="geta-input"
                   placeholder="Enter Your Phone Number"
@@ -91,7 +124,7 @@ function GetAQuote() {
               </Form.Item>
             </Col>
             <Col span={8}>
-              <Form.Item label="Full Name">
+              <Form.Item name="fullName" label="Full Name">
                 <Input
                   className="geta-input"
                   placeholder="Enter Your Full Name"
@@ -102,7 +135,7 @@ function GetAQuote() {
 
           <Row gutter={16}>
             <Col span={12}>
-              <Form.Item label="Email">
+              <Form.Item name="email" label="Email">
                 <Input
                   className="geta-input"
                   type="email"
@@ -111,20 +144,24 @@ function GetAQuote() {
               </Form.Item>
             </Col>
             <Col span={12}>
-              <Form.Item label="Upload File">
-                <Upload>
-                  <Button className="geta-upload-button" icon={<UploadOutlined />}>
-                    Upload
-                  </Button>
-                </Upload>
+              <Form.Item name="uploadFile" label="Upload File">
+                <FileUpload
+                  onUploadSuccess={(url) =>
+                    form.setFieldsValue({ uploadFile: url })
+                  }
+                />
               </Form.Item>
             </Col>
           </Row>
 
           <Row gutter={16}>
             <Col span={24}>
-              <Form.Item label="Message">
-                <Input.TextArea className="geta-textarea" placeholder="Enter Your Message" rows={2} />
+              <Form.Item name="message" label="Message">
+                <Input.TextArea
+                  className="geta-textarea"
+                  placeholder="Enter Your Message"
+                  rows={2}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -136,8 +173,10 @@ function GetAQuote() {
                   type="primary"
                   htmlType="submit"
                   className="geta-submit-button"
+                  loading={loading}
+                  disabled={loading}
                 >
-                  Submit
+                  {loading ? "Submitting..." : "Submit"}
                 </Button>
               </Form.Item>
             </Col>

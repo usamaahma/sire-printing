@@ -1,31 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col, Card, Modal, Carousel } from "antd";
 import { Breadcrumb } from "antd";
 import "./portcards.css";
-
-// Sample data for the cards
-const cardData = [
-  { id: 1, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
-  { id: 2, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
-  { id: 3, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"]},
-  { id: 4, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
-  { id: 5, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
-  { id: 6, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
-  { id: 7, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
-  { id: 8, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
-  { id: 9, images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] },
-  {
-    id: 10,
-    images: ["../images/portfolio1.avif", "../images/portfolio2.avif", "../images/portfolio3.avif", "../images/portfolio4.avif"] ,
-  },
-];
+import { portfolio } from "../../utils/axios";
 
 function Portcards1() {
+  const [portfolioData, setPortfolioData] = useState([]);
   const [visible, setVisible] = useState(false);
   const [currentImages, setCurrentImages] = useState([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await portfolio.get("/"); // Ensure the correct API endpoint
+        setPortfolioData(response.data);
+      } catch (err) {
+        console.error("Failed to load product details:", err);
+        setError("Failed to load product details.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const showModal = (images) => {
-    setCurrentImages(images);
+    fetchProduct();
+  }, []);
+  const showModal = () => {
+    const allImages = portfolioData.map((card) => card.image); // Extract all images
+    setCurrentImages(allImages);
     setVisible(true);
   };
 
@@ -35,59 +37,60 @@ function Portcards1() {
 
   return (
     <div>
-         <div className="breadcrumb-container">
-          <Breadcrumb
-            items={[
-              {
-                title: (
-                  <a href="/" className="breadcrumb-title">
-                    Home
-                  </a>
-                ),
-              },
-              {
-                title: (
-                  <span className="breadcrumb-link">
-                   Portfolio
-                  </span>
-                ),
-              },
-            ]}
-          />
-        </div>
-    <div className="portfolio-container">
-      <p className="portfolio-txt">Portfolio</p>
-      <Row justify="center" gutter={[16, 16]}>
-        {cardData.map((card) => (
-          <Col xs={12} sm={8} md={6} key={card.id}>
-            <Card
-              hoverable
-              cover={<img alt="image" src={card.images[0]} />}
-              className="portfolio-card"
-              onClick={() => showModal(card.images)} // Open modal on click
-            />
-          </Col>
-        ))}
-      </Row>
-
-      <Modal
-        visible={visible}
-        footer={null}
-        onCancel={handleCancel}
-      >
-        <Carousel dots arrows>
-          {currentImages.map((img, index) => (
-            <div key={index}>
-              <img
-                className="image-modal-post"
-                alt={`carousel-${index}`}
-                src={img}
+      <div className="breadcrumb-container">
+        <Breadcrumb
+          items={[
+            {
+              title: (
+                <a href="/" className="breadcrumb-title">
+                  Home
+                </a>
+              ),
+            },
+            {
+              title: <span className="breadcrumb-link">Portfolio</span>,
+            },
+          ]}
+        />
+      </div>
+      <div className="portfolio-container">
+        <p className="portfolio-txt">Portfolio</p>
+        <Row justify="center" gutter={[16, 16]}>
+          {portfolioData.map((card) => (
+            <Col xs={12} sm={8} md={6} key={card.id}>
+              <Card
+                hoverable
+                cover={<img alt="image" src={card.image} />}
+                className="portfolio-card"
+                onClick={showModal} // Now opens modal with all images
               />
-            </div>
+            </Col>
           ))}
-        </Carousel>
-      </Modal>
-    </div>
+        </Row>
+
+        <Modal visible={visible} footer={null} onCancel={handleCancel} centered>
+          <div className="carousel-container">
+            {/* Left-side Buttons (Vertical) */}
+            <div className="carousel-buttons">
+              <button className="whatsapp-btn">WhatsApp Quote</button>
+              <button className="quote-btn">Get a Free Quote</button>
+            </div>
+
+            {/* Image Carousel */}
+            <Carousel dots arrows>
+              {currentImages.map((img, index) => (
+                <div key={index}>
+                  <img
+                    className="image-modal-post"
+                    alt={`carousel-${index}`}
+                    src={img}
+                  />
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </Modal>
+      </div>
     </div>
   );
 }

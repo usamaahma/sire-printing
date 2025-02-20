@@ -7,9 +7,31 @@ import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./firstnav.css";
 
 function Firstnav1() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const query = params.get("query") || ""; // URL se query extract karo
+    setSearchQuery(query);
+  }, [location.search]);
+
+  const handleSearch = (e) => {
+    if (e) e.preventDefault(); // ✅ Prevent default form submit behavior
+
+    if (searchQuery.trim() !== "") {
+      navigate(`/product-search?query=${encodeURIComponent(searchQuery)}`);
+    } else {
+      navigate("/product-search");
+    }
+  };
+
   return (
     <div className="nav-main">
       <Navbar
@@ -18,7 +40,7 @@ function Firstnav1() {
         style={{
           backgroundColor: "rgb(255,160,21)",
           padding: "10px 28px",
-          margin: "0 auto", // Center the navbar
+          margin: "0 auto",
         }}
       >
         <div
@@ -70,7 +92,7 @@ function Firstnav1() {
               style={{ color: "black" }}
             >
               <a
-                href="mailto:support@sireprinting.co.uk" // Mailto link
+                href="mailto:support@sireprinting.co.uk"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -95,7 +117,9 @@ function Firstnav1() {
                     style={{ fontSize: "1.3rem", color: "white" }}
                   />
                 </div>
-                <p style={{ margin: 0 }}  className="firstnav-num">Email: support@sireprinting.co.uk</p>
+                <p style={{ margin: 0 }} className="firstnav-num">
+                  Email: support@sireprinting.co.uk
+                </p>
               </a>
             </Nav.Item>
 
@@ -104,15 +128,15 @@ function Firstnav1() {
               style={{ color: "black" }}
             >
               <a
-                href="https://wa.me/447745807425" // WhatsApp link with the provided number
+                href="https://wa.me/447745807425"
                 style={{
                   display: "flex",
                   alignItems: "center",
                   textDecoration: "none",
                   color: "black",
                 }}
-                target="_blank" // Open in a new tab
-                rel="noopener noreferrer" // Security feature
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <div
                   style={{
@@ -132,15 +156,16 @@ function Firstnav1() {
             </Nav.Item>
           </Nav>
 
-          <Form inline className="d-flex">
+          {/* ✅ Search Form with Proper Submit Handling */}
+          <Form className="d-flex" onSubmit={handleSearch}>
             <Row className="align-items-center">
               <Col xs="auto" className="mx-3">
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <Form.Control
                     type="text"
                     placeholder="Search"
-                    className="mr-sm-2"
-                    style={{ width: "auto" }}
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                   />
                   <div
                     style={{
@@ -154,6 +179,7 @@ function Firstnav1() {
                       cursor: "pointer",
                       marginLeft: "0.5rem",
                     }}
+                    onClick={handleSearch}
                   >
                     <FaSearch style={{ fontSize: "1.3rem", color: "white" }} />
                   </div>
