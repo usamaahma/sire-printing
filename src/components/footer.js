@@ -1,5 +1,5 @@
-import React from "react";
-import { Row, Col } from "antd";
+import React, {useState} from "react";
+import { Row, Col, Form,Button,Input,message } from "antd";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -15,20 +15,99 @@ import { FaPhone } from "react-icons/fa6";
 import "./footer.css";
 
 function Footer1() {
+  const [email, setEmail] = useState("");
+  const [form] = Form.useForm();
+
+  const onFinish = (values) => {
+    console.log("Form Submitted with values:", values); // Log form values
+
+    const data1 = {
+      email: values.email,
+    };
+
+    newsletter({
+      method: "post",
+      data: data1,
+    })
+      .then((response) => {
+        console.log("API Response:", response); // Log the entire response to inspect it
+        form.resetFields(); // This will reset all form fields to their initial state
+
+        if (
+          response.data &&
+          response.data.message === "Email already subscribed"
+        ) {
+          message.info("You already subscribed, thank you!");
+        } else {
+          message.success("You have successfully subscribed!");
+        }
+      })
+      .catch((error) => {
+        console.log("API Error:", error); // Log the API error to the console
+
+        if (error.response) {
+          // Handle error based on server response status
+          if (error.response.status === 400) {
+            if (error.response.data.message === "Email already subscribed") {
+              message.warning("You already subscribed, thank you!");
+            } else {
+              message.error("Something went wrong, please try again!");
+            }
+          } else {
+            // Handle other error statuses
+            message.error("Something went wrong, please try again!");
+          }
+        } else if (error.request) {
+          // Handle network error
+          console.log("No response received from the API");
+          message.error("Network error, please try again later.");
+        } else {
+          // General error
+          console.log("Error during request setup", error.message);
+          message.error("Something went wrong, please try again!");
+        }
+      });
+  };
   return (
     <div className="footersire-footer">
       <Row gutter={16}>
         <Col xs={24} sm={12} md={8} lg={6} className="footersire-column">
           <img src="../images/sire logo 2.png" alt="Logo" />
           <div className="footer-input-container">
-            <input
-              type="email"
-              placeholder="E-mail here"
-              className="footer-input"
-            />
-            <button type="submit" className="submit-button">
-              <FaPaperPlane />
-            </button>
+            <Form
+              onFinish={onFinish}
+              layout="inline" // Optional: to display the input and button inline
+            >
+              <Form.Item
+                name="email"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your email!",
+                  },
+                  {
+                    type: "email",
+                    message: "Please enter a valid email address!",
+                  },
+                ]}
+              >
+                <Input
+                  type="email"
+                  placeholder="E-mail here"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="footer-input"
+                />
+              </Form.Item>
+              <Form.Item>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  icon={<FaPaperPlane />}
+                  className="submit-button"
+                />
+              </Form.Item>
+            </Form>
           </div>
           <p className="sirefooter-p-txt1">
             Subscribe to our newsletter and stay updated with our new products,
@@ -59,7 +138,7 @@ function Footer1() {
           </p>
           <div className="footersire-social-icons">
             <FaFacebook />
-            <FaXTwitter/>
+            <FaXTwitter />
             <FaInstagram />
             <FaLinkedin />
           </div>
