@@ -41,6 +41,8 @@ import GetAQuote from "./components/Get a quote/getaquote";
 import Sitemap from "./components/site-map/sitemap";
 import ProductDetail from "./components/productdetail/productdetail";
 import Category from "./components/category/category";
+import { Search } from "react-bootstrap-icons";
+import SearchProduct from "./components/search-data/search";
 
 const AppRoutes = () => {
   return (
@@ -70,7 +72,7 @@ const AppRoutes = () => {
           <Route path="incense-boxes" element={<Incenseboxpage />} />
           <Route path="small-mailer-boxes" element={<Smallmailerboxpage />} />
           <Route path="Blogs" element={<Blog />} />
-          <Route path="food-packaging" element={<Foodpack />} />
+          <Route path="/blogs/:name/:id" element={<Foodpack />} />
           <Route
             path="10-reasons-to-love-custom-cereal-boxes"
             element={<Tenreasonsccboxes />}
@@ -99,6 +101,8 @@ const AppRoutes = () => {
           <Route path="Terms and conditions" element={<Term />} />
           <Route path="get a quote" element={<GetAQuote />} />
           <Route path="site-map" element={<Sitemap />} />
+          <Route path="product-search" element={<SearchProduct />} />
+          Search
         </Routes>
         <Footer1 />
       </>

@@ -5,6 +5,60 @@
   margin-right: 5rem; /* Add right margin */
 }
 
+.carousel-container {
+  position: relative;
+  padding: 20px;
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  left: -110px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Gap between rotated buttons */
+  z-index: 10; /* Ensure buttons appear above carousel */
+}
+
+.whatsapp-btn,
+.quote-btn {
+  width: 170px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Transparent background for better visibility */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transform: rotate(-270deg);
+  transform-origin: center;
+}
+
+.whatsapp-btn {
+  margin-bottom: 7rem;
+  background-color: #ff9001;
+  font-size: medium;
+  color: white;
+}
+
+.quote-btn {
+  background-color: #ff9001;
+  font-size: medium;
+
+  color: white;
+}
+
 .portfolio-txt {
   font-size: 30px;
   font-weight: bold;
@@ -16,30 +70,35 @@
   width: 95%; /* Decrease the width of the cards */
   padding: 0% !important;
 }
+
 .image-modal-post {
-  width: 60%; /* Make the image take the full width */
+  width: 100%; /* Make the image take the full width */
   height: auto; /* Maintain the aspect ratio */
   display: block; /* Remove any inline spacing */
   margin: 0 auto;
 }
-.ant-modal .ant-modal-content{
+
+.ant-modal .ant-modal-content {
   background-color: transparent !important;
 }
+
 .ant-modal {
   background-color: transparent; /* Remove the modal background color */
   padding: 0; /* Remove padding from the modal */
   margin-top: 3rem;
   box-shadow: none; /* Remove any shadow, if desired */
 }
+
 .ant-modal-body {
-  background-color: transparent; /* Remove the modal background color */
-  padding: 0; /* Remove padding from the modal body */
   background-color: transparent !important;
+  padding: 0; /* Remove padding from the modal body */
   border: none; /* Remove the border, if needed */
 }
+
 .portfolio-card:hover {
   transform: scale(1.05); /* Scale effect on hover */
 }
+
 .ant-card .ant-card-body {
   padding: 0% !important;
 }

@@ -1,0 +1,142 @@
+.allproduct-beat-txt {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.div-beatform-txt {
+  background-color: rgb(255, 160, 21);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.allproduct-form-submit-button {
+  width: 100%;
+  max-width: 200px; /* Adjust max-width as needed */
+}
+.allproduct-form-sticky-div {
+  position: sticky;
+  top: 0;
+  padding-top: 5rem !important;
+  /* z-index: 1000;   */
+  padding: 20px;
+  border-radius: 2px;
+}
+.input-allproduct {
+  border-color: rgb(131, 130, 130);
+}
+.input-allproduct:hover {
+  border-color: black;
+}
+
+.div-beatform-txt {
+  margin: 0 0 1rem 0; /* Reduce margin to make it compact */
+  background-color: rgb(255, 160, 21);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px; /* Set a fixed height */
+}
+
+.allproduct-beat-txt {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.allproduct-form-submit-button {
+  width: 100%;
+  max-width: 200px; /* Adjust max-width as needed */
+  padding: 10px 20px;
+  background-color: #070707;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 4rem;
+  font-weight: bold;
+}
+.allproduct-form-submit-button:hover {
+  background-color: #fcfcfc !important;
+  color: #070707 !important;
+  border-color: #070707;
+}
+
+.allproduct-card-link {
+  color: #070707;
+}
+.allproduct-card-link:hover {
+  color: white;
+}
+.allproduct-card-image {
+  width: 5rem;
+  height: 15rem;
+}
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+  .allproduct-form-sticky-div {
+    padding: 10px;
+  }
+
+  .div-beatform-txt {
+    height: auto; /* Allow height to adjust on smaller screens */
+  }
+}
+.allproduct-txt {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* Make all text in the form bold */
+
+/* *****************************************888 */
+.allproduct-main {
+  padding: 20px; /* Add some padding to the main container */
+}
+
+.allproduct-row {
+  margin: 0; /* Remove default margin */
+}
+
+.allproduct-card-main {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allproduct-card {
+  width: 16.5rem;
+  border-radius: 8px; /* Rounded corners */
+  /* Subtle shadow for depth */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.allproduct-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.allproduct-card-title {
+  font-weight: bold; /* Bold text */
+  background-color: rgb(255, 160, 21);
+  font-size: 1.2rem; /* Adjust font size as needed */
+  height: 4rem;
+  text-align: center;
+  align-items: center;
+}
+/* breadcrumb */
+.breadcrumb-container {
+  background-color: rgb(237, 239, 240); /* Set background color to gray */
+  padding: 20px; /* Optional: Add some padding for better appearance */
+}
+.breadcrumb-title {
+  font-weight: bold; /* Make the font bold */
+  font-size: 1rem; /* Set font size to 1 rem */
+}
+.breadcrumb-link {
+  font-weight: bold; /* Make the font bold */
+  color: orange; /* Change the color to orange */
+  font-size: 1rem; /* Increase font size (adjust as needed) */
+}
