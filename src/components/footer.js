@@ -33,7 +33,6 @@ function Footer1() {
       .then((response) => {
         console.log("API Response:", response); // Log the entire response to inspect it
         form.resetFields(); // This will reset all form fields to their initial state
-
         if (
           response.data &&
           response.data.message === "Email already subscribed"
@@ -124,7 +123,7 @@ function Footer1() {
             policies, and terms.
           </p>
           <img
-            src="../images/googleplay.png"
+            src="../images/googleplay.png"    
             alt="Additional"
             style={{ marginTop: "1rem" }}
           />
@@ -154,7 +153,7 @@ function Footer1() {
           </div>
           <img
             src="../images/footervisa.png"
-            alt="Additional"
+            alt="Additional" 
             className="footer-visaimg"
           />
         </Col>

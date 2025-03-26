@@ -22,19 +22,20 @@ function Allproduct1() {
       .replace(/\s+/g, "-");
     navigate(`/product-detail/${productNameSlug}/${product._id}`);
   };
+
   useEffect(() => {
     const fetchProductsData = async () => {
       try {
-        const response = await products.get("/"); // Replace with your API URL
-        setAllProducts(response.data); // Assuming the response contains an array of blogs
+        const response = await products.get("/"); // Replace with your sorted products API URL
+        setAllProducts(response.data); // Assuming the response contains sorted products
       } catch (err) {
-        setError("Failed to load blogs."); // Set error if request fails
+        setError("Failed to load products.");
       } finally {
-        setLoading(false); // Set loading to false after the data is fetched or if an error occurs
+        setLoading(false);
       }
     };
 
-    fetchProductsData(); // Call the fetch function
+    fetchProductsData();
   }, []); // Empty dependency array ensures this only runs once when the component mounts
 
   return (
@@ -90,7 +91,6 @@ function Allproduct1() {
               )}
             </Row>
           </Col>
-
           <Col span={7} xs={24} md={7} className="simpletable-right-column">
             <Productform />
           </Col>

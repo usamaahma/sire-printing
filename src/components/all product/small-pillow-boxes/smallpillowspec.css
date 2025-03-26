@@ -1,46 +1,123 @@
-.review-carousel {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between reviews */
-}
-
-.review-item {
-    background: #f0f0f0; /* Light gray background */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
-}
+/* Small Pillow Specs Container */
 .small-pillows-spec {
-    padding: 20px; /* Add padding to the container */
+    padding: 20px;
+    background: #ffffff; /* White background for cleaner look */
 }
 
- 
+/* Table Header */
 .tablehead-div {
-    display: flex;               
-    justify-content: center;    
-    align-items: center;         
-    height: 50px;              
-    background-color: rgb(255,160,21);
-    border-radius: 3px;
-  }
-  
-  .tablehead-txt {
-    text-align: center;          
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(255, 160, 21);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.tablehead-txt {
+    text-align: center;
     color: white;
     font-size: 1.4rem;
     font-weight: bold;
-  }
-  .carousel-main{
+    letter-spacing: 0.5px;
+}
+
+/* Review Carousel */
+.review-carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Increased spacing for better readability */
+    margin-top: 15px;
+}
+
+.review-item {
+    background: #f8f8f8; /* Softer gray for a modern look */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.review-item:hover {
+    transform: translateY(-3px); /* Slight hover effect */
+}
+
+/* Carousel Main */
+.carousel-main {
     margin-top: 1rem;
-  }
-  .car-img {
-    width: 100%;             
-    height: auto;           
-    max-height: 400px;      
-    object-fit: cover;     
-  }
-  @media (max-width: 375px) {
+}
+
+/* Carousel Image */
+.car-img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* FAQ Section */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid #1890ff;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background: #e6f7ff;
+}
+
+.faq-question {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.faq-answer {
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .tablehead-txt {
-       font-size: 1rem;
+        font-size: 1.2rem;
     }
-  }
+
+    .car-img {
+        max-height: 300px;
+    }
+
+    .review-item {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tablehead-txt {
+        font-size: 1rem;
+    }
+
+    .review-item {
+        padding: 10px;
+    }
+
+    .car-img {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 375px) {
+    .tablehead-txt {
+        font-size: 0.9rem;
+    }
+}

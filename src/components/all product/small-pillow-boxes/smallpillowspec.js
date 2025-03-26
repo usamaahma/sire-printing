@@ -84,7 +84,6 @@ function Smallpillowspec() {
           <div className="tablehead-div">
             <p className="tablehead-txt">Customer Feedback</p>
           </div>
-
            <Smallpillowcarousel/>
         </Col>
       </Row>
