@@ -43,12 +43,14 @@ import ProductDetail from "./components/productdetail/productdetail";
 import Category from "./components/category/category";
 import { Search } from "react-bootstrap-icons";
 import SearchProduct from "./components/search-data/search";
+import Mnav from "./components/navbars/mnav";
 
 const AppRoutes = () => {
   return (
     <Router>
       <Firstnav1 />
-      <Mainnav1 />
+      {/* <Mainnav1 /> */}
+      <Mnav/>
       <>
         <ScrollToTop />
         <Routes>
